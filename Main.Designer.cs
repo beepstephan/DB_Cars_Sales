@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.testDataGridView = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.testDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,25 +38,14 @@
             this.testDataGridView.Location = new System.Drawing.Point(12, 12);
             this.testDataGridView.Name = "testDataGridView";
             this.testDataGridView.RowTemplate.Height = 25;
-            this.testDataGridView.Size = new System.Drawing.Size(572, 371);
+            this.testDataGridView.Size = new System.Drawing.Size(1027, 624);
             this.testDataGridView.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(669, 60);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1051, 648);
             this.Controls.Add(this.testDataGridView);
             this.Name = "Main";
             this.Text = "Main";
@@ -69,6 +57,5 @@
         #endregion
 
         private DataGridView testDataGridView;
-        private Button button1;
     }
 }
