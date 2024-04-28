@@ -76,7 +76,7 @@ namespace DB_Cars_Sales
                 MessageBox.Show("Error: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            
+            this.Close();
         }
         private void ClearFields()
         {
