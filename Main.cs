@@ -13,7 +13,7 @@ namespace DB_Cars_Sales
 {
     public partial class Main : Form
     {
-        // string connectionString = "Server=26.205.250.8;Port=5432;Database=mashinki; User Id = stas; Password = stas2002";
+        
         public Main()
         {
             InitializeComponent();
