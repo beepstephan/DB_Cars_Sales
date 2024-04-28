@@ -28,126 +28,139 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tabControl1 = new TabControl();
-            tabPageCars = new TabPage();
-            tabPageCarModels = new TabPage();
-            tabPageCarDealerships = new TabPage();
-            buttonAddDealership = new Button();
-            testDataGridView = new DataGridView();
-            tabPageEmployees = new TabPage();
-            tabPageCustomers = new TabPage();
-            tabPageTransactions = new TabPage();
-            tabControl1.SuspendLayout();
-            tabPageCarDealerships.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)testDataGridView).BeginInit();
-            SuspendLayout();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPageCars = new System.Windows.Forms.TabPage();
+            this.tabPageCarModels = new System.Windows.Forms.TabPage();
+            this.tabPageCarDealerships = new System.Windows.Forms.TabPage();
+            this.buttonDeleteDealership = new System.Windows.Forms.Button();
+            this.buttonAddDealership = new System.Windows.Forms.Button();
+            this.testDataGridView = new System.Windows.Forms.DataGridView();
+            this.tabPageEmployees = new System.Windows.Forms.TabPage();
+            this.tabPageCustomers = new System.Windows.Forms.TabPage();
+            this.tabPageTransactions = new System.Windows.Forms.TabPage();
+            this.tabControl1.SuspendLayout();
+            this.tabPageCarDealerships.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.testDataGridView)).BeginInit();
+            this.SuspendLayout();
             // 
             // tabControl1
             // 
-            tabControl1.Controls.Add(tabPageCars);
-            tabControl1.Controls.Add(tabPageCarModels);
-            tabControl1.Controls.Add(tabPageCarDealerships);
-            tabControl1.Controls.Add(tabPageEmployees);
-            tabControl1.Controls.Add(tabPageCustomers);
-            tabControl1.Controls.Add(tabPageTransactions);
-            tabControl1.Dock = DockStyle.Fill;
-            tabControl1.Location = new Point(0, 0);
-            tabControl1.Multiline = true;
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1054, 596);
-            tabControl1.TabIndex = 1;
+            this.tabControl1.Controls.Add(this.tabPageCars);
+            this.tabControl1.Controls.Add(this.tabPageCarModels);
+            this.tabControl1.Controls.Add(this.tabPageCarDealerships);
+            this.tabControl1.Controls.Add(this.tabPageEmployees);
+            this.tabControl1.Controls.Add(this.tabPageCustomers);
+            this.tabControl1.Controls.Add(this.tabPageTransactions);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Multiline = true;
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1054, 596);
+            this.tabControl1.TabIndex = 1;
             // 
             // tabPageCars
             // 
-            tabPageCars.Location = new Point(4, 24);
-            tabPageCars.Name = "tabPageCars";
-            tabPageCars.Padding = new Padding(3);
-            tabPageCars.Size = new Size(1046, 568);
-            tabPageCars.TabIndex = 0;
-            tabPageCars.Text = "Cars";
-            tabPageCars.UseVisualStyleBackColor = true;
+            this.tabPageCars.Location = new System.Drawing.Point(4, 24);
+            this.tabPageCars.Name = "tabPageCars";
+            this.tabPageCars.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageCars.Size = new System.Drawing.Size(1046, 568);
+            this.tabPageCars.TabIndex = 0;
+            this.tabPageCars.Text = "Cars";
+            this.tabPageCars.UseVisualStyleBackColor = true;
             // 
             // tabPageCarModels
             // 
-            tabPageCarModels.Location = new Point(4, 24);
-            tabPageCarModels.Name = "tabPageCarModels";
-            tabPageCarModels.Padding = new Padding(3);
-            tabPageCarModels.Size = new Size(1046, 568);
-            tabPageCarModels.TabIndex = 1;
-            tabPageCarModels.Text = "Car Models";
-            tabPageCarModels.UseVisualStyleBackColor = true;
+            this.tabPageCarModels.Location = new System.Drawing.Point(4, 24);
+            this.tabPageCarModels.Name = "tabPageCarModels";
+            this.tabPageCarModels.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageCarModels.Size = new System.Drawing.Size(1046, 568);
+            this.tabPageCarModels.TabIndex = 1;
+            this.tabPageCarModels.Text = "Car Models";
+            this.tabPageCarModels.UseVisualStyleBackColor = true;
             // 
             // tabPageCarDealerships
             // 
-            tabPageCarDealerships.Controls.Add(buttonAddDealership);
-            tabPageCarDealerships.Controls.Add(testDataGridView);
-            tabPageCarDealerships.Location = new Point(4, 24);
-            tabPageCarDealerships.Name = "tabPageCarDealerships";
-            tabPageCarDealerships.Padding = new Padding(3);
-            tabPageCarDealerships.Size = new Size(1046, 568);
-            tabPageCarDealerships.TabIndex = 2;
-            tabPageCarDealerships.Text = "Car Dealerships";
-            tabPageCarDealerships.UseVisualStyleBackColor = true;
+            this.tabPageCarDealerships.Controls.Add(this.buttonDeleteDealership);
+            this.tabPageCarDealerships.Controls.Add(this.buttonAddDealership);
+            this.tabPageCarDealerships.Controls.Add(this.testDataGridView);
+            this.tabPageCarDealerships.Location = new System.Drawing.Point(4, 24);
+            this.tabPageCarDealerships.Name = "tabPageCarDealerships";
+            this.tabPageCarDealerships.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageCarDealerships.Size = new System.Drawing.Size(1046, 568);
+            this.tabPageCarDealerships.TabIndex = 2;
+            this.tabPageCarDealerships.Text = "Car Dealerships";
+            this.tabPageCarDealerships.UseVisualStyleBackColor = true;
+            // 
+            // buttonDeleteDealership
+            // 
+            this.buttonDeleteDealership.Location = new System.Drawing.Point(8, 65);
+            this.buttonDeleteDealership.Name = "buttonDeleteDealership";
+            this.buttonDeleteDealership.Size = new System.Drawing.Size(98, 44);
+            this.buttonDeleteDealership.TabIndex = 3;
+            this.buttonDeleteDealership.Text = "Видалити автосалон";
+            this.buttonDeleteDealership.UseVisualStyleBackColor = true;
+            this.buttonDeleteDealership.Click += new System.EventHandler(this.buttonDeleteDealership_Click);
             // 
             // buttonAddDealership
             // 
-            buttonAddDealership.Location = new Point(8, 15);
-            buttonAddDealership.Name = "buttonAddDealership";
-            buttonAddDealership.Size = new Size(98, 44);
-            buttonAddDealership.TabIndex = 2;
-            buttonAddDealership.Text = "Додати автосалон";
-            buttonAddDealership.UseVisualStyleBackColor = true;
-            buttonAddDealership.Click += buttonAddDealership_Click;
+            this.buttonAddDealership.Location = new System.Drawing.Point(8, 15);
+            this.buttonAddDealership.Name = "buttonAddDealership";
+            this.buttonAddDealership.Size = new System.Drawing.Size(98, 44);
+            this.buttonAddDealership.TabIndex = 2;
+            this.buttonAddDealership.Text = "Додати автосалон";
+            this.buttonAddDealership.UseVisualStyleBackColor = true;
+            this.buttonAddDealership.Click += new System.EventHandler(this.buttonAddDealership_Click);
             // 
             // testDataGridView
             // 
-            testDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            testDataGridView.Location = new Point(112, 0);
-            testDataGridView.Name = "testDataGridView";
-            testDataGridView.RowTemplate.Height = 25;
-            testDataGridView.Size = new Size(934, 568);
-            testDataGridView.TabIndex = 1;
+            this.testDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.testDataGridView.Location = new System.Drawing.Point(112, 0);
+            this.testDataGridView.Name = "testDataGridView";
+            this.testDataGridView.RowTemplate.Height = 25;
+            this.testDataGridView.Size = new System.Drawing.Size(934, 568);
+            this.testDataGridView.TabIndex = 1;
             // 
             // tabPageEmployees
             // 
-            tabPageEmployees.Location = new Point(4, 24);
-            tabPageEmployees.Name = "tabPageEmployees";
-            tabPageEmployees.Size = new Size(1046, 568);
-            tabPageEmployees.TabIndex = 3;
-            tabPageEmployees.Text = "Employees";
-            tabPageEmployees.UseVisualStyleBackColor = true;
+            this.tabPageEmployees.Location = new System.Drawing.Point(4, 24);
+            this.tabPageEmployees.Name = "tabPageEmployees";
+            this.tabPageEmployees.Size = new System.Drawing.Size(1046, 568);
+            this.tabPageEmployees.TabIndex = 3;
+            this.tabPageEmployees.Text = "Employees";
+            this.tabPageEmployees.UseVisualStyleBackColor = true;
             // 
             // tabPageCustomers
             // 
-            tabPageCustomers.Location = new Point(4, 24);
-            tabPageCustomers.Name = "tabPageCustomers";
-            tabPageCustomers.Size = new Size(1046, 568);
-            tabPageCustomers.TabIndex = 4;
-            tabPageCustomers.Text = "Customers";
-            tabPageCustomers.UseVisualStyleBackColor = true;
+            this.tabPageCustomers.Location = new System.Drawing.Point(4, 24);
+            this.tabPageCustomers.Name = "tabPageCustomers";
+            this.tabPageCustomers.Size = new System.Drawing.Size(1046, 568);
+            this.tabPageCustomers.TabIndex = 4;
+            this.tabPageCustomers.Text = "Customers";
+            this.tabPageCustomers.UseVisualStyleBackColor = true;
             // 
             // tabPageTransactions
             // 
-            tabPageTransactions.Location = new Point(4, 24);
-            tabPageTransactions.Name = "tabPageTransactions";
-            tabPageTransactions.Size = new Size(1046, 568);
-            tabPageTransactions.TabIndex = 5;
-            tabPageTransactions.Text = "Transactions";
-            tabPageTransactions.UseVisualStyleBackColor = true;
+            this.tabPageTransactions.Location = new System.Drawing.Point(4, 24);
+            this.tabPageTransactions.Name = "tabPageTransactions";
+            this.tabPageTransactions.Size = new System.Drawing.Size(1046, 568);
+            this.tabPageTransactions.TabIndex = 5;
+            this.tabPageTransactions.Text = "Transactions";
+            this.tabPageTransactions.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1054, 596);
-            Controls.Add(tabControl1);
-            Name = "Main";
-            Text = "Main";
-            tabControl1.ResumeLayout(false);
-            tabPageCarDealerships.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)testDataGridView).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1054, 596);
+            this.Controls.Add(this.tabControl1);
+            this.Name = "Main";
+            this.Text = "Main";
+            this.tabControl1.ResumeLayout(false);
+            this.tabPageCarDealerships.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.testDataGridView)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -160,5 +173,6 @@
         private TabPage tabPageTransactions;
         private DataGridView testDataGridView;
         private Button buttonAddDealership;
+        private Button buttonDeleteDealership;
     }
 }
