@@ -13,30 +13,34 @@ namespace DB_Cars_Sales
 {
     public partial class Main : Form
     {
-        string connectionString = "Server=26.205.250.8;Port=5432;Database=mashinki; User Id = stas; Password = stas2002";
+        // string connectionString = "Server=26.205.250.8;Port=5432;Database=mashinki; User Id = stas; Password = stas2002";
         public Main()
         {
             InitializeComponent();
-            SqlConnectionReader();
+            RefreshDataGridView();
+
+
         }
 
-        private void SqlConnectionReader()
+        public void RefreshDataGridView()
         {
-            NpgsqlConnection conn = new NpgsqlConnection(connectionString);
-            conn.Open();
-            NpgsqlCommand command = new NpgsqlCommand();
-            command.Connection = conn;
-            command.CommandType = CommandType.Text;
-            command.CommandText = "SELECT * FROM car_dealerships";
-            NpgsqlDataReader reader = command.ExecuteReader();
-            if (reader.HasRows)
+            testDataGridView.DataSource = SqlConnectionReader();
+        }
+
+        private DataTable SqlConnectionReader()
+        {
+            string connectionString = "Server=26.205.250.8;Port=5432;Database=mashinki; User Id = stas; Password = stas2002";
+            string sql = "SELECT * FROM car_dealerships";
+            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
-                DataTable data = new DataTable();
-                data.Load(reader);
-                testDataGridView.DataSource = data;
+                using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(sql, connection))
+                {
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    return dataTable;
+                }
             }
-            command.Dispose();
-            conn.Close();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,7 +50,7 @@ namespace DB_Cars_Sales
 
         private void buttonAddDealership_Click(object sender, EventArgs e)
         {
-            FormAddDealership formAddDealership = new FormAddDealership();
+            FormAddDealership formAddDealership = new FormAddDealership(this);
             formAddDealership.ShowDialog();
         }
     }
