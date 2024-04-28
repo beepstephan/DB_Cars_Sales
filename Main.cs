@@ -44,5 +44,10 @@ namespace DB_Cars_Sales
             MessageBox.Show("кулити!");
         }
 
+        private void buttonAddDealership_Click(object sender, EventArgs e)
+        {
+            FormAddDealership formAddDealership = new FormAddDealership();
+            formAddDealership.ShowDialog();
+        }
     }
 }
