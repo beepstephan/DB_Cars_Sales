@@ -23,7 +23,7 @@ namespace DB_Cars_Sales
 
         public void RefreshDataGridView()
         {
-            testDataGridView.DataSource = SqlConnectionReader();
+            CarDealershipsDataGridView.DataSource = SqlConnectionReader();
         }
 
         private DataTable SqlConnectionReader()
@@ -58,14 +58,14 @@ namespace DB_Cars_Sales
         {
             NpgsqlConnection connection;
             connection = new NpgsqlConnection(connectionString);
-            if (testDataGridView.SelectedRows.Count > 0)
+            if (CarDealershipsDataGridView.SelectedRows.Count > 0)
             {
                 
-                int selectedRowIndex = testDataGridView.SelectedRows[0].Index;
-                string emailToDelete = testDataGridView.SelectedRows[0].Cells["Email"].Value.ToString();
+                int selectedRowIndex = CarDealershipsDataGridView.SelectedRows[0].Index;
+                string emailToDelete = CarDealershipsDataGridView.SelectedRows[0].Cells["Email"].Value.ToString();
 
                 
-                testDataGridView.Rows.RemoveAt(selectedRowIndex);
+                CarDealershipsDataGridView.Rows.RemoveAt(selectedRowIndex);
 
                 
                 try

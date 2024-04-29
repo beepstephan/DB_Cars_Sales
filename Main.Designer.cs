@@ -34,24 +34,32 @@
             tabPageCarDealerships = new TabPage();
             buttonDeleteDealership = new Button();
             buttonAddDealership = new Button();
-            testDataGridView = new DataGridView();
+            CarDealershipsDataGridView = new DataGridView();
             tabPageEmployees = new TabPage();
             tabPageCustomers = new TabPage();
+            dataGridView1 = new DataGridView();
             tabPageTransactions = new TabPage();
+            radioButton1 = new RadioButton();
+            radioButton2 = new RadioButton();
+            radioButton3 = new RadioButton();
+            textBox1 = new TextBox();
+            button1 = new Button();
             tabControl1.SuspendLayout();
             tabPageCarDealerships.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)testDataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CarDealershipsDataGridView).BeginInit();
+            tabPageCustomers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
             // 
+            tabControl1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tabControl1.Controls.Add(tabPageCars);
             tabControl1.Controls.Add(tabPageCarModels);
             tabControl1.Controls.Add(tabPageCarDealerships);
             tabControl1.Controls.Add(tabPageEmployees);
             tabControl1.Controls.Add(tabPageCustomers);
             tabControl1.Controls.Add(tabPageTransactions);
-            tabControl1.Dock = DockStyle.Fill;
             tabControl1.Location = new Point(0, 0);
             tabControl1.Multiline = true;
             tabControl1.Name = "tabControl1";
@@ -83,7 +91,7 @@
             // 
             tabPageCarDealerships.Controls.Add(buttonDeleteDealership);
             tabPageCarDealerships.Controls.Add(buttonAddDealership);
-            tabPageCarDealerships.Controls.Add(testDataGridView);
+            tabPageCarDealerships.Controls.Add(CarDealershipsDataGridView);
             tabPageCarDealerships.Location = new Point(4, 24);
             tabPageCarDealerships.Name = "tabPageCarDealerships";
             tabPageCarDealerships.Padding = new Padding(3);
@@ -112,14 +120,15 @@
             buttonAddDealership.UseVisualStyleBackColor = true;
             buttonAddDealership.Click += buttonAddDealership_Click;
             // 
-            // testDataGridView
+            // CarDealershipsDataGridView
             // 
-            testDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            testDataGridView.Location = new Point(112, 0);
-            testDataGridView.Name = "testDataGridView";
-            testDataGridView.RowTemplate.Height = 25;
-            testDataGridView.Size = new Size(934, 568);
-            testDataGridView.TabIndex = 1;
+            CarDealershipsDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            CarDealershipsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            CarDealershipsDataGridView.Location = new Point(112, 0);
+            CarDealershipsDataGridView.Name = "CarDealershipsDataGridView";
+            CarDealershipsDataGridView.RowTemplate.Height = 25;
+            CarDealershipsDataGridView.Size = new Size(934, 568);
+            CarDealershipsDataGridView.TabIndex = 1;
             // 
             // tabPageEmployees
             // 
@@ -132,12 +141,28 @@
             // 
             // tabPageCustomers
             // 
+            tabPageCustomers.Controls.Add(button1);
+            tabPageCustomers.Controls.Add(textBox1);
+            tabPageCustomers.Controls.Add(radioButton3);
+            tabPageCustomers.Controls.Add(radioButton2);
+            tabPageCustomers.Controls.Add(radioButton1);
+            tabPageCustomers.Controls.Add(dataGridView1);
             tabPageCustomers.Location = new Point(4, 24);
             tabPageCustomers.Name = "tabPageCustomers";
             tabPageCustomers.Size = new Size(1046, 568);
             tabPageCustomers.TabIndex = 4;
             tabPageCustomers.Text = "Клієнти";
             tabPageCustomers.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(0, 86);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(1046, 482);
+            dataGridView1.TabIndex = 0;
             // 
             // tabPageTransactions
             // 
@@ -147,6 +172,55 @@
             tabPageTransactions.TabIndex = 5;
             tabPageTransactions.Text = "Транзакції";
             tabPageTransactions.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            radioButton1.AutoSize = true;
+            radioButton1.Location = new Point(189, 20);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(94, 19);
+            radioButton1.TabIndex = 1;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "radioButton1";
+            radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.Location = new Point(334, 20);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(94, 19);
+            radioButton2.TabIndex = 2;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "radioButton2";
+            radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            radioButton3.AutoSize = true;
+            radioButton3.Location = new Point(466, 20);
+            radioButton3.Name = "radioButton3";
+            radioButton3.Size = new Size(94, 19);
+            radioButton3.TabIndex = 3;
+            radioButton3.TabStop = true;
+            radioButton3.Text = "radioButton3";
+            radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(436, 57);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 23);
+            textBox1.TabIndex = 4;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(695, 32);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 5;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -158,7 +232,10 @@
             Text = "DB Cars Sales";
             tabControl1.ResumeLayout(false);
             tabPageCarDealerships.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)testDataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CarDealershipsDataGridView).EndInit();
+            tabPageCustomers.ResumeLayout(false);
+            tabPageCustomers.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -170,8 +247,14 @@
         private TabPage tabPageEmployees;
         private TabPage tabPageCustomers;
         private TabPage tabPageTransactions;
-        private DataGridView testDataGridView;
+        private DataGridView CarDealershipsDataGridView;
         private Button buttonAddDealership;
         private Button buttonDeleteDealership;
+        private DataGridView dataGridView1;
+        private Button button1;
+        private TextBox textBox1;
+        private RadioButton radioButton3;
+        private RadioButton radioButton2;
+        private RadioButton radioButton1;
     }
 }
