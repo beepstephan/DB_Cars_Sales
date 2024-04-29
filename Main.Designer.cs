@@ -72,26 +72,27 @@
             // 
             // tabPageCars
             // 
+            this.tabPageCars.BackColor = System.Drawing.Color.RosyBrown;
             this.tabPageCars.Location = new System.Drawing.Point(4, 24);
             this.tabPageCars.Name = "tabPageCars";
             this.tabPageCars.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageCars.Size = new System.Drawing.Size(1046, 568);
             this.tabPageCars.TabIndex = 0;
             this.tabPageCars.Text = "Автомобілі";
-            this.tabPageCars.UseVisualStyleBackColor = true;
             // 
             // tabPageCarModels
             // 
+            this.tabPageCarModels.BackColor = System.Drawing.Color.RosyBrown;
             this.tabPageCarModels.Location = new System.Drawing.Point(4, 24);
             this.tabPageCarModels.Name = "tabPageCarModels";
             this.tabPageCarModels.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageCarModels.Size = new System.Drawing.Size(1046, 568);
             this.tabPageCarModels.TabIndex = 1;
             this.tabPageCarModels.Text = "Моделі автомобілей";
-            this.tabPageCarModels.UseVisualStyleBackColor = true;
             // 
             // tabPageCarDealerships
             // 
+            this.tabPageCarDealerships.BackColor = System.Drawing.Color.RosyBrown;
             this.tabPageCarDealerships.Controls.Add(this.buttonDeleteDealership);
             this.tabPageCarDealerships.Controls.Add(this.buttonAddDealership);
             this.tabPageCarDealerships.Controls.Add(this.CarDealershipsDataGridView);
@@ -101,7 +102,6 @@
             this.tabPageCarDealerships.Size = new System.Drawing.Size(1046, 568);
             this.tabPageCarDealerships.TabIndex = 2;
             this.tabPageCarDealerships.Text = "Автосалони";
-            this.tabPageCarDealerships.UseVisualStyleBackColor = true;
             // 
             // buttonDeleteDealership
             // 
@@ -135,15 +135,16 @@
             // 
             // tabPageEmployees
             // 
+            this.tabPageEmployees.BackColor = System.Drawing.Color.RosyBrown;
             this.tabPageEmployees.Location = new System.Drawing.Point(4, 24);
             this.tabPageEmployees.Name = "tabPageEmployees";
             this.tabPageEmployees.Size = new System.Drawing.Size(1046, 568);
             this.tabPageEmployees.TabIndex = 3;
             this.tabPageEmployees.Text = "Працівники";
-            this.tabPageEmployees.UseVisualStyleBackColor = true;
             // 
             // tabPageCustomers
             // 
+            this.tabPageCustomers.BackColor = System.Drawing.Color.RosyBrown;
             this.tabPageCustomers.Controls.Add(this.labelCustomerSearch);
             this.tabPageCustomers.Controls.Add(this.buttonCustomerSearch);
             this.tabPageCustomers.Controls.Add(this.textBoxCustomerSearch);
@@ -156,7 +157,6 @@
             this.tabPageCustomers.Size = new System.Drawing.Size(1046, 568);
             this.tabPageCustomers.TabIndex = 4;
             this.tabPageCustomers.Text = "Клієнти";
-            this.tabPageCustomers.UseVisualStyleBackColor = true;
             // 
             // labelCustomerSearch
             // 
@@ -231,17 +231,18 @@
             // 
             // tabPageTransactions
             // 
+            this.tabPageTransactions.BackColor = System.Drawing.Color.RosyBrown;
             this.tabPageTransactions.Location = new System.Drawing.Point(4, 24);
             this.tabPageTransactions.Name = "tabPageTransactions";
             this.tabPageTransactions.Size = new System.Drawing.Size(1046, 568);
             this.tabPageTransactions.TabIndex = 5;
             this.tabPageTransactions.Text = "Транзакції";
-            this.tabPageTransactions.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1054, 596);
             this.Controls.Add(this.tabControl1);
             this.Name = "Main";
