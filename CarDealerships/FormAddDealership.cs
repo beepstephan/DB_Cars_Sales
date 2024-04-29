@@ -61,7 +61,7 @@ namespace DB_Cars_Sales
                 if (checkExecute > 0)
                 {
                     MessageBox.Show("все охуенно!");
-                    mainForm.RefreshDataGridView();
+                    mainForm.RefreshCarDealershipsDataGridView();
                     ClearFields();
                 }
                 else

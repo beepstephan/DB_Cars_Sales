@@ -18,18 +18,41 @@ namespace DB_Cars_Sales
         public Main()
         {
             InitializeComponent();
-            RefreshDataGridView();
+            RefreshCarDealershipsDataGridView();
+            RefreshCustomershipsDataGridView();
+            radioButtonCustomerSurname.Checked = true;
         }
 
-        public void RefreshDataGridView()
+        public void RefreshCarDealershipsDataGridView()
         {
-            CarDealershipsDataGridView.DataSource = SqlConnectionReader();
+            CarDealershipsDataGridView.DataSource = CarDealershipsSqlConnectionReader();
         }
 
-        private DataTable SqlConnectionReader()
+        public void RefreshCustomershipsDataGridView()
+        {
+            CustomerDataGridView.DataSource = CustomerssSqlConnectionReader();
+        }
+
+        private DataTable CarDealershipsSqlConnectionReader()
         {
             
             string sql = "SELECT * FROM car_dealerships";
+            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+            {
+                using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(sql, connection))
+                {
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    return dataTable;
+                }
+            }
+
+        }
+
+        private DataTable CustomerssSqlConnectionReader()
+        {
+
+            string sql = "SELECT * FROM customers";
             using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
                 using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(sql, connection))
@@ -87,6 +110,55 @@ namespace DB_Cars_Sales
             else
             {
                 MessageBox.Show("Укажіть рядок з автосалоном, який треба видалити!");
+            }
+        }
+
+        private void buttonCustomerSearch_Click(object sender, EventArgs e)
+        {
+            NpgsqlConnection connection;
+            connection = new NpgsqlConnection(connectionString);
+            try
+            {
+                connection.Open();
+                string query = "";
+                if (radioButtonCustomerSurname.Checked)
+                {
+                    query = "SELECT * FROM customers WHERE LOWER(fullname) LIKE LOWER(@fullname)";
+                    NpgsqlCommand cmd = new NpgsqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@fullname", "%" + textBoxCustomerSearch.Text + "%");
+                    NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    CustomerDataGridView.DataSource = dt;
+                }
+                else if (radioButtonCustomerPhone.Checked)
+                {
+                    query = "SELECT * FROM customers WHERE phone_number LIKE @phone_number";
+                    NpgsqlCommand cmd = new NpgsqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@phone_number", "%" + textBoxCustomerSearch.Text + "%");
+                    NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    CustomerDataGridView.DataSource = dt;
+                }
+                else if (radioButtonCustomerDate.Checked)
+                {
+                    query = "SELECT * FROM customers WHERE birth_date = @birth_date";
+                    NpgsqlCommand cmd = new NpgsqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@birth_date", DateTime.Parse(textBoxCustomerSearch.Text));
+                    NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    CustomerDataGridView.DataSource = dt;
+                }
+                
+                
+                
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
     }
