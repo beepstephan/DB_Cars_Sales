@@ -52,6 +52,29 @@
             tabPageCustomers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)CustomerDataGridView).BeginInit();
             SuspendLayout();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPageCars = new System.Windows.Forms.TabPage();
+            this.tabPageCarModels = new System.Windows.Forms.TabPage();
+            this.tabPageCarDealerships = new System.Windows.Forms.TabPage();
+            this.buttonDeleteDealership = new System.Windows.Forms.Button();
+            this.buttonAddDealership = new System.Windows.Forms.Button();
+            this.CarDealershipsDataGridView = new System.Windows.Forms.DataGridView();
+            this.tabPageEmployees = new System.Windows.Forms.TabPage();
+            this.tabPageCustomers = new System.Windows.Forms.TabPage();
+            this.labelCustomerSearch = new System.Windows.Forms.Label();
+            this.buttonCustomerSearch = new System.Windows.Forms.Button();
+            this.textBoxCustomerSearch = new System.Windows.Forms.TextBox();
+            this.radioButtonCustomerDate = new System.Windows.Forms.RadioButton();
+            this.radioButtonCustomerPhone = new System.Windows.Forms.RadioButton();
+            this.radioButtonCustomerSurname = new System.Windows.Forms.RadioButton();
+            this.CustomerDataGridView = new System.Windows.Forms.DataGridView();
+            this.tabPageTransactions = new System.Windows.Forms.TabPage();
+            this.tabControl1.SuspendLayout();
+            this.tabPageCarDealerships.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CarDealershipsDataGridView)).BeginInit();
+            this.tabPageCustomers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomerDataGridView)).BeginInit();
+            this.SuspendLayout();
             // 
             // tabControl1
             // 
@@ -149,7 +172,6 @@
             // tabPageEmployees
             // 
             this.tabPageEmployees.BackColor = System.Drawing.Color.RosyBrown;
-            this.tabPageEmployees.Controls.Add(this.EmployeesDataGridView);
             this.tabPageEmployees.Location = new System.Drawing.Point(4, 24);
             this.tabPageEmployees.Name = "tabPageEmployees";
             this.tabPageEmployees.Size = new System.Drawing.Size(1046, 568);
@@ -250,18 +272,6 @@
             tabPageTransactions.TabIndex = 5;
             tabPageTransactions.Text = "Транзакції";
             // 
-            // EmployeesDataGridView
-            // 
-            this.EmployeesDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.EmployeesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EmployeesDataGridView.Location = new System.Drawing.Point(0, 86);
-            this.EmployeesDataGridView.Name = "EmployeesDataGridView";
-            this.EmployeesDataGridView.RowTemplate.Height = 25;
-            this.EmployeesDataGridView.Size = new System.Drawing.Size(1046, 482);
-            this.EmployeesDataGridView.TabIndex = 1;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -274,11 +284,9 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPageCarDealerships.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CarDealershipsDataGridView)).EndInit();
-            this.tabPageEmployees.ResumeLayout(false);
             this.tabPageCustomers.ResumeLayout(false);
             this.tabPageCustomers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeesDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
