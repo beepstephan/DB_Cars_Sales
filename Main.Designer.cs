@@ -145,6 +145,7 @@
             CarDealershipsDataGridView.RowTemplate.Height = 25;
             CarDealershipsDataGridView.Size = new Size(934, 568);
             CarDealershipsDataGridView.TabIndex = 1;
+            CarDealershipsDataGridView.SelectionChanged += CarDealershipsDataGridView_SelectionChanged;
             // 
             // tabPageEmployees
             // 

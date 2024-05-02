@@ -28,154 +28,154 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxPhone = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBoxWorkingHours = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBoxServices = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBoxAddress = new System.Windows.Forms.TextBox();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            textBoxName = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
+            textBoxPhone = new TextBox();
+            label3 = new Label();
+            textBoxEmail = new TextBox();
+            label4 = new Label();
+            textBoxWorkingHours = new TextBox();
+            label5 = new Label();
+            textBoxServices = new TextBox();
+            label6 = new Label();
+            textBoxAddress = new TextBox();
+            buttonAdd = new Button();
+            SuspendLayout();
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(49, 46);
-            this.textBoxName.MaxLength = 100;
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(262, 23);
-            this.textBoxName.TabIndex = 0;
+            textBoxName.Location = new Point(49, 46);
+            textBoxName.MaxLength = 100;
+            textBoxName.Name = "textBoxName";
+            textBoxName.Size = new Size(262, 23);
+            textBoxName.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 15);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Назва автосалону";
+            label1.AutoSize = true;
+            label1.Location = new Point(49, 28);
+            label1.Name = "label1";
+            label1.Size = new Size(105, 15);
+            label1.TabIndex = 3;
+            label1.Text = "Назва автосалону";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(49, 86);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 15);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Телефон автосалону";
+            label2.AutoSize = true;
+            label2.Location = new Point(49, 86);
+            label2.Name = "label2";
+            label2.Size = new Size(121, 15);
+            label2.TabIndex = 5;
+            label2.Text = "Телефон автосалону";
             // 
             // textBoxPhone
             // 
-            this.textBoxPhone.Location = new System.Drawing.Point(49, 104);
-            this.textBoxPhone.MaxLength = 25;
-            this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(194, 23);
-            this.textBoxPhone.TabIndex = 4;
+            textBoxPhone.Location = new Point(49, 104);
+            textBoxPhone.MaxLength = 25;
+            textBoxPhone.Name = "textBoxPhone";
+            textBoxPhone.Size = new Size(194, 23);
+            textBoxPhone.TabIndex = 4;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 144);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 15);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Email автосалону";
+            label3.AutoSize = true;
+            label3.Location = new Point(49, 144);
+            label3.Name = "label3";
+            label3.Size = new Size(102, 15);
+            label3.TabIndex = 7;
+            label3.Text = "Email автосалону";
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(49, 162);
-            this.textBoxEmail.MaxLength = 50;
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(194, 23);
-            this.textBoxEmail.TabIndex = 6;
+            textBoxEmail.Location = new Point(49, 162);
+            textBoxEmail.MaxLength = 50;
+            textBoxEmail.Name = "textBoxEmail";
+            textBoxEmail.Size = new Size(194, 23);
+            textBoxEmail.TabIndex = 6;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(49, 203);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 15);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Часи роботи";
+            label4.AutoSize = true;
+            label4.Location = new Point(49, 203);
+            label4.Name = "label4";
+            label4.Size = new Size(77, 15);
+            label4.TabIndex = 9;
+            label4.Text = "Часи роботи";
             // 
             // textBoxWorkingHours
             // 
-            this.textBoxWorkingHours.Location = new System.Drawing.Point(49, 221);
-            this.textBoxWorkingHours.Name = "textBoxWorkingHours";
-            this.textBoxWorkingHours.Size = new System.Drawing.Size(194, 23);
-            this.textBoxWorkingHours.TabIndex = 8;
+            textBoxWorkingHours.Location = new Point(49, 221);
+            textBoxWorkingHours.Name = "textBoxWorkingHours";
+            textBoxWorkingHours.Size = new Size(194, 23);
+            textBoxWorkingHours.TabIndex = 8;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(49, 263);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 15);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Послуги";
+            label5.AutoSize = true;
+            label5.Location = new Point(49, 263);
+            label5.Name = "label5";
+            label5.Size = new Size(54, 15);
+            label5.TabIndex = 11;
+            label5.Text = "Послуги";
             // 
             // textBoxServices
             // 
-            this.textBoxServices.Location = new System.Drawing.Point(49, 281);
-            this.textBoxServices.Name = "textBoxServices";
-            this.textBoxServices.Size = new System.Drawing.Size(262, 23);
-            this.textBoxServices.TabIndex = 10;
+            textBoxServices.Location = new Point(49, 281);
+            textBoxServices.Name = "textBoxServices";
+            textBoxServices.Size = new Size(262, 23);
+            textBoxServices.TabIndex = 10;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(49, 322);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(112, 15);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Адреса автосалону";
+            label6.AutoSize = true;
+            label6.Location = new Point(49, 322);
+            label6.Name = "label6";
+            label6.Size = new Size(112, 15);
+            label6.TabIndex = 13;
+            label6.Text = "Адреса автосалону";
             // 
             // textBoxAddress
             // 
-            this.textBoxAddress.Location = new System.Drawing.Point(49, 340);
-            this.textBoxAddress.MaxLength = 100;
-            this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(262, 23);
-            this.textBoxAddress.TabIndex = 12;
+            textBoxAddress.Location = new Point(49, 340);
+            textBoxAddress.MaxLength = 100;
+            textBoxAddress.Name = "textBoxAddress";
+            textBoxAddress.Size = new Size(262, 23);
+            textBoxAddress.TabIndex = 12;
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(157, 398);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(126, 42);
-            this.buttonAdd.TabIndex = 14;
-            this.buttonAdd.Text = "Додати";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            buttonAdd.Location = new Point(157, 398);
+            buttonAdd.Name = "buttonAdd";
+            buttonAdd.Size = new Size(126, 42);
+            buttonAdd.TabIndex = 14;
+            buttonAdd.Text = "Додати";
+            buttonAdd.UseVisualStyleBackColor = true;
+            buttonAdd.Click += buttonAdd_Click;
             // 
             // FormAddDealership
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 478);
-            this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBoxAddress);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBoxServices);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBoxWorkingHours);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBoxEmail);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxPhone);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxName);
-            this.Name = "FormAddDealership";
-            this.Text = "Додати Автосалон";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(435, 478);
+            Controls.Add(buttonAdd);
+            Controls.Add(label6);
+            Controls.Add(textBoxAddress);
+            Controls.Add(label5);
+            Controls.Add(textBoxServices);
+            Controls.Add(label4);
+            Controls.Add(textBoxWorkingHours);
+            Controls.Add(label3);
+            Controls.Add(textBoxEmail);
+            Controls.Add(label2);
+            Controls.Add(textBoxPhone);
+            Controls.Add(label1);
+            Controls.Add(textBoxName);
+            Name = "FormAddDealership";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Додати Автосалон";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

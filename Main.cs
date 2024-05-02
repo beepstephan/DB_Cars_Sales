@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DB_Cars_Sales.CarDealerships;
 using Npgsql;
 
 namespace DB_Cars_Sales
@@ -35,7 +36,7 @@ namespace DB_Cars_Sales
 
         private DataTable CarDealershipsSqlConnectionReader()
         {
-            
+
             string sql = "SELECT * FROM car_dealerships";
             using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
@@ -164,38 +165,22 @@ namespace DB_Cars_Sales
 
         private void buttonUpdateDealership_Click(object sender, EventArgs e)
         {
-            //NpgsqlConnection connection;
-            //connection = new NpgsqlConnection(connectionString);
-            //if (CarDealershipsDataGridView.SelectedRows.Count > 0)
-            //{
+            string name = CarDealershipsDataGridView.SelectedRows[0].Cells["name"].Value.ToString();
+            string phone = CarDealershipsDataGridView.SelectedRows[0].Cells["phone"].Value.ToString();
+            string email = CarDealershipsDataGridView.SelectedRows[0].Cells["email"].Value.ToString();
+            string working_hours = CarDealershipsDataGridView.SelectedRows[0].Cells["working_hours"].Value.ToString();
+            string services = CarDealershipsDataGridView.SelectedRows[0].Cells["services"].Value.ToString();
+            string address = CarDealershipsDataGridView.SelectedRows[0].Cells["address"].Value.ToString();
+            FormUpdateDealership formUpdateDealership = new FormUpdateDealership(name, phone, email, working_hours, services, address);
+            formUpdateDealership.ShowDialog();
+        }
 
-            //    int selectedRowIndex = CarDealershipsDataGridView.SelectedRows[0].Index;
-            //    string emailToDelete = CarDealershipsDataGridView.SelectedRows[0].Cells["Email"].Value.ToString();
-
-
-            //    CarDealershipsDataGridView.Rows.RemoveAt(selectedRowIndex);
-
-
-            //    try
-            //    {
-            //        connection.Open();
-            //        string sql = "DELETE FROM car_dealerships WHERE email = @email";
-            //        using (NpgsqlCommand command = new NpgsqlCommand(sql, connection))
-            //        {
-            //            command.Parameters.AddWithValue("@email", emailToDelete);
-            //            command.ExecuteNonQuery();
-            //        }
-            //        connection.Close();
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show("Error: " + ex.Message);
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Укажіть рядок з автосалоном, який треба видалити!");
-            //}
+        private void CarDealershipsDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            if (CarDealershipsDataGridView.SelectedRows.Count == 1)
+                buttonUpdateDealership.Enabled = true;
+            else
+                buttonUpdateDealership.Enabled = false;
         }
     }
 }
