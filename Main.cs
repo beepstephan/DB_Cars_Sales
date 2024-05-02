@@ -14,7 +14,7 @@ namespace DB_Cars_Sales
     public partial class Main : Form
     {
         string connectionString = "Server=26.205.250.8;Port=5432;Database=mashinki; User Id = stas; Password = stas2002";
-        
+
         public Main()
         {
             InitializeComponent();
@@ -35,7 +35,7 @@ namespace DB_Cars_Sales
 
         private DataTable CarDealershipsSqlConnectionReader()
         {
-            
+
             string sql = "SELECT * FROM car_dealerships";
             using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
@@ -76,21 +76,21 @@ namespace DB_Cars_Sales
             formAddDealership.ShowDialog();
         }
 
-        
+
         private void buttonDeleteDealership_Click(object sender, EventArgs e)
         {
             NpgsqlConnection connection;
             connection = new NpgsqlConnection(connectionString);
             if (CarDealershipsDataGridView.SelectedRows.Count > 0)
             {
-                
+
                 int selectedRowIndex = CarDealershipsDataGridView.SelectedRows[0].Index;
                 string emailToDelete = CarDealershipsDataGridView.SelectedRows[0].Cells["Email"].Value.ToString();
 
-                
+
                 CarDealershipsDataGridView.Rows.RemoveAt(selectedRowIndex);
 
-                
+
                 try
                 {
                     connection.Open();
@@ -151,15 +151,51 @@ namespace DB_Cars_Sales
                     da.Fill(dt);
                     CustomerDataGridView.DataSource = dt;
                 }
-                
-                
-                
+
+
+
                 connection.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+        }
+
+        private void buttonUpdateDealership_Click(object sender, EventArgs e)
+        {
+            //NpgsqlConnection connection;
+            //connection = new NpgsqlConnection(connectionString);
+            //if (CarDealershipsDataGridView.SelectedRows.Count > 0)
+            //{
+
+            //    int selectedRowIndex = CarDealershipsDataGridView.SelectedRows[0].Index;
+            //    string emailToDelete = CarDealershipsDataGridView.SelectedRows[0].Cells["Email"].Value.ToString();
+
+
+            //    CarDealershipsDataGridView.Rows.RemoveAt(selectedRowIndex);
+
+
+            //    try
+            //    {
+            //        connection.Open();
+            //        string sql = "DELETE FROM car_dealerships WHERE email = @email";
+            //        using (NpgsqlCommand command = new NpgsqlCommand(sql, connection))
+            //        {
+            //            command.Parameters.AddWithValue("@email", emailToDelete);
+            //            command.ExecuteNonQuery();
+            //        }
+            //        connection.Close();
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show("Error: " + ex.Message);
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Укажіть рядок з автосалоном, який треба видалити!");
+            //}
         }
     }
 }
