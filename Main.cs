@@ -116,7 +116,7 @@ namespace DB_Cars_Sales
         private void buttonCustomerSearch_Click(object sender, EventArgs e)
         {
             NpgsqlConnection connection;
-            connection = new NpgsqlConnection(connectionString);
+            connection = new NpgsqlConnection(connectionString); //пум
             try
             {
                 connection.Open();
