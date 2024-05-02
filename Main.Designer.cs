@@ -148,12 +148,13 @@
             // 
             // tabPageEmployees
             // 
-            tabPageEmployees.BackColor = Color.RosyBrown;
-            tabPageEmployees.Location = new Point(4, 24);
-            tabPageEmployees.Name = "tabPageEmployees";
-            tabPageEmployees.Size = new Size(1046, 568);
-            tabPageEmployees.TabIndex = 3;
-            tabPageEmployees.Text = "Працівники";
+            this.tabPageEmployees.BackColor = System.Drawing.Color.RosyBrown;
+            this.tabPageEmployees.Controls.Add(this.EmployeesDataGridView);
+            this.tabPageEmployees.Location = new System.Drawing.Point(4, 24);
+            this.tabPageEmployees.Name = "tabPageEmployees";
+            this.tabPageEmployees.Size = new System.Drawing.Size(1046, 568);
+            this.tabPageEmployees.TabIndex = 3;
+            this.tabPageEmployees.Text = "Працівники";
             // 
             // tabPageCustomers
             // 
@@ -249,22 +250,37 @@
             tabPageTransactions.TabIndex = 5;
             tabPageTransactions.Text = "Транзакції";
             // 
+            // EmployeesDataGridView
+            // 
+            this.EmployeesDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.EmployeesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EmployeesDataGridView.Location = new System.Drawing.Point(0, 86);
+            this.EmployeesDataGridView.Name = "EmployeesDataGridView";
+            this.EmployeesDataGridView.RowTemplate.Height = 25;
+            this.EmployeesDataGridView.Size = new System.Drawing.Size(1046, 482);
+            this.EmployeesDataGridView.TabIndex = 1;
+            // 
             // Main
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(1054, 596);
-            Controls.Add(tabControl1);
-            Name = "Main";
-            Text = "DB Cars Sales";
-            tabControl1.ResumeLayout(false);
-            tabPageCarDealerships.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)CarDealershipsDataGridView).EndInit();
-            tabPageCustomers.ResumeLayout(false);
-            tabPageCustomers.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)CustomerDataGridView).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(1054, 596);
+            this.Controls.Add(this.tabControl1);
+            this.Name = "Main";
+            this.Text = "DB Cars Sales";
+            this.tabControl1.ResumeLayout(false);
+            this.tabPageCarDealerships.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.CarDealershipsDataGridView)).EndInit();
+            this.tabPageEmployees.ResumeLayout(false);
+            this.tabPageCustomers.ResumeLayout(false);
+            this.tabPageCustomers.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomerDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeesDataGridView)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -285,6 +301,7 @@
         private RadioButton radioButtonCustomerPhone;
         private RadioButton radioButtonCustomerSurname;
         private Label labelCustomerSearch;
+        private DataGridView EmployeesDataGridView;
         private Button buttonUpdateDealership;
     }
 }
