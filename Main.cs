@@ -57,7 +57,16 @@ namespace DB_Cars_Sales
         private DataTable EmployeesSqlConnectionReader()
         {
 
-            string sql = "SELECT * FROM employees";
+            string sql = "SELECT employees.fullname, employees.position, " +
+                "employees.phone_number, employees.birth_date, " +
+                "employees.address, employees.salary, " +
+                "employees.hire_date, employees.passport_id, " +
+                "car_dealerships.name AS dealership_name, " +
+                "COUNT(transactions.employee_passport) AS total_sales " +
+                "FROM employees " +
+                "JOIN car_dealerships ON employees.dealership_job = car_dealerships.dealership_id " +
+                "LEFT JOIN transactions ON employees.passport_id = transactions.employee_passport " +
+                "GROUP BY employees.passport_id, car_dealerships.name;";
             using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
                 using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(sql, connection))
