@@ -52,29 +52,6 @@
             tabPageCustomers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)CustomerDataGridView).BeginInit();
             SuspendLayout();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPageCars = new System.Windows.Forms.TabPage();
-            this.tabPageCarModels = new System.Windows.Forms.TabPage();
-            this.tabPageCarDealerships = new System.Windows.Forms.TabPage();
-            this.buttonDeleteDealership = new System.Windows.Forms.Button();
-            this.buttonAddDealership = new System.Windows.Forms.Button();
-            this.CarDealershipsDataGridView = new System.Windows.Forms.DataGridView();
-            this.tabPageEmployees = new System.Windows.Forms.TabPage();
-            this.tabPageCustomers = new System.Windows.Forms.TabPage();
-            this.labelCustomerSearch = new System.Windows.Forms.Label();
-            this.buttonCustomerSearch = new System.Windows.Forms.Button();
-            this.textBoxCustomerSearch = new System.Windows.Forms.TextBox();
-            this.radioButtonCustomerDate = new System.Windows.Forms.RadioButton();
-            this.radioButtonCustomerPhone = new System.Windows.Forms.RadioButton();
-            this.radioButtonCustomerSurname = new System.Windows.Forms.RadioButton();
-            this.CustomerDataGridView = new System.Windows.Forms.DataGridView();
-            this.tabPageTransactions = new System.Windows.Forms.TabPage();
-            this.tabControl1.SuspendLayout();
-            this.tabPageCarDealerships.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CarDealershipsDataGridView)).BeginInit();
-            this.tabPageCustomers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CustomerDataGridView)).BeginInit();
-            this.SuspendLayout();
             // 
             // tabControl1
             // 
@@ -132,7 +109,7 @@
             buttonUpdateDealership.Name = "buttonUpdateDealership";
             buttonUpdateDealership.Size = new Size(98, 44);
             buttonUpdateDealership.TabIndex = 4;
-            buttonUpdateDealership.Text = "Видалити автосалон";
+            buttonUpdateDealership.Text = "Оновити дані";
             buttonUpdateDealership.UseVisualStyleBackColor = true;
             buttonUpdateDealership.Click += buttonUpdateDealership_Click;
             // 
@@ -171,12 +148,12 @@
             // 
             // tabPageEmployees
             // 
-            this.tabPageEmployees.BackColor = System.Drawing.Color.RosyBrown;
-            this.tabPageEmployees.Location = new System.Drawing.Point(4, 24);
-            this.tabPageEmployees.Name = "tabPageEmployees";
-            this.tabPageEmployees.Size = new System.Drawing.Size(1046, 568);
-            this.tabPageEmployees.TabIndex = 3;
-            this.tabPageEmployees.Text = "Працівники";
+            tabPageEmployees.BackColor = Color.RosyBrown;
+            tabPageEmployees.Location = new Point(4, 24);
+            tabPageEmployees.Name = "tabPageEmployees";
+            tabPageEmployees.Size = new Size(1046, 568);
+            tabPageEmployees.TabIndex = 3;
+            tabPageEmployees.Text = "Працівники";
             // 
             // tabPageCustomers
             // 
@@ -274,21 +251,20 @@
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1054, 596);
-            this.Controls.Add(this.tabControl1);
-            this.Name = "Main";
-            this.Text = "DB Cars Sales";
-            this.tabControl1.ResumeLayout(false);
-            this.tabPageCarDealerships.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.CarDealershipsDataGridView)).EndInit();
-            this.tabPageCustomers.ResumeLayout(false);
-            this.tabPageCustomers.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CustomerDataGridView)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.WhiteSmoke;
+            ClientSize = new Size(1054, 596);
+            Controls.Add(tabControl1);
+            Name = "Main";
+            Text = "DB Cars Sales";
+            tabControl1.ResumeLayout(false);
+            tabPageCarDealerships.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)CarDealershipsDataGridView).EndInit();
+            tabPageCustomers.ResumeLayout(false);
+            tabPageCustomers.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)CustomerDataGridView).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

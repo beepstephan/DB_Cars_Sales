@@ -67,7 +67,7 @@ namespace DB_Cars_Sales
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("кулити!");
+            MessageBox.Show("кулитии!");
         }
 
         private void buttonAddDealership_Click(object sender, EventArgs e)
