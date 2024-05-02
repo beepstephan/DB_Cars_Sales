@@ -111,6 +111,7 @@
             this.buttonDeleteDealership.TabIndex = 3;
             this.buttonDeleteDealership.Text = "Видалити автосалон";
             this.buttonDeleteDealership.UseVisualStyleBackColor = true;
+            this.buttonDeleteDealership.Click += new System.EventHandler(this.buttonDeleteDealership_Click);
             // 
             // buttonAddDealership
             // 
@@ -120,6 +121,7 @@
             this.buttonAddDealership.TabIndex = 2;
             this.buttonAddDealership.Text = "Додати автосалон";
             this.buttonAddDealership.UseVisualStyleBackColor = true;
+            this.buttonAddDealership.Click += new System.EventHandler(this.buttonAddDealership_Click);
             // 
             // CarDealershipsDataGridView
             // 
