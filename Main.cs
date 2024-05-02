@@ -20,18 +20,12 @@ namespace DB_Cars_Sales
             InitializeComponent();
             RefreshCarDealershipsDataGridView();
             RefreshCustomershipsDataGridView();
-            RefreshEmployeessDataGridView();
             radioButtonCustomerSurname.Checked = true;
         }
 
         public void RefreshCarDealershipsDataGridView()
         {
             CarDealershipsDataGridView.DataSource = CarDealershipsSqlConnectionReader();
-        }
-
-        public void RefreshEmployeessDataGridView()
-        {
-            EmployeesDataGridView.DataSource = EmployeesSqlConnectionReader();
         }
 
         public void RefreshCustomershipsDataGridView()
@@ -42,7 +36,7 @@ namespace DB_Cars_Sales
         private DataTable CarDealershipsSqlConnectionReader()
         {
             
-            string sql = "SELECT name, phone, email, working_hours, services, address FROM car_dealerships";
+            string sql = "SELECT * FROM car_dealerships";
             using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
                 using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(sql, connection))
@@ -52,21 +46,7 @@ namespace DB_Cars_Sales
                     return dataTable;
                 }
             }
-        }
 
-        private DataTable EmployeesSqlConnectionReader()
-        {
-
-            string sql = "SELECT * FROM employees";
-            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
-            {
-                using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(sql, connection))
-                {
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-                    return dataTable;
-                }
-            }
         }
 
         private DataTable CustomerssSqlConnectionReader()
@@ -105,7 +85,7 @@ namespace DB_Cars_Sales
             {
 
                 int selectedRowIndex = CarDealershipsDataGridView.SelectedRows[0].Index;
-                string emailToDelete = CarDealershipsDataGridView.SelectedRows[0].Cells["email"].Value.ToString();
+                string emailToDelete = CarDealershipsDataGridView.SelectedRows[0].Cells["Email"].Value.ToString();
 
 
                 CarDealershipsDataGridView.Rows.RemoveAt(selectedRowIndex);

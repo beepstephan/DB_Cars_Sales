@@ -181,7 +181,6 @@
             tabPageEmployees.TabIndex = 3;
             tabPageEmployees.Text = "Працівники";
             this.tabPageEmployees.BackColor = System.Drawing.Color.RosyBrown;
-            this.tabPageEmployees.Controls.Add(this.EmployeesDataGridView);
             this.tabPageEmployees.Location = new System.Drawing.Point(4, 24);
             this.tabPageEmployees.Name = "tabPageEmployees";
             this.tabPageEmployees.Size = new System.Drawing.Size(1046, 568);
@@ -282,18 +281,6 @@
             tabPageTransactions.TabIndex = 5;
             tabPageTransactions.Text = "Транзакції";
             // 
-            // EmployeesDataGridView
-            // 
-            this.EmployeesDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.EmployeesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EmployeesDataGridView.Location = new System.Drawing.Point(0, 86);
-            this.EmployeesDataGridView.Name = "EmployeesDataGridView";
-            this.EmployeesDataGridView.RowTemplate.Height = 25;
-            this.EmployeesDataGridView.Size = new System.Drawing.Size(1046, 482);
-            this.EmployeesDataGridView.TabIndex = 1;
-            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -320,11 +307,9 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPageCarDealerships.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CarDealershipsDataGridView)).EndInit();
-            this.tabPageEmployees.ResumeLayout(false);
             this.tabPageCustomers.ResumeLayout(false);
             this.tabPageCustomers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeesDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
