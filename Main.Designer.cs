@@ -135,7 +135,7 @@
             buttonUpdateDealership.Name = "buttonUpdateDealership";
             buttonUpdateDealership.Size = new Size(98, 44);
             buttonUpdateDealership.TabIndex = 4;
-            buttonUpdateDealership.Text = "Видалити автосалон";
+            buttonUpdateDealership.Text = "Оновити дані";
             buttonUpdateDealership.UseVisualStyleBackColor = true;
             buttonUpdateDealership.Click += buttonUpdateDealership_Click;
             // 
