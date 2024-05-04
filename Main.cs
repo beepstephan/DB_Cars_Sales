@@ -171,7 +171,7 @@ namespace DB_Cars_Sales
             string working_hours = CarDealershipsDataGridView.SelectedRows[0].Cells["working_hours"].Value.ToString();
             string services = CarDealershipsDataGridView.SelectedRows[0].Cells["services"].Value.ToString();
             string address = CarDealershipsDataGridView.SelectedRows[0].Cells["address"].Value.ToString();
-            FormUpdateDealership formUpdateDealership = new FormUpdateDealership(name, phone, email, working_hours, services, address);
+            FormUpdateDealership formUpdateDealership = new FormUpdateDealership(this, name, phone, email, working_hours, services, address);
             formUpdateDealership.ShowDialog();
         }
 
