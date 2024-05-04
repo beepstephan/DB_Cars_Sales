@@ -77,7 +77,7 @@ namespace DB_Cars_Sales
                 }
             }
         }
-
+        // с богом 
         private DataTable CustomerssSqlConnectionReader()
         {
 
