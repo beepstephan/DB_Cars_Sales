@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DB_Cars_Sales.CarDealerships;
+using DB_Cars_Sales.Employees;
 using Npgsql;
 
 namespace DB_Cars_Sales
@@ -182,8 +183,6 @@ namespace DB_Cars_Sales
                     CustomerDataGridView.DataSource = dt;
                 }
 
-
-
                 connection.Close();
             }
             catch (Exception ex)
@@ -211,12 +210,7 @@ namespace DB_Cars_Sales
             else
                 buttonUpdateDealership.Enabled = false;
         }
-
-
-                
-
-        
-
+    
         private void textBoxEmployeeSearch_TextChanged(object sender, EventArgs e)
         {
             string name = textBoxEmployeeSearch.Text.Trim();
@@ -265,6 +259,12 @@ namespace DB_Cars_Sales
                     }
                 }
             }
+        }
+
+        private void buttonAddEmployee_Click(object sender, EventArgs e)
+        {
+            FormAddEmployee formAddEmployee = new FormAddEmployee();
+            formAddEmployee.ShowDialog();
         }
     }
 }

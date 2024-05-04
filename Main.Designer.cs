@@ -81,7 +81,8 @@
             // 
             // tabPageCars
             // 
-            this.tabPageCars.BackColor = System.Drawing.Color.RosyBrown;
+            this.tabPageCars.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tabPageCars.ForeColor = System.Drawing.Color.Coral;
             this.tabPageCars.Location = new System.Drawing.Point(4, 24);
             this.tabPageCars.Name = "tabPageCars";
             this.tabPageCars.Padding = new System.Windows.Forms.Padding(3);
@@ -91,7 +92,7 @@
             // 
             // tabPageCarModels
             // 
-            this.tabPageCarModels.BackColor = System.Drawing.Color.RosyBrown;
+            this.tabPageCarModels.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tabPageCarModels.Location = new System.Drawing.Point(4, 24);
             this.tabPageCarModels.Name = "tabPageCarModels";
             this.tabPageCarModels.Padding = new System.Windows.Forms.Padding(3);
@@ -101,7 +102,7 @@
             // 
             // tabPageCarDealerships
             // 
-            this.tabPageCarDealerships.BackColor = System.Drawing.Color.RosyBrown;
+            this.tabPageCarDealerships.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tabPageCarDealerships.Controls.Add(this.buttonUpdateDealership);
             this.tabPageCarDealerships.Controls.Add(this.buttonDeleteDealership);
             this.tabPageCarDealerships.Controls.Add(this.buttonAddDealership);
@@ -150,6 +151,7 @@
             this.CarDealershipsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.CarDealershipsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
             this.CarDealershipsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.CarDealershipsDataGridView.Location = new System.Drawing.Point(112, 0);
             this.CarDealershipsDataGridView.Name = "CarDealershipsDataGridView";
@@ -160,7 +162,7 @@
             // 
             // tabPageEmployees
             // 
-            this.tabPageEmployees.BackColor = System.Drawing.Color.RosyBrown;
+            this.tabPageEmployees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tabPageEmployees.Controls.Add(this.buttonUpdateEmployee);
             this.tabPageEmployees.Controls.Add(this.buttonDeleteEmployee);
             this.tabPageEmployees.Controls.Add(this.buttonAddEmployee);
@@ -199,6 +201,7 @@
             this.buttonAddEmployee.TabIndex = 9;
             this.buttonAddEmployee.Text = "Додати працівника";
             this.buttonAddEmployee.UseVisualStyleBackColor = true;
+            this.buttonAddEmployee.Click += new System.EventHandler(this.buttonAddEmployee_Click);
             // 
             // labelEmployeeSearch
             // 
@@ -222,6 +225,7 @@
             this.EmployeesDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.EmployeesDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
             this.EmployeesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.EmployeesDataGridView.Location = new System.Drawing.Point(0, 86);
             this.EmployeesDataGridView.Name = "EmployeesDataGridView";
@@ -231,7 +235,7 @@
             // 
             // tabPageCustomers
             // 
-            this.tabPageCustomers.BackColor = System.Drawing.Color.RosyBrown;
+            this.tabPageCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tabPageCustomers.Controls.Add(this.labelCustomerSearch);
             this.tabPageCustomers.Controls.Add(this.buttonCustomerSearch);
             this.tabPageCustomers.Controls.Add(this.textBoxCustomerSearch);
@@ -309,6 +313,7 @@
             this.CustomerDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.CustomerDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
             this.CustomerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.CustomerDataGridView.Location = new System.Drawing.Point(0, 86);
             this.CustomerDataGridView.Name = "CustomerDataGridView";
@@ -318,7 +323,7 @@
             // 
             // tabPageTransactions
             // 
-            this.tabPageTransactions.BackColor = System.Drawing.Color.RosyBrown;
+            this.tabPageTransactions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tabPageTransactions.Location = new System.Drawing.Point(4, 24);
             this.tabPageTransactions.Name = "tabPageTransactions";
             this.tabPageTransactions.Size = new System.Drawing.Size(1046, 568);
@@ -329,7 +334,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
             this.ClientSize = new System.Drawing.Size(1054, 596);
             this.Controls.Add(this.tabControl1);
             this.Name = "Main";
