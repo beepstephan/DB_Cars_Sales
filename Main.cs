@@ -226,5 +226,55 @@ namespace DB_Cars_Sales
             //    MessageBox.Show("Укажіть рядок з автосалоном, який треба видалити!");
             //}
         }
+
+        private void textBoxEmployeeSearch_TextChanged(object sender, EventArgs e)
+        {
+            string name = textBoxEmployeeSearch.Text.Trim();
+            string searchQuery;
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                searchQuery = "SELECT employees.fullname, employees.position, " +
+                "employees.phone_number, employees.birth_date, " +
+                "employees.address, employees.salary, " +
+                "employees.hire_date, employees.passport_id, " +
+                "car_dealerships.name AS dealership_name, " +
+                "COUNT(transactions.employee_passport) AS total_sales " +
+                "FROM employees " +
+                "JOIN car_dealerships ON employees.dealership_job = car_dealerships.dealership_id " +
+                "LEFT JOIN transactions ON employees.passport_id = transactions.employee_passport " +
+                "GROUP BY employees.passport_id, car_dealerships.name;";
+            }
+            else
+            {
+                searchQuery = "SELECT employees.fullname, employees.position, " +
+                "employees.phone_number, employees.birth_date, " +
+                "employees.address, employees.salary, " +
+                "employees.hire_date, employees.passport_id, " +
+                "car_dealerships.name AS dealership_name, " +
+                "COUNT(transactions.employee_passport) AS total_sales " +
+                "FROM employees " +
+                "JOIN car_dealerships ON employees.dealership_job = car_dealerships.dealership_id " +
+                "LEFT JOIN transactions ON employees.passport_id = transactions.employee_passport " +
+                "WHERE LOWER(employees.fullname) LIKE LOWER(@name) " +
+                "GROUP BY employees.passport_id, car_dealerships.name;";
+            }
+            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+            {
+                using (NpgsqlCommand command = new NpgsqlCommand(searchQuery, connection))
+                {
+                    connection.Open();
+
+                    if (!string.IsNullOrWhiteSpace(name))
+                        command.Parameters.AddWithValue("@name", "%" + name + "%");
+
+                    using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(command))
+                    {
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+                        EmployeesDataGridView.DataSource = dataTable;
+                    }
+                }
+            }
+        }
     }
 }
