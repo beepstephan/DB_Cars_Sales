@@ -37,6 +37,8 @@
             this.buttonAddDealership = new System.Windows.Forms.Button();
             this.CarDealershipsDataGridView = new System.Windows.Forms.DataGridView();
             this.tabPageEmployees = new System.Windows.Forms.TabPage();
+            this.labelEmployeeSearch = new System.Windows.Forms.Label();
+            this.textBoxEmployeeSearch = new System.Windows.Forms.TextBox();
             this.EmployeesDataGridView = new System.Windows.Forms.DataGridView();
             this.tabPageCustomers = new System.Windows.Forms.TabPage();
             this.labelCustomerSearch = new System.Windows.Forms.Label();
@@ -47,8 +49,9 @@
             this.radioButtonCustomerSurname = new System.Windows.Forms.RadioButton();
             this.CustomerDataGridView = new System.Windows.Forms.DataGridView();
             this.tabPageTransactions = new System.Windows.Forms.TabPage();
-            this.labelEmployeeSearch = new System.Windows.Forms.Label();
-            this.textBoxEmployeeSearch = new System.Windows.Forms.TextBox();
+            this.buttonUpdateEmployee = new System.Windows.Forms.Button();
+            this.buttonDeleteEmployee = new System.Windows.Forms.Button();
+            this.buttonAddEmployee = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPageCarDealerships.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CarDealershipsDataGridView)).BeginInit();
@@ -155,6 +158,9 @@
             // tabPageEmployees
             // 
             this.tabPageEmployees.BackColor = System.Drawing.Color.RosyBrown;
+            this.tabPageEmployees.Controls.Add(this.buttonUpdateEmployee);
+            this.tabPageEmployees.Controls.Add(this.buttonDeleteEmployee);
+            this.tabPageEmployees.Controls.Add(this.buttonAddEmployee);
             this.tabPageEmployees.Controls.Add(this.labelEmployeeSearch);
             this.tabPageEmployees.Controls.Add(this.textBoxEmployeeSearch);
             this.tabPageEmployees.Controls.Add(this.EmployeesDataGridView);
@@ -163,6 +169,23 @@
             this.tabPageEmployees.Size = new System.Drawing.Size(1046, 568);
             this.tabPageEmployees.TabIndex = 3;
             this.tabPageEmployees.Text = "Працівники";
+            // 
+            // labelEmployeeSearch
+            // 
+            this.labelEmployeeSearch.AutoSize = true;
+            this.labelEmployeeSearch.Location = new System.Drawing.Point(8, 20);
+            this.labelEmployeeSearch.Name = "labelEmployeeSearch";
+            this.labelEmployeeSearch.Size = new System.Drawing.Size(228, 15);
+            this.labelEmployeeSearch.TabIndex = 8;
+            this.labelEmployeeSearch.Text = "Поле для вводу щоб знайти працівників";
+            // 
+            // textBoxEmployeeSearch
+            // 
+            this.textBoxEmployeeSearch.Location = new System.Drawing.Point(8, 38);
+            this.textBoxEmployeeSearch.Name = "textBoxEmployeeSearch";
+            this.textBoxEmployeeSearch.Size = new System.Drawing.Size(302, 23);
+            this.textBoxEmployeeSearch.TabIndex = 7;
+            this.textBoxEmployeeSearch.TextChanged += new System.EventHandler(this.textBoxEmployeeSearch_TextChanged);
             // 
             // EmployeesDataGridView
             // 
@@ -271,22 +294,32 @@
             this.tabPageTransactions.TabIndex = 5;
             this.tabPageTransactions.Text = "Транзакції";
             // 
-            // labelEmployeeSearch
+            // buttonUpdateEmployee
             // 
-            this.labelEmployeeSearch.AutoSize = true;
-            this.labelEmployeeSearch.Location = new System.Drawing.Point(8, 20);
-            this.labelEmployeeSearch.Name = "labelEmployeeSearch";
-            this.labelEmployeeSearch.Size = new System.Drawing.Size(206, 15);
-            this.labelEmployeeSearch.TabIndex = 8;
-            this.labelEmployeeSearch.Text = "Поле для вводу щоб знайти клієнтів";
+            this.buttonUpdateEmployee.Location = new System.Drawing.Point(940, 20);
+            this.buttonUpdateEmployee.Name = "buttonUpdateEmployee";
+            this.buttonUpdateEmployee.Size = new System.Drawing.Size(98, 44);
+            this.buttonUpdateEmployee.TabIndex = 11;
+            this.buttonUpdateEmployee.Text = "Оновити дані";
+            this.buttonUpdateEmployee.UseVisualStyleBackColor = true;
             // 
-            // textBoxEmployeeSearch
+            // buttonDeleteEmployee
             // 
-            this.textBoxEmployeeSearch.Location = new System.Drawing.Point(8, 38);
-            this.textBoxEmployeeSearch.Name = "textBoxEmployeeSearch";
-            this.textBoxEmployeeSearch.Size = new System.Drawing.Size(302, 23);
-            this.textBoxEmployeeSearch.TabIndex = 7;
-            this.textBoxEmployeeSearch.TextChanged += new System.EventHandler(this.textBoxEmployeeSearch_TextChanged);
+            this.buttonDeleteEmployee.Location = new System.Drawing.Point(740, 20);
+            this.buttonDeleteEmployee.Name = "buttonDeleteEmployee";
+            this.buttonDeleteEmployee.Size = new System.Drawing.Size(98, 44);
+            this.buttonDeleteEmployee.TabIndex = 10;
+            this.buttonDeleteEmployee.Text = "Видалити працівника";
+            this.buttonDeleteEmployee.UseVisualStyleBackColor = true;
+            // 
+            // buttonAddEmployee
+            // 
+            this.buttonAddEmployee.Location = new System.Drawing.Point(540, 20);
+            this.buttonAddEmployee.Name = "buttonAddEmployee";
+            this.buttonAddEmployee.Size = new System.Drawing.Size(98, 44);
+            this.buttonAddEmployee.TabIndex = 9;
+            this.buttonAddEmployee.Text = "Додати працівника";
+            this.buttonAddEmployee.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -332,5 +365,8 @@
         private Button buttonUpdateDealership;
         private Label labelEmployeeSearch;
         private TextBox textBoxEmployeeSearch;
+        private Button buttonUpdateEmployee;
+        private Button buttonDeleteEmployee;
+        private Button buttonAddEmployee;
     }
 }
