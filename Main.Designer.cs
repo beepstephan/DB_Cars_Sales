@@ -37,6 +37,9 @@
             this.buttonAddDealership = new System.Windows.Forms.Button();
             this.CarDealershipsDataGridView = new System.Windows.Forms.DataGridView();
             this.tabPageEmployees = new System.Windows.Forms.TabPage();
+            this.buttonUpdateEmployee = new System.Windows.Forms.Button();
+            this.buttonDeleteEmployee = new System.Windows.Forms.Button();
+            this.buttonAddEmployee = new System.Windows.Forms.Button();
             this.labelEmployeeSearch = new System.Windows.Forms.Label();
             this.textBoxEmployeeSearch = new System.Windows.Forms.TextBox();
             this.EmployeesDataGridView = new System.Windows.Forms.DataGridView();
@@ -49,9 +52,6 @@
             this.radioButtonCustomerSurname = new System.Windows.Forms.RadioButton();
             this.CustomerDataGridView = new System.Windows.Forms.DataGridView();
             this.tabPageTransactions = new System.Windows.Forms.TabPage();
-            this.buttonUpdateEmployee = new System.Windows.Forms.Button();
-            this.buttonDeleteEmployee = new System.Windows.Forms.Button();
-            this.buttonAddEmployee = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPageCarDealerships.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CarDealershipsDataGridView)).BeginInit();
@@ -121,6 +121,7 @@
             this.buttonUpdateDealership.TabIndex = 4;
             this.buttonUpdateDealership.Text = "Оновити дані";
             this.buttonUpdateDealership.UseVisualStyleBackColor = true;
+            this.buttonUpdateDealership.Click += new System.EventHandler(this.buttonUpdateDealership_Click);
             // 
             // buttonDeleteDealership
             // 
@@ -130,6 +131,7 @@
             this.buttonDeleteDealership.TabIndex = 3;
             this.buttonDeleteDealership.Text = "Видалити автосалон";
             this.buttonDeleteDealership.UseVisualStyleBackColor = true;
+            this.buttonDeleteDealership.Click += new System.EventHandler(this.buttonDeleteDealership_Click);
             // 
             // buttonAddDealership
             // 
@@ -139,6 +141,7 @@
             this.buttonAddDealership.TabIndex = 2;
             this.buttonAddDealership.Text = "Додати автосалон";
             this.buttonAddDealership.UseVisualStyleBackColor = true;
+            this.buttonAddDealership.Click += new System.EventHandler(this.buttonAddDealership_Click);
             // 
             // CarDealershipsDataGridView
             // 
@@ -169,6 +172,33 @@
             this.tabPageEmployees.Size = new System.Drawing.Size(1046, 568);
             this.tabPageEmployees.TabIndex = 3;
             this.tabPageEmployees.Text = "Працівники";
+            // 
+            // buttonUpdateEmployee
+            // 
+            this.buttonUpdateEmployee.Location = new System.Drawing.Point(940, 20);
+            this.buttonUpdateEmployee.Name = "buttonUpdateEmployee";
+            this.buttonUpdateEmployee.Size = new System.Drawing.Size(98, 44);
+            this.buttonUpdateEmployee.TabIndex = 11;
+            this.buttonUpdateEmployee.Text = "Оновити дані";
+            this.buttonUpdateEmployee.UseVisualStyleBackColor = true;
+            // 
+            // buttonDeleteEmployee
+            // 
+            this.buttonDeleteEmployee.Location = new System.Drawing.Point(740, 20);
+            this.buttonDeleteEmployee.Name = "buttonDeleteEmployee";
+            this.buttonDeleteEmployee.Size = new System.Drawing.Size(98, 44);
+            this.buttonDeleteEmployee.TabIndex = 10;
+            this.buttonDeleteEmployee.Text = "Видалити працівника";
+            this.buttonDeleteEmployee.UseVisualStyleBackColor = true;
+            // 
+            // buttonAddEmployee
+            // 
+            this.buttonAddEmployee.Location = new System.Drawing.Point(540, 20);
+            this.buttonAddEmployee.Name = "buttonAddEmployee";
+            this.buttonAddEmployee.Size = new System.Drawing.Size(98, 44);
+            this.buttonAddEmployee.TabIndex = 9;
+            this.buttonAddEmployee.Text = "Додати працівника";
+            this.buttonAddEmployee.UseVisualStyleBackColor = true;
             // 
             // labelEmployeeSearch
             // 
@@ -232,6 +262,7 @@
             this.buttonCustomerSearch.TabIndex = 5;
             this.buttonCustomerSearch.Text = "Знайти";
             this.buttonCustomerSearch.UseVisualStyleBackColor = true;
+            this.buttonCustomerSearch.Click += new System.EventHandler(this.buttonCustomerSearch_Click);
             // 
             // textBoxCustomerSearch
             // 
@@ -293,33 +324,6 @@
             this.tabPageTransactions.Size = new System.Drawing.Size(1046, 568);
             this.tabPageTransactions.TabIndex = 5;
             this.tabPageTransactions.Text = "Транзакції";
-            // 
-            // buttonUpdateEmployee
-            // 
-            this.buttonUpdateEmployee.Location = new System.Drawing.Point(940, 20);
-            this.buttonUpdateEmployee.Name = "buttonUpdateEmployee";
-            this.buttonUpdateEmployee.Size = new System.Drawing.Size(98, 44);
-            this.buttonUpdateEmployee.TabIndex = 11;
-            this.buttonUpdateEmployee.Text = "Оновити дані";
-            this.buttonUpdateEmployee.UseVisualStyleBackColor = true;
-            // 
-            // buttonDeleteEmployee
-            // 
-            this.buttonDeleteEmployee.Location = new System.Drawing.Point(740, 20);
-            this.buttonDeleteEmployee.Name = "buttonDeleteEmployee";
-            this.buttonDeleteEmployee.Size = new System.Drawing.Size(98, 44);
-            this.buttonDeleteEmployee.TabIndex = 10;
-            this.buttonDeleteEmployee.Text = "Видалити працівника";
-            this.buttonDeleteEmployee.UseVisualStyleBackColor = true;
-            // 
-            // buttonAddEmployee
-            // 
-            this.buttonAddEmployee.Location = new System.Drawing.Point(540, 20);
-            this.buttonAddEmployee.Name = "buttonAddEmployee";
-            this.buttonAddEmployee.Size = new System.Drawing.Size(98, 44);
-            this.buttonAddEmployee.TabIndex = 9;
-            this.buttonAddEmployee.Text = "Додати працівника";
-            this.buttonAddEmployee.UseVisualStyleBackColor = true;
             // 
             // Main
             // 

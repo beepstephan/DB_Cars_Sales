@@ -213,49 +213,9 @@ namespace DB_Cars_Sales
         }
 
 
-                connection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-        }
+                
 
-        private void buttonUpdateDealership_Click(object sender, EventArgs e)
-        {
-            //NpgsqlConnection connection;
-            //connection = new NpgsqlConnection(connectionString);
-            //if (CarDealershipsDataGridView.SelectedRows.Count > 0)
-            //{
-
-            //    int selectedRowIndex = CarDealershipsDataGridView.SelectedRows[0].Index;
-            //    string emailToDelete = CarDealershipsDataGridView.SelectedRows[0].Cells["Email"].Value.ToString();
-
-
-            //    CarDealershipsDataGridView.Rows.RemoveAt(selectedRowIndex);
-
-
-            //    try
-            //    {
-            //        connection.Open();
-            //        string sql = "DELETE FROM car_dealerships WHERE email = @email";
-            //        using (NpgsqlCommand command = new NpgsqlCommand(sql, connection))
-            //        {
-            //            command.Parameters.AddWithValue("@email", emailToDelete);
-            //            command.ExecuteNonQuery();
-            //        }
-            //        connection.Close();
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show("Error: " + ex.Message);
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Укажіть рядок з автосалоном, який треба видалити!");
-            //}
-        }
+        
 
         private void textBoxEmployeeSearch_TextChanged(object sender, EventArgs e)
         {
