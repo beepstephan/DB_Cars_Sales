@@ -33,20 +33,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxPosition = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerBirthDate = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.textBoxAddress = new System.Windows.Forms.TextBox();
+            this.dateTimePickerHireDate = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxPassportID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxDealership = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.buttonAdd = new System.Windows.Forms.Button();
+            this.numericUpDownSalary = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSalary)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -92,18 +93,18 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Посада працівника";
             // 
-            // comboBox1
+            // comboBoxPosition
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPosition.FormattingEnabled = true;
+            this.comboBoxPosition.Items.AddRange(new object[] {
             "Адміністратор",
             "Директор",
             "Продавець"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 67);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(262, 23);
-            this.comboBox1.TabIndex = 11;
+            this.comboBoxPosition.Location = new System.Drawing.Point(12, 67);
+            this.comboBoxPosition.Name = "comboBoxPosition";
+            this.comboBoxPosition.Size = new System.Drawing.Size(262, 23);
+            this.comboBoxPosition.TabIndex = 11;
             // 
             // label4
             // 
@@ -114,13 +115,13 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "Дата народження працівника";
             // 
-            // dateTimePicker1
+            // dateTimePickerBirthDate
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(13, 155);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(261, 23);
-            this.dateTimePicker1.TabIndex = 14;
+            this.dateTimePickerBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerBirthDate.Location = new System.Drawing.Point(13, 155);
+            this.dateTimePickerBirthDate.Name = "dateTimePickerBirthDate";
+            this.dateTimePickerBirthDate.Size = new System.Drawing.Size(261, 23);
+            this.dateTimePickerBirthDate.TabIndex = 14;
             // 
             // label5
             // 
@@ -140,29 +141,21 @@
             this.label6.TabIndex = 16;
             this.label6.Text = "Адреса працівника";
             // 
-            // textBox1
+            // textBoxAddress
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 200);
-            this.textBox1.MaxLength = 100;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(262, 23);
-            this.textBox1.TabIndex = 15;
+            this.textBoxAddress.Location = new System.Drawing.Point(13, 200);
+            this.textBoxAddress.MaxLength = 100;
+            this.textBoxAddress.Name = "textBoxAddress";
+            this.textBoxAddress.Size = new System.Drawing.Size(262, 23);
+            this.textBoxAddress.TabIndex = 15;
             // 
-            // textBox2
+            // dateTimePickerHireDate
             // 
-            this.textBox2.Location = new System.Drawing.Point(13, 244);
-            this.textBox2.MaxLength = 100;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(262, 23);
-            this.textBox2.TabIndex = 18;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(13, 288);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(261, 23);
-            this.dateTimePicker2.TabIndex = 20;
+            this.dateTimePickerHireDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerHireDate.Location = new System.Drawing.Point(13, 288);
+            this.dateTimePickerHireDate.Name = "dateTimePickerHireDate";
+            this.dateTimePickerHireDate.Size = new System.Drawing.Size(261, 23);
+            this.dateTimePickerHireDate.TabIndex = 20;
             // 
             // label7
             // 
@@ -173,13 +166,13 @@
             this.label7.TabIndex = 19;
             this.label7.Text = "Дата прийому на роботу працівника";
             // 
-            // textBox3
+            // textBoxPassportID
             // 
-            this.textBox3.Location = new System.Drawing.Point(13, 334);
-            this.textBox3.MaxLength = 100;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(262, 23);
-            this.textBox3.TabIndex = 22;
+            this.textBoxPassportID.Location = new System.Drawing.Point(13, 334);
+            this.textBoxPassportID.MaxLength = 100;
+            this.textBoxPassportID.Name = "textBoxPassportID";
+            this.textBoxPassportID.Size = new System.Drawing.Size(262, 23);
+            this.textBoxPassportID.TabIndex = 22;
             // 
             // label8
             // 
@@ -190,20 +183,20 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "ID паспорту працівника";
             // 
-            // comboBox2
+            // comboBoxDealership
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBoxDealership.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDealership.FormattingEnabled = true;
+            this.comboBoxDealership.Items.AddRange(new object[] {
             "Автосалон Audi",
             "Автосалон Volkswagen",
             "Автосалон Skoda",
             "Автосалон \"Бомбейський Пантеон\"",
             "Автосалон \"Вторинний Рай\""});
-            this.comboBox2.Location = new System.Drawing.Point(13, 378);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(262, 23);
-            this.comboBox2.TabIndex = 24;
+            this.comboBoxDealership.Location = new System.Drawing.Point(13, 378);
+            this.comboBoxDealership.Name = "comboBoxDealership";
+            this.comboBoxDealership.Size = new System.Drawing.Size(262, 23);
+            this.comboBoxDealership.TabIndex = 24;
             // 
             // label9
             // 
@@ -222,26 +215,34 @@
             this.buttonAdd.TabIndex = 25;
             this.buttonAdd.Text = "Додати";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
+            // numericUpDownSalary
+            // 
+            this.numericUpDownSalary.Location = new System.Drawing.Point(13, 244);
+            this.numericUpDownSalary.Name = "numericUpDownSalary";
+            this.numericUpDownSalary.Size = new System.Drawing.Size(261, 23);
+            this.numericUpDownSalary.TabIndex = 26;
             // 
             // FormAddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(435, 478);
+            this.Controls.Add(this.numericUpDownSalary);
             this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBoxDealership);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxPassportID);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePickerHireDate);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.textBoxAddress);
+            this.Controls.Add(this.dateTimePickerBirthDate);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxPosition);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxPhone);
@@ -249,6 +250,7 @@
             this.Controls.Add(this.textBoxName);
             this.Name = "FormAddEmployee";
             this.Text = "Додати працівника";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSalary)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,19 +263,19 @@
         private Label label1;
         private TextBox textBoxName;
         private Label label3;
-        private ComboBox comboBox1;
+        private ComboBox comboBoxPosition;
         private Label label4;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateTimePickerBirthDate;
         private Label label5;
         private Label label6;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private DateTimePicker dateTimePicker2;
+        private TextBox textBoxAddress;
+        private DateTimePicker dateTimePickerHireDate;
         private Label label7;
-        private TextBox textBox3;
+        private TextBox textBoxPassportID;
         private Label label8;
-        private ComboBox comboBox2;
+        private ComboBox comboBoxDealership;
         private Label label9;
         private Button buttonAdd;
+        private NumericUpDown numericUpDownSalary;
     }
 }

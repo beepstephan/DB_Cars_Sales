@@ -263,7 +263,7 @@ namespace DB_Cars_Sales
 
         private void buttonAddEmployee_Click(object sender, EventArgs e)
         {
-            FormAddEmployee formAddEmployee = new FormAddEmployee();
+            FormAddEmployee formAddEmployee = new FormAddEmployee(this);
             formAddEmployee.ShowDialog();
         }
     }

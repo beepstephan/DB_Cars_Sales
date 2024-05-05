@@ -60,7 +60,6 @@ namespace DB_Cars_Sales
                 int checkExecute = addQueryCommand.ExecuteNonQuery();
                 if (checkExecute > 0)
                 {
-                    MessageBox.Show("все четко!");
                     mainForm.RefreshCarDealershipsDataGridView();
                     ClearFields();
                 }
