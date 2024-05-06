@@ -186,12 +186,14 @@
             // 
             // buttonDeleteEmployee
             // 
+            this.buttonDeleteEmployee.Enabled = false;
             this.buttonDeleteEmployee.Location = new System.Drawing.Point(740, 20);
             this.buttonDeleteEmployee.Name = "buttonDeleteEmployee";
             this.buttonDeleteEmployee.Size = new System.Drawing.Size(98, 44);
             this.buttonDeleteEmployee.TabIndex = 10;
             this.buttonDeleteEmployee.Text = "Видалити працівника";
             this.buttonDeleteEmployee.UseVisualStyleBackColor = true;
+            this.buttonDeleteEmployee.Click += new System.EventHandler(this.buttonDeleteEmployee_Click);
             // 
             // buttonAddEmployee
             // 
@@ -232,6 +234,7 @@
             this.EmployeesDataGridView.RowTemplate.Height = 25;
             this.EmployeesDataGridView.Size = new System.Drawing.Size(1046, 482);
             this.EmployeesDataGridView.TabIndex = 1;
+            this.EmployeesDataGridView.SelectionChanged += new System.EventHandler(this.EmployeesDataGridView_SelectionChanged);
             // 
             // tabPageCustomers
             // 
