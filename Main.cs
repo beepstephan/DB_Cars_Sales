@@ -267,6 +267,42 @@ namespace DB_Cars_Sales
             formAddEmployee.ShowDialog();
         }
 
+        private void buttonDeleteEmployee_Click(object sender, EventArgs e)
+        {
+            NpgsqlConnection connection;
+            connection = new NpgsqlConnection(connectionString);
+            int selectedRowIndex = EmployeesDataGridView.SelectedRows[0].Index;
+            int idToDelete = Convert.ToInt32(EmployeesDataGridView.SelectedRows[0].Cells["passport_id"].Value);
+
+
+            EmployeesDataGridView.Rows.RemoveAt(selectedRowIndex);
+
+
+            try
+            {
+                connection.Open();
+                string sql = "DELETE FROM employees WHERE passport_id = @id";
+                using (NpgsqlCommand command = new NpgsqlCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@id", idToDelete);
+                    command.ExecuteNonQuery();
+                }
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void EmployeesDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            if (EmployeesDataGridView.SelectedRows.Count == 1)
+                buttonDeleteEmployee.Enabled = true;
+            else
+                buttonDeleteEmployee.Enabled = false;
+        }
+
         private void buttonUpdateEmployee_Click(object sender, EventArgs e)
         {
             string fullname = EmployeesDataGridView.SelectedRows[0].Cells["fullname"].Value.ToString();
