@@ -183,14 +183,14 @@
             // 
             // buttonDeleteEmployee
             // 
-            this.buttonDeleteEmployee.Enabled = false;
-            this.buttonDeleteEmployee.Location = new System.Drawing.Point(740, 20);
-            this.buttonDeleteEmployee.Name = "buttonDeleteEmployee";
-            this.buttonDeleteEmployee.Size = new System.Drawing.Size(98, 44);
-            this.buttonDeleteEmployee.TabIndex = 10;
-            this.buttonDeleteEmployee.Text = "Видалити працівника";
-            this.buttonDeleteEmployee.UseVisualStyleBackColor = true;
-            this.buttonDeleteEmployee.Click += new System.EventHandler(this.buttonDeleteEmployee_Click);
+            buttonDeleteEmployee.Enabled = false;
+            buttonDeleteEmployee.Location = new Point(740, 20);
+            buttonDeleteEmployee.Name = "buttonDeleteEmployee";
+            buttonDeleteEmployee.Size = new Size(98, 44);
+            buttonDeleteEmployee.TabIndex = 10;
+            buttonDeleteEmployee.Text = "Видалити працівника";
+            buttonDeleteEmployee.UseVisualStyleBackColor = true;
+            buttonDeleteEmployee.Click += buttonDeleteEmployee_Click;
             // 
             // buttonAddEmployee
             // 
@@ -221,17 +221,15 @@
             // 
             // EmployeesDataGridView
             // 
-            this.EmployeesDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.EmployeesDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
-            this.EmployeesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EmployeesDataGridView.Location = new System.Drawing.Point(0, 86);
-            this.EmployeesDataGridView.Name = "EmployeesDataGridView";
-            this.EmployeesDataGridView.RowTemplate.Height = 25;
-            this.EmployeesDataGridView.Size = new System.Drawing.Size(1046, 482);
-            this.EmployeesDataGridView.TabIndex = 1;
-            this.EmployeesDataGridView.SelectionChanged += new System.EventHandler(this.EmployeesDataGridView_SelectionChanged);
+            EmployeesDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            EmployeesDataGridView.BackgroundColor = Color.FromArgb(255, 228, 228);
+            EmployeesDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            EmployeesDataGridView.Location = new Point(0, 86);
+            EmployeesDataGridView.Name = "EmployeesDataGridView";
+            EmployeesDataGridView.RowTemplate.Height = 25;
+            EmployeesDataGridView.Size = new Size(1046, 482);
+            EmployeesDataGridView.TabIndex = 1;
+            EmployeesDataGridView.SelectionChanged += EmployeesDataGridView_SelectionChanged;
             // 
             // tabPageCustomers
             // 
@@ -336,6 +334,7 @@
             ClientSize = new Size(1054, 596);
             Controls.Add(tabControl1);
             Name = "Main";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "DB Cars Sales";
             tabControl1.ResumeLayout(false);
             tabPageCarDealerships.ResumeLayout(false);

@@ -298,9 +298,15 @@ namespace DB_Cars_Sales
         private void EmployeesDataGridView_SelectionChanged(object sender, EventArgs e)
         {
             if (EmployeesDataGridView.SelectedRows.Count == 1)
+            {
                 buttonDeleteEmployee.Enabled = true;
+                buttonUpdateEmployee.Enabled = true;
+            }
             else
+            {
                 buttonDeleteEmployee.Enabled = false;
+                buttonUpdateEmployee.Enabled = false;
+            }
         }
 
         private void buttonUpdateEmployee_Click(object sender, EventArgs e)
