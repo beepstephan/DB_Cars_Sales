@@ -43,7 +43,7 @@ namespace DB_Cars_Sales
 
         private DataTable CarDealershipsSqlConnectionReader()
         {
-            
+
             string sql = "SELECT name, phone, email, working_hours, services, address FROM car_dealerships";
             using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
@@ -210,7 +210,7 @@ namespace DB_Cars_Sales
             else
                 buttonUpdateDealership.Enabled = false;
         }
-    
+
         private void textBoxEmployeeSearch_TextChanged(object sender, EventArgs e)
         {
             string name = textBoxEmployeeSearch.Text.Trim();
@@ -265,6 +265,23 @@ namespace DB_Cars_Sales
         {
             FormAddEmployee formAddEmployee = new FormAddEmployee(this);
             formAddEmployee.ShowDialog();
+        }
+
+        private void buttonUpdateEmployee_Click(object sender, EventArgs e)
+        {
+            string fullname = EmployeesDataGridView.SelectedRows[0].Cells["fullname"].Value.ToString();
+            string position = EmployeesDataGridView.SelectedRows[0].Cells["position"].Value.ToString();
+            string phone = EmployeesDataGridView.SelectedRows[0].Cells["phone_number"].Value.ToString();
+            DateTime birthDateTime = DateTime.Parse(EmployeesDataGridView.SelectedRows[0].Cells["birth_date"].Value.ToString());
+            string address = EmployeesDataGridView.SelectedRows[0].Cells["address"].Value.ToString();
+            int salary = (int) EmployeesDataGridView.SelectedRows[0].Cells["salary"].Value;
+            DateTime hireDateTime = DateTime.Parse(EmployeesDataGridView.SelectedRows[0].Cells["hire_date"].Value.ToString());
+            int passportID = (int) EmployeesDataGridView.SelectedRows[0].Cells["passport_id"].Value;
+            string dealershipJob = EmployeesDataGridView.SelectedRows[0].Cells["dealership_name"].Value.ToString();
+
+            FormUpdateEmployees formUpdateEmployees = new FormUpdateEmployees(this, fullname, position, phone, birthDateTime, address,
+                salary, hireDateTime, passportID, dealershipJob);
+            formUpdateEmployees.ShowDialog();
         }
     }
 }
