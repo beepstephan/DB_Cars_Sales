@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DB_Cars_Sales.CarDealerships;
 using DB_Cars_Sales.Employees;
+using DB_Cars_Sales.Transactions;
 using Npgsql;
 
 namespace DB_Cars_Sales
@@ -23,6 +24,7 @@ namespace DB_Cars_Sales
             RefreshCarDealershipsDataGridView();
             RefreshCustomershipsDataGridView();
             RefreshEmployeessDataGridView();
+            RefreshTransactionsDataGridView();
             radioButtonCustomerSurname.Checked = true;
         }
 
@@ -39,6 +41,11 @@ namespace DB_Cars_Sales
         public void RefreshCustomershipsDataGridView()
         {
             CustomerDataGridView.DataSource = CustomerssSqlConnectionReader();
+        }
+
+        public void RefreshTransactionsDataGridView()
+        {
+            TransactionsDataGridView.DataSource = TransactionsSqlConnectionReader();
         }
 
         private DataTable CarDealershipsSqlConnectionReader()
@@ -84,6 +91,22 @@ namespace DB_Cars_Sales
         {
 
             string sql = "SELECT * FROM customers";
+            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+            {
+                using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(sql, connection))
+                {
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    return dataTable;
+                }
+            }
+
+        }
+
+        private DataTable TransactionsSqlConnectionReader()
+        {
+
+            string sql = "SELECT * FROM transactions";
             using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
                 using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(sql, connection))
@@ -316,14 +339,34 @@ namespace DB_Cars_Sales
             string phone = EmployeesDataGridView.SelectedRows[0].Cells["phone_number"].Value.ToString();
             DateTime birthDateTime = DateTime.Parse(EmployeesDataGridView.SelectedRows[0].Cells["birth_date"].Value.ToString());
             string address = EmployeesDataGridView.SelectedRows[0].Cells["address"].Value.ToString();
-            int salary = (int) EmployeesDataGridView.SelectedRows[0].Cells["salary"].Value;
+            int salary = (int)EmployeesDataGridView.SelectedRows[0].Cells["salary"].Value;
             DateTime hireDateTime = DateTime.Parse(EmployeesDataGridView.SelectedRows[0].Cells["hire_date"].Value.ToString());
-            int passportID = (int) EmployeesDataGridView.SelectedRows[0].Cells["passport_id"].Value;
+            int passportID = (int)EmployeesDataGridView.SelectedRows[0].Cells["passport_id"].Value;
             string dealershipJob = EmployeesDataGridView.SelectedRows[0].Cells["dealership_name"].Value.ToString();
 
             FormUpdateEmployees formUpdateEmployees = new FormUpdateEmployees(this, fullname, position, phone, birthDateTime, address,
                 salary, hireDateTime, passportID, dealershipJob);
             formUpdateEmployees.ShowDialog();
+        }
+
+        private void TransactionsDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            if (TransactionsDataGridView.SelectedRows.Count == 1)
+            {
+                buttonUpdateTransaction.Enabled = true;
+                buttonDeleteTransaction.Enabled = true;
+            }
+            else
+            {
+                buttonUpdateTransaction.Enabled = false;
+                buttonDeleteTransaction.Enabled = false;
+            }
+        }
+
+        private void buttonAddTransaction_Click(object sender, EventArgs e)
+        {
+            FormAddTransaction formAddTransaction = new FormAddTransaction(this);
+            formAddTransaction.ShowDialog();
         }
     }
 }
