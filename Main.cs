@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -353,12 +354,12 @@ namespace DB_Cars_Sales
         {
             if (TransactionsDataGridView.SelectedRows.Count == 1)
             {
-                buttonUpdateTransaction.Enabled = true;
+                buttonCheckInfoTransaction.Enabled = true;
                 buttonDeleteTransaction.Enabled = true;
             }
             else
             {
-                buttonUpdateTransaction.Enabled = false;
+                buttonCheckInfoTransaction.Enabled = false;
                 buttonDeleteTransaction.Enabled = false;
             }
         }
@@ -367,6 +368,46 @@ namespace DB_Cars_Sales
         {
             FormAddTransaction formAddTransaction = new FormAddTransaction(this);
             formAddTransaction.ShowDialog();
+        }
+
+        private void buttonDeleteTransaction_Click(object sender, EventArgs e)
+        {
+            NpgsqlConnection connection;
+            connection = new NpgsqlConnection(connectionString);
+            int selectedRowIndex = TransactionsDataGridView.SelectedRows[0].Index;
+            int idToDelete = Convert.ToInt32(TransactionsDataGridView.SelectedRows[0].Cells["transaction_id"].Value);
+
+
+            TransactionsDataGridView.Rows.RemoveAt(selectedRowIndex);
+
+
+            try
+            {
+                connection.Open();
+                string sql = "DELETE FROM transactions WHERE transaction_id = @id";
+                using (NpgsqlCommand command = new NpgsqlCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@id", idToDelete);
+                    command.ExecuteNonQuery();
+                }
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void buttonCheckInfoTransaction_Click(object sender, EventArgs e)
+        {
+            int customerPassport = (int)TransactionsDataGridView.SelectedRows[0].Cells["customer_passport"].Value;
+            int employeePassport = (int)TransactionsDataGridView.SelectedRows[0].Cells["employee_passport"].Value;
+            int serviceId = (int)TransactionsDataGridView.SelectedRows[0].Cells["service_id"].Value;
+            int dealershipId = (int)TransactionsDataGridView.SelectedRows[0].Cells["dealership_id"].Value;
+            string VIN = TransactionsDataGridView.SelectedRows[0].Cells["vin"].Value.ToString();
+            int transactionId = (int)TransactionsDataGridView.SelectedRows[0].Cells["transaction_id"].Value;
+            FormCheckInfoTransaction formCheckInfoTransaction = new FormCheckInfoTransaction(this, transactionId);
+            formCheckInfoTransaction.ShowDialog();
         }
     }
 }
