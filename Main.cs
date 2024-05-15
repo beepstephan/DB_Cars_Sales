@@ -12,6 +12,7 @@ using DB_Cars_Sales.CarDealerships;
 using DB_Cars_Sales.Customers;
 using DB_Cars_Sales.Employees;
 using DB_Cars_Sales.Transactions;
+using DB_Cars_Sales.CarModels;
 using Npgsql;
 
 namespace DB_Cars_Sales
@@ -27,6 +28,7 @@ namespace DB_Cars_Sales
             RefreshCustomershipsDataGridView();
             RefreshEmployeessDataGridView();
             RefreshTransactionsDataGridView();
+            RefreshModelsDataGridView();
             radioButtonCustomerSurname.Checked = true;
         }
 
@@ -48,6 +50,11 @@ namespace DB_Cars_Sales
         public void RefreshTransactionsDataGridView()
         {
             TransactionsDataGridView.DataSource = TransactionsSqlConnectionReader();
+        }
+
+        public void RefreshModelsDataGridView()
+        {
+            ModelsDataGridView.DataSource = ModelsSqlConnectionReader();
         }
 
         private DataTable CarDealershipsSqlConnectionReader()
@@ -109,6 +116,22 @@ namespace DB_Cars_Sales
         {
 
             string sql = "SELECT * FROM transactions";
+            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+            {
+                using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(sql, connection))
+                {
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    return dataTable;
+                }
+            }
+
+        }
+
+        private DataTable ModelsSqlConnectionReader()
+        {
+
+            string sql = "SELECT * FROM car_models";
             using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
                 using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(sql, connection))
@@ -409,6 +432,52 @@ namespace DB_Cars_Sales
             int transactionId = (int)TransactionsDataGridView.SelectedRows[0].Cells["transaction_id"].Value;
             FormCheckInfoTransaction formCheckInfoTransaction = new FormCheckInfoTransaction(this, transactionId);
             formCheckInfoTransaction.ShowDialog();
+        }
+
+        private void buttonAddModel_Click(object sender, EventArgs e)
+        {
+            FormAddModel formAddModel = new FormAddModel(this);
+            formAddModel.ShowDialog();
+        }
+
+        private void buttonDeleteModel_Click(object sender, EventArgs e)
+        {
+            NpgsqlConnection connection;
+            connection = new NpgsqlConnection(connectionString);
+            int selectedRowIndex = ModelsDataGridView.SelectedRows[0].Index;
+            string idToDelete = ModelsDataGridView.SelectedRows[0].Cells["configuration"].Value.ToString();
+
+            ModelsDataGridView.Rows.RemoveAt(selectedRowIndex);
+
+            try
+            {
+                connection.Open();
+                string sql = "DELETE FROM car_models WHERE configuration = @configuration";
+                using (NpgsqlCommand command = new NpgsqlCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@configuration", idToDelete);
+                    command.ExecuteNonQuery();
+                }
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void ModelsDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            if (ModelsDataGridView.SelectedRows.Count == 1)
+            {
+                buttonDeleteModel.Enabled = true;
+                buttonModelDetails.Enabled = true;
+            }
+            else
+            {
+                buttonDeleteModel.Enabled = false;
+                buttonModelDetails.Enabled = false;
+            }
         }
 
         private void buttonAddClient_Click(object sender, EventArgs e)
