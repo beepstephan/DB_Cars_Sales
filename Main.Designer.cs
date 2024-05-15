@@ -56,7 +56,9 @@
             this.buttonDeleteTransaction = new System.Windows.Forms.Button();
             this.buttonAddTransaction = new System.Windows.Forms.Button();
             this.TransactionsDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
+            this.tabPageCarModels.SuspendLayout();
             this.tabPageCarDealerships.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CarDealershipsDataGridView)).BeginInit();
             this.tabPageEmployees.SuspendLayout();
@@ -65,6 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CustomerDataGridView)).BeginInit();
             this.tabPageTransactions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TransactionsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -99,6 +102,7 @@
             // tabPageCarModels
             // 
             this.tabPageCarModels.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tabPageCarModels.Controls.Add(this.dataGridView1);
             this.tabPageCarModels.Location = new System.Drawing.Point(4, 24);
             this.tabPageCarModels.Name = "tabPageCarModels";
             this.tabPageCarModels.Padding = new System.Windows.Forms.Padding(3);
@@ -376,13 +380,27 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TransactionsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
             this.TransactionsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TransactionsDataGridView.Location = new System.Drawing.Point(0, 89);
+            this.TransactionsDataGridView.Location = new System.Drawing.Point(0, 86);
             this.TransactionsDataGridView.Name = "TransactionsDataGridView";
             this.TransactionsDataGridView.RowHeadersWidth = 51;
             this.TransactionsDataGridView.RowTemplate.Height = 25;
             this.TransactionsDataGridView.Size = new System.Drawing.Size(1046, 482);
             this.TransactionsDataGridView.TabIndex = 1;
             this.TransactionsDataGridView.SelectionChanged += new System.EventHandler(this.TransactionsDataGridView_SelectionChanged);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 86);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(1046, 482);
+            this.dataGridView1.TabIndex = 2;
             // 
             // Main
             // 
@@ -395,6 +413,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DB Cars Sales";
             this.tabControl1.ResumeLayout(false);
+            this.tabPageCarModels.ResumeLayout(false);
             this.tabPageCarDealerships.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CarDealershipsDataGridView)).EndInit();
             this.tabPageEmployees.ResumeLayout(false);
@@ -405,6 +424,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CustomerDataGridView)).EndInit();
             this.tabPageTransactions.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TransactionsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -438,5 +458,6 @@
         private Button buttonCheckInfoTransaction;
         private Button buttonDeleteTransaction;
         private Button buttonAddTransaction;
+        private DataGridView dataGridView1;
     }
 }
