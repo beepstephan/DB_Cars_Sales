@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DB_Cars_Sales.CarDealerships;
+using DB_Cars_Sales.Customers;
 using DB_Cars_Sales.Employees;
 using DB_Cars_Sales.Transactions;
 using Npgsql;
@@ -408,6 +409,73 @@ namespace DB_Cars_Sales
             int transactionId = (int)TransactionsDataGridView.SelectedRows[0].Cells["transaction_id"].Value;
             FormCheckInfoTransaction formCheckInfoTransaction = new FormCheckInfoTransaction(this, transactionId);
             formCheckInfoTransaction.ShowDialog();
+        }
+
+        private void buttonAddClient_Click(object sender, EventArgs e)
+        {
+            FormAddCustomer formAddCustomer = new FormAddCustomer(this);
+            formAddCustomer.ShowDialog();
+        }
+
+        private void buttonUpdateClient_Click(object sender, EventArgs e)
+        {
+            string fullname = CustomerDataGridView.SelectedRows[0].Cells["fullname"].Value.ToString();
+            string phone = CustomerDataGridView.SelectedRows[0].Cells["phone_number"].Value.ToString();
+            DateTime birthDateTime = DateTime.Parse(CustomerDataGridView.SelectedRows[0].Cells["birth_date"].Value.ToString());
+            string address = CustomerDataGridView.SelectedRows[0].Cells["address"].Value.ToString();
+            int passportID = (int)CustomerDataGridView.SelectedRows[0].Cells["passport_num"].Value;
+            FormUpdateCustomer formUpdateCustomer = new FormUpdateCustomer(this, fullname, phone, address, birthDateTime, passportID);
+            formUpdateCustomer.ShowDialog();
+        }
+
+        private void CustomerDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            if (CustomerDataGridView.SelectedRows.Count == 1)
+            {
+                buttonUpdateClient.Enabled = true;
+                buttonDeleteClient.Enabled = true;
+            }
+            else
+            {
+                buttonUpdateClient.Enabled = false;
+                buttonDeleteClient.Enabled = false;
+            }
+        }
+
+        private void buttonDeleteClient_Click(object sender, EventArgs e)
+        {
+            NpgsqlConnection connection;
+            connection = new NpgsqlConnection(connectionString);
+            if (CustomerDataGridView.SelectedRows.Count == 1)
+            {
+
+                int selectedRowIndex = CustomerDataGridView.SelectedRows[0].Index;
+                int passportToDelete = (int)CustomerDataGridView.SelectedRows[0].Cells["passport_num"].Value;
+
+
+                CustomerDataGridView.Rows.RemoveAt(selectedRowIndex);
+
+
+                try
+                {
+                    connection.Open();
+                    string sql = "DELETE FROM customers WHERE passport_num = @passport_num";
+                    using (NpgsqlCommand command = new NpgsqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@passport_num", passportToDelete);
+                        command.ExecuteNonQuery();
+                    }
+                    connection.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Укажіть рядок з клієнтом, який треба видалити!");
+            }
         }
     }
 }

@@ -5,33 +5,33 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
-using System.Xml.Linq;
 
-namespace DB_Cars_Sales.CarDealerships
+namespace DB_Cars_Sales.Customers
 {
-    public partial class FormUpdateDealership : Form
+    public partial class FormUpdateCustomer : Form
     {
         private Main mainForm;
         private const string connectionString = "Server=26.205.250.8;Port=5432;Database=mashinki; User Id = stas; Password = stas2002";
         private NpgsqlConnection connection;
-
-        public FormUpdateDealership(Main main, string name, string phone, string email, string working_hours, string services, string address)
+        public FormUpdateCustomer(Main main, string fullname, string phone, string address, DateTime birthDateTime, int passportID)
         {
             InitializeComponent();
             connection = new NpgsqlConnection(connectionString);
-            textBoxName.Text = name; textBoxPhone.Text = phone; textBoxEmail.Text = email;
-            textBoxWorkingHours.Text = working_hours; textBoxServices.Text = services; textBoxAddress.Text = address;
             mainForm = main;
+            textBoxName.Text = fullname;
+            textBoxPhone.Text = phone;
+            textBoxAddress.Text = address;
+            dateTimePickerBirthDate.Value = birthDateTime;
+            textBoxPassportID.Text = passportID.ToString();
         }
+
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            if (textBoxName.Text == "" || textBoxPhone.Text == "" || textBoxEmail.Text == "" ||
-                textBoxWorkingHours.Text == "" || textBoxServices.Text == "" || textBoxAddress.Text == "")
+            if (textBoxName.Text == "" || textBoxPhone.Text == "" || textBoxAddress.Text == "" ||
+                dateTimePickerBirthDate.Text == "" || textBoxPassportID.Text == "")
             {
                 MessageBox.Show("Заповніть усі поля");
                 return;
@@ -41,21 +41,20 @@ namespace DB_Cars_Sales.CarDealerships
             {
                 connection.Open();
 
-                string updateQuery = "UPDATE car_dealerships SET name = @name, phone = @phone, email = @email, working_hours = @workingHours, services = @services, address = @address WHERE email = @email";
+                string updateQuery = "UPDATE customers SET fullname = @fullname, phone_number = @phone_number, address = @address, birth_date = @birth_date::timestamp WHERE passport_num = @passport_num";
 
                 NpgsqlCommand updateQueryCommand = new NpgsqlCommand(updateQuery, connection);
 
-                updateQueryCommand.Parameters.AddWithValue("@name", textBoxName.Text);
-                updateQueryCommand.Parameters.AddWithValue("@phone", textBoxPhone.Text);
-                updateQueryCommand.Parameters.AddWithValue("@email", textBoxEmail.Text);
-                updateQueryCommand.Parameters.AddWithValue("@workingHours", textBoxWorkingHours.Text);
-                updateQueryCommand.Parameters.AddWithValue("@services", textBoxServices.Text);
+                updateQueryCommand.Parameters.AddWithValue("@fullname", textBoxName.Text);
+                updateQueryCommand.Parameters.AddWithValue("@phone_number", textBoxPhone.Text);
                 updateQueryCommand.Parameters.AddWithValue("@address", textBoxAddress.Text);
+                updateQueryCommand.Parameters.AddWithValue("@birth_date", dateTimePickerBirthDate.Value.ToString("yyyy-MM-dd"));
+                updateQueryCommand.Parameters.AddWithValue("@passport_num", Int32.Parse(textBoxPassportID.Text));
 
                 int checkExecute = updateQueryCommand.ExecuteNonQuery();
                 if (checkExecute > 0)
                 {
-                    mainForm.RefreshCarDealershipsDataGridView();
+                    mainForm.RefreshCustomershipsDataGridView();
                 }
                 else
                 {
@@ -71,7 +70,5 @@ namespace DB_Cars_Sales.CarDealerships
             connection.Close();
             this.Close();
         }
-
-        
     }
 }

@@ -31,6 +31,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageCars = new System.Windows.Forms.TabPage();
             this.tabPageCarModels = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPageCarDealerships = new System.Windows.Forms.TabPage();
             this.buttonUpdateDealership = new System.Windows.Forms.Button();
             this.buttonDeleteDealership = new System.Windows.Forms.Button();
@@ -44,6 +45,9 @@
             this.textBoxEmployeeSearch = new System.Windows.Forms.TextBox();
             this.EmployeesDataGridView = new System.Windows.Forms.DataGridView();
             this.tabPageCustomers = new System.Windows.Forms.TabPage();
+            this.buttonDeleteClient = new System.Windows.Forms.Button();
+            this.buttonUpdateClient = new System.Windows.Forms.Button();
+            this.buttonAddClient = new System.Windows.Forms.Button();
             this.labelCustomerSearch = new System.Windows.Forms.Label();
             this.buttonCustomerSearch = new System.Windows.Forms.Button();
             this.textBoxCustomerSearch = new System.Windows.Forms.TextBox();
@@ -56,9 +60,9 @@
             this.buttonDeleteTransaction = new System.Windows.Forms.Button();
             this.buttonAddTransaction = new System.Windows.Forms.Button();
             this.TransactionsDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPageCarModels.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPageCarDealerships.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CarDealershipsDataGridView)).BeginInit();
             this.tabPageEmployees.SuspendLayout();
@@ -67,7 +71,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.CustomerDataGridView)).BeginInit();
             this.tabPageTransactions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TransactionsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -109,6 +112,20 @@
             this.tabPageCarModels.Size = new System.Drawing.Size(1046, 568);
             this.tabPageCarModels.TabIndex = 1;
             this.tabPageCarModels.Text = "Моделі автомобілей";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 86);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(1046, 482);
+            this.dataGridView1.TabIndex = 2;
             // 
             // tabPageCarDealerships
             // 
@@ -244,6 +261,9 @@
             // tabPageCustomers
             // 
             this.tabPageCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tabPageCustomers.Controls.Add(this.buttonDeleteClient);
+            this.tabPageCustomers.Controls.Add(this.buttonUpdateClient);
+            this.tabPageCustomers.Controls.Add(this.buttonAddClient);
             this.tabPageCustomers.Controls.Add(this.labelCustomerSearch);
             this.tabPageCustomers.Controls.Add(this.buttonCustomerSearch);
             this.tabPageCustomers.Controls.Add(this.textBoxCustomerSearch);
@@ -257,6 +277,37 @@
             this.tabPageCustomers.TabIndex = 4;
             this.tabPageCustomers.Text = "Клієнти";
             // 
+            // buttonDeleteClient
+            // 
+            this.buttonDeleteClient.Enabled = false;
+            this.buttonDeleteClient.Location = new System.Drawing.Point(784, 22);
+            this.buttonDeleteClient.Name = "buttonDeleteClient";
+            this.buttonDeleteClient.Size = new System.Drawing.Size(98, 52);
+            this.buttonDeleteClient.TabIndex = 13;
+            this.buttonDeleteClient.Text = "Видалити клієнта";
+            this.buttonDeleteClient.UseVisualStyleBackColor = true;
+            this.buttonDeleteClient.Click += new System.EventHandler(this.buttonDeleteClient_Click);
+            // 
+            // buttonUpdateClient
+            // 
+            this.buttonUpdateClient.Location = new System.Drawing.Point(888, 22);
+            this.buttonUpdateClient.Name = "buttonUpdateClient";
+            this.buttonUpdateClient.Size = new System.Drawing.Size(150, 52);
+            this.buttonUpdateClient.TabIndex = 14;
+            this.buttonUpdateClient.Text = "Оновити дані військовозобов\'язаного";
+            this.buttonUpdateClient.UseVisualStyleBackColor = true;
+            this.buttonUpdateClient.Click += new System.EventHandler(this.buttonUpdateClient_Click);
+            // 
+            // buttonAddClient
+            // 
+            this.buttonAddClient.Location = new System.Drawing.Point(680, 22);
+            this.buttonAddClient.Name = "buttonAddClient";
+            this.buttonAddClient.Size = new System.Drawing.Size(98, 52);
+            this.buttonAddClient.TabIndex = 12;
+            this.buttonAddClient.Text = "Додати клієнта";
+            this.buttonAddClient.UseVisualStyleBackColor = true;
+            this.buttonAddClient.Click += new System.EventHandler(this.buttonAddClient_Click);
+            // 
             // labelCustomerSearch
             // 
             this.labelCustomerSearch.AutoSize = true;
@@ -268,11 +319,11 @@
             // 
             // buttonCustomerSearch
             // 
-            this.buttonCustomerSearch.Location = new System.Drawing.Point(945, 11);
+            this.buttonCustomerSearch.Location = new System.Drawing.Point(524, 22);
             this.buttonCustomerSearch.Name = "buttonCustomerSearch";
             this.buttonCustomerSearch.Size = new System.Drawing.Size(93, 52);
             this.buttonCustomerSearch.TabIndex = 5;
-            this.buttonCustomerSearch.Text = "Знайти";
+            this.buttonCustomerSearch.Text = "Знайти клієнта";
             this.buttonCustomerSearch.UseVisualStyleBackColor = true;
             // 
             // textBoxCustomerSearch
@@ -285,7 +336,7 @@
             // radioButtonCustomerDate
             // 
             this.radioButtonCustomerDate.AutoSize = true;
-            this.radioButtonCustomerDate.Location = new System.Drawing.Point(784, 53);
+            this.radioButtonCustomerDate.Location = new System.Drawing.Point(363, 62);
             this.radioButtonCustomerDate.Name = "radioButtonCustomerDate";
             this.radioButtonCustomerDate.Size = new System.Drawing.Size(144, 19);
             this.radioButtonCustomerDate.TabIndex = 3;
@@ -296,7 +347,7 @@
             // radioButtonCustomerPhone
             // 
             this.radioButtonCustomerPhone.AutoSize = true;
-            this.radioButtonCustomerPhone.Location = new System.Drawing.Point(784, 28);
+            this.radioButtonCustomerPhone.Location = new System.Drawing.Point(363, 37);
             this.radioButtonCustomerPhone.Name = "radioButtonCustomerPhone";
             this.radioButtonCustomerPhone.Size = new System.Drawing.Size(102, 19);
             this.radioButtonCustomerPhone.TabIndex = 2;
@@ -307,7 +358,7 @@
             // radioButtonCustomerSurname
             // 
             this.radioButtonCustomerSurname.AutoSize = true;
-            this.radioButtonCustomerSurname.Location = new System.Drawing.Point(784, 3);
+            this.radioButtonCustomerSurname.Location = new System.Drawing.Point(363, 12);
             this.radioButtonCustomerSurname.Name = "radioButtonCustomerSurname";
             this.radioButtonCustomerSurname.Size = new System.Drawing.Size(100, 19);
             this.radioButtonCustomerSurname.TabIndex = 1;
@@ -328,6 +379,7 @@
             this.CustomerDataGridView.RowTemplate.Height = 25;
             this.CustomerDataGridView.Size = new System.Drawing.Size(1046, 482);
             this.CustomerDataGridView.TabIndex = 0;
+            this.CustomerDataGridView.SelectionChanged += new System.EventHandler(this.CustomerDataGridView_SelectionChanged);
             // 
             // tabPageTransactions
             // 
@@ -388,20 +440,6 @@
             this.TransactionsDataGridView.TabIndex = 1;
             this.TransactionsDataGridView.SelectionChanged += new System.EventHandler(this.TransactionsDataGridView_SelectionChanged);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 86);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(1046, 482);
-            this.dataGridView1.TabIndex = 2;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -414,6 +452,7 @@
             this.Text = "DB Cars Sales";
             this.tabControl1.ResumeLayout(false);
             this.tabPageCarModels.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPageCarDealerships.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CarDealershipsDataGridView)).EndInit();
             this.tabPageEmployees.ResumeLayout(false);
@@ -424,7 +463,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.CustomerDataGridView)).EndInit();
             this.tabPageTransactions.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TransactionsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -459,5 +497,8 @@
         private Button buttonDeleteTransaction;
         private Button buttonAddTransaction;
         private DataGridView dataGridView1;
+        private Button buttonAddClient;
+        private Button buttonUpdateClient;
+        private Button buttonDeleteClient;
     }
 }
