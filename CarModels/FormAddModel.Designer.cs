@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBoxBrand = new TextBox();
             label2 = new Label();
-            textBoxModel = new TextBox();
             label3 = new Label();
             textBoxConfiguration = new TextBox();
             label4 = new Label();
@@ -45,6 +43,8 @@
             buttonAdd = new Button();
             textBoxTransmission = new TextBox();
             comboBoxDrive = new ComboBox();
+            comboBoxModel = new ComboBox();
+            comboBoxBrand = new ComboBox();
             SuspendLayout();
             // 
             // label1
@@ -56,14 +56,6 @@
             label1.TabIndex = 9;
             label1.Text = "Назва бренду";
             // 
-            // textBoxBrand
-            // 
-            textBoxBrand.Location = new Point(12, 27);
-            textBoxBrand.MaxLength = 100;
-            textBoxBrand.Name = "textBoxBrand";
-            textBoxBrand.Size = new Size(262, 23);
-            textBoxBrand.TabIndex = 8;
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -72,14 +64,6 @@
             label2.Size = new Size(80, 15);
             label2.TabIndex = 11;
             label2.Text = "Назва моделі";
-            // 
-            // textBoxModel
-            // 
-            textBoxModel.Location = new Point(12, 71);
-            textBoxModel.MaxLength = 100;
-            textBoxModel.Name = "textBoxModel";
-            textBoxModel.Size = new Size(262, 23);
-            textBoxModel.TabIndex = 10;
             // 
             // label3
             // 
@@ -175,6 +159,7 @@
             buttonAdd.TabIndex = 26;
             buttonAdd.Text = "Додати";
             buttonAdd.UseVisualStyleBackColor = true;
+            buttonAdd.Click += buttonAdd_Click;
             // 
             // textBoxTransmission
             // 
@@ -194,11 +179,31 @@
             comboBoxDrive.Size = new Size(262, 23);
             comboBoxDrive.TabIndex = 27;
             // 
+            // comboBoxModel
+            // 
+            comboBoxModel.FormattingEnabled = true;
+            comboBoxModel.Items.AddRange(new object[] { "Передній", "Задній", "Повний" });
+            comboBoxModel.Location = new Point(12, 71);
+            comboBoxModel.Name = "comboBoxModel";
+            comboBoxModel.Size = new Size(262, 23);
+            comboBoxModel.TabIndex = 28;
+            // 
+            // comboBoxBrand
+            // 
+            comboBoxBrand.FormattingEnabled = true;
+            comboBoxBrand.Items.AddRange(new object[] { "Передній", "Задній", "Повний" });
+            comboBoxBrand.Location = new Point(12, 27);
+            comboBoxBrand.Name = "comboBoxBrand";
+            comboBoxBrand.Size = new Size(262, 23);
+            comboBoxBrand.TabIndex = 29;
+            // 
             // FormAddModel
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(435, 478);
+            Controls.Add(comboBoxBrand);
+            Controls.Add(comboBoxModel);
             Controls.Add(comboBoxDrive);
             Controls.Add(buttonAdd);
             Controls.Add(label8);
@@ -213,10 +218,9 @@
             Controls.Add(label3);
             Controls.Add(textBoxConfiguration);
             Controls.Add(label2);
-            Controls.Add(textBoxModel);
             Controls.Add(label1);
-            Controls.Add(textBoxBrand);
             Name = "FormAddModel";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Додати модель";
             ResumeLayout(false);
             PerformLayout();
@@ -225,9 +229,7 @@
         #endregion
 
         private Label label1;
-        private TextBox textBoxBrand;
         private Label label2;
-        private TextBox textBoxModel;
         private Label label3;
         private TextBox textBoxConfiguration;
         private Label label4;
@@ -241,5 +243,7 @@
         private Button buttonAdd;
         private TextBox textBoxTransmission;
         private ComboBox comboBoxDrive;
+        private ComboBox comboBoxModel;
+        private ComboBox comboBoxBrand;
     }
 }

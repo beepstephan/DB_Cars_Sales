@@ -31,7 +31,10 @@
             tabControl1 = new TabControl();
             tabPageCars = new TabPage();
             tabPageCarModels = new TabPage();
-            dataGridView1 = new DataGridView();
+            buttonModelDetails = new Button();
+            buttonDeleteModel = new Button();
+            buttonAddModel = new Button();
+            ModelsDataGridView = new DataGridView();
             tabPageCarDealerships = new TabPage();
             buttonUpdateDealership = new Button();
             buttonDeleteDealership = new Button();
@@ -57,12 +60,9 @@
             buttonDeleteTransaction = new Button();
             buttonAddTransaction = new Button();
             TransactionsDataGridView = new DataGridView();
-            buttonAddModel = new Button();
-            buttonDeleteModel = new Button();
-            buttonModelDetails = new Button();
             tabControl1.SuspendLayout();
             tabPageCarModels.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ModelsDataGridView).BeginInit();
             tabPageCarDealerships.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)CarDealershipsDataGridView).BeginInit();
             tabPageEmployees.SuspendLayout();
@@ -106,7 +106,7 @@
             tabPageCarModels.Controls.Add(buttonModelDetails);
             tabPageCarModels.Controls.Add(buttonDeleteModel);
             tabPageCarModels.Controls.Add(buttonAddModel);
-            tabPageCarModels.Controls.Add(dataGridView1);
+            tabPageCarModels.Controls.Add(ModelsDataGridView);
             tabPageCarModels.Location = new Point(4, 24);
             tabPageCarModels.Name = "tabPageCarModels";
             tabPageCarModels.Padding = new Padding(3);
@@ -114,17 +114,50 @@
             tabPageCarModels.TabIndex = 1;
             tabPageCarModels.Text = "Моделі автомобілей";
             // 
-            // dataGridView1
+            // buttonModelDetails
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.BackgroundColor = Color.FromArgb(255, 228, 228);
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(0, 86);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(1046, 482);
-            dataGridView1.TabIndex = 2;
+            buttonModelDetails.Location = new Point(920, 20);
+            buttonModelDetails.Name = "buttonModelDetails";
+            buttonModelDetails.Size = new Size(98, 44);
+            buttonModelDetails.TabIndex = 15;
+            buttonModelDetails.Text = "Деталі";
+            buttonModelDetails.UseVisualStyleBackColor = true;
+            // 
+            // buttonDeleteModel
+            // 
+            buttonDeleteModel.Location = new Point(797, 20);
+            buttonDeleteModel.Name = "buttonDeleteModel";
+            buttonDeleteModel.Size = new Size(98, 44);
+            buttonDeleteModel.TabIndex = 14;
+            buttonDeleteModel.Text = "Видалити модель";
+            buttonDeleteModel.UseVisualStyleBackColor = true;
+            buttonDeleteModel.Click += buttonDeleteModel_Click;
+            // 
+            // buttonAddModel
+            // 
+            buttonAddModel.Location = new Point(667, 20);
+            buttonAddModel.Name = "buttonAddModel";
+            buttonAddModel.Size = new Size(98, 44);
+            buttonAddModel.TabIndex = 13;
+            buttonAddModel.Text = "Додати модель";
+            buttonAddModel.UseVisualStyleBackColor = true;
+            buttonAddModel.Click += buttonAddModel_Click;
+            // 
+            // ModelsDataGridView
+            // 
+            ModelsDataGridView.AllowUserToAddRows = false;
+            ModelsDataGridView.AllowUserToDeleteRows = false;
+            ModelsDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ModelsDataGridView.BackgroundColor = Color.FromArgb(255, 228, 228);
+            ModelsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ModelsDataGridView.Location = new Point(0, 86);
+            ModelsDataGridView.Name = "ModelsDataGridView";
+            ModelsDataGridView.ReadOnly = true;
+            ModelsDataGridView.RowHeadersWidth = 51;
+            ModelsDataGridView.RowTemplate.Height = 25;
+            ModelsDataGridView.Size = new Size(1046, 482);
+            ModelsDataGridView.TabIndex = 2;
+            ModelsDataGridView.SelectionChanged += ModelsDataGridView_SelectionChanged;
             // 
             // tabPageCarDealerships
             // 
@@ -396,34 +429,6 @@
             TransactionsDataGridView.TabIndex = 1;
             TransactionsDataGridView.SelectionChanged += TransactionsDataGridView_SelectionChanged;
             // 
-            // buttonAddModel
-            // 
-            buttonAddModel.Location = new Point(667, 20);
-            buttonAddModel.Name = "buttonAddModel";
-            buttonAddModel.Size = new Size(98, 44);
-            buttonAddModel.TabIndex = 13;
-            buttonAddModel.Text = "Додати модель";
-            buttonAddModel.UseVisualStyleBackColor = true;
-            buttonAddModel.Click += buttonAddModel_Click;
-            // 
-            // buttonDeleteModel
-            // 
-            buttonDeleteModel.Location = new Point(797, 20);
-            buttonDeleteModel.Name = "buttonDeleteModel";
-            buttonDeleteModel.Size = new Size(98, 44);
-            buttonDeleteModel.TabIndex = 14;
-            buttonDeleteModel.Text = "Видалити модель";
-            buttonDeleteModel.UseVisualStyleBackColor = true;
-            // 
-            // buttonModelDetails
-            // 
-            buttonModelDetails.Location = new Point(920, 20);
-            buttonModelDetails.Name = "buttonModelDetails";
-            buttonModelDetails.Size = new Size(98, 44);
-            buttonModelDetails.TabIndex = 15;
-            buttonModelDetails.Text = "Деталі";
-            buttonModelDetails.UseVisualStyleBackColor = true;
-            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -436,7 +441,7 @@
             Text = "DB Cars Sales";
             tabControl1.ResumeLayout(false);
             tabPageCarModels.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ModelsDataGridView).EndInit();
             tabPageCarDealerships.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)CarDealershipsDataGridView).EndInit();
             tabPageEmployees.ResumeLayout(false);
@@ -479,7 +484,7 @@
         private Button buttonCheckInfoTransaction;
         private Button buttonDeleteTransaction;
         private Button buttonAddTransaction;
-        private DataGridView dataGridView1;
+        private DataGridView ModelsDataGridView;
         private Button buttonModelDetails;
         private Button buttonDeleteModel;
         private Button buttonAddModel;
