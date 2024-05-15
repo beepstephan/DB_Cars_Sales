@@ -50,7 +50,7 @@ namespace DB_Cars_Sales.Transactions
                         decimal servicePrice = Convert.ToDecimal(row["service_price"]);
 
                         labelBrand.Text = "Марка авто: " + brand;
-                        labelModel.Text = "Марка авто: " + model;
+                        labelModel.Text = "Модель авто: " + model;
                         labelЗPrice.Text = "Ціна авто: " + price;
                         labelCustomerName.Text = "Покупець авто: " + customerName;
                         labelEmployeeName.Text = "Продавець авто: " + employeeName;
