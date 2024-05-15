@@ -409,5 +409,11 @@ namespace DB_Cars_Sales
             FormCheckInfoTransaction formCheckInfoTransaction = new FormCheckInfoTransaction(this, transactionId);
             formCheckInfoTransaction.ShowDialog();
         }
+
+        private void buttonAddModel_Click(object sender, EventArgs e)
+        {
+            FormAddModel formAddModel = new FormAddModel(this);
+            formAddModel.ShowDialog();
+        }
     }
 }
