@@ -134,6 +134,8 @@
             Controls.Add(labelPower);
             Controls.Add(labelEngineCapacity);
             Controls.Add(labelConfiguration);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
             Name = "FormCheckInfoCarModels";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Інформація про модель";

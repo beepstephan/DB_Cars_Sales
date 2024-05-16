@@ -38,6 +38,7 @@ namespace DB_Cars_Sales
             SearchCarBodytypes();
             comboBoxBodytype.SelectedIndex = 0;
 
+            ColumnsResize();
             radioButtonCustomerSurname.Checked = true;
         }
 
@@ -694,7 +695,7 @@ namespace DB_Cars_Sales
                 "WHERE brand = @brand AND model = @model AND bodytype = @bodytype " +
                 "AND year BETWEEN @startYear AND @endYear AND " +
                 "price BETWEEN @startPrice AND @endPrice;";
-                
+
                 NpgsqlCommand cmd = new NpgsqlCommand(query, connection);
                 cmd.Parameters.AddWithValue("@brand", brand);
                 cmd.Parameters.AddWithValue("@model", model);
@@ -714,6 +715,71 @@ namespace DB_Cars_Sales
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+        }
+
+        private void buttonDeleteCar_Click(object sender, EventArgs e)
+        {
+            NpgsqlConnection connection;
+            connection = new NpgsqlConnection(connectionString);
+            int selectedRowIndex = CarsDataGridView.SelectedRows[0].Index;
+            string vinToDelete = CarsDataGridView.SelectedRows[0].Cells["vin"].Value.ToString();
+
+            CarsDataGridView.Rows.RemoveAt(selectedRowIndex);
+            try
+            {
+                connection.Open();
+                string sql = "DELETE FROM cars WHERE vin = @vin";
+                using (NpgsqlCommand command = new NpgsqlCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@vin", vinToDelete);
+                    command.ExecuteNonQuery();
+                }
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void buttonCheckCarInfo_Click(object sender, EventArgs e)
+        {
+            string configuration = CarsDataGridView.SelectedRows[0].Cells["configuration"].Value.ToString();
+            FormCheckInfoCarModels formCheckInfoCarModels = new FormCheckInfoCarModels(configuration);
+            formCheckInfoCarModels.ShowDialog();
+        }
+
+        private void ColumnsResize()
+        {
+            foreach (DataGridViewColumn column in TransactionsDataGridView.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+            foreach (DataGridViewColumn column in CustomerDataGridView.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+            foreach (DataGridViewColumn column in EmployeesDataGridView.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+            foreach (DataGridViewColumn column in CarDealershipsDataGridView.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+            foreach (DataGridViewColumn column in ModelsDataGridView.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+            foreach (DataGridViewColumn column in CarsDataGridView.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+        }
+
+        private void Main_SizeChanged(object sender, EventArgs e)
+        {
+            ColumnsResize();
         }
 
         private void buttonAddCar_Click(object sender, EventArgs e)
