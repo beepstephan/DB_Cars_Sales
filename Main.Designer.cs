@@ -207,6 +207,7 @@
             this.buttonAddCar.TabIndex = 21;
             this.buttonAddCar.Text = "Додати авто";
             this.buttonAddCar.UseVisualStyleBackColor = true;
+            this.buttonAddCar.Click += new System.EventHandler(this.buttonAddCar_Click);
             // 
             // numericUpDownPriceFrom
             // 

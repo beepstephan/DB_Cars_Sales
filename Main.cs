@@ -14,6 +14,7 @@ using DB_Cars_Sales.Employees;
 using DB_Cars_Sales.Transactions;
 using DB_Cars_Sales.CarModels;
 using Npgsql;
+using DB_Cars_Sales.Cars;
 
 namespace DB_Cars_Sales
 {
@@ -713,6 +714,12 @@ namespace DB_Cars_Sales
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+        }
+
+        private void buttonAddCar_Click(object sender, EventArgs e)
+        {
+            FormAddCar formAddCar = new FormAddCar(this);
+            formAddCar.ShowDialog();
         }
     }
 }
