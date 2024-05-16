@@ -452,8 +452,14 @@ namespace DB_Cars_Sales
             try
             {
                 connection.Open();
-                string sql = "DELETE FROM car_models WHERE configuration = @configuration";
+                string sql = "DELETE FROM model_info WHERE configuration = @configuration";
+                string sql2 = "DELETE FROM car_models WHERE configuration = @configuration";
                 using (NpgsqlCommand command = new NpgsqlCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@configuration", idToDelete);
+                    command.ExecuteNonQuery();
+                }
+                using (NpgsqlCommand command = new NpgsqlCommand(sql2, connection))
                 {
                     command.Parameters.AddWithValue("@configuration", idToDelete);
                     command.ExecuteNonQuery();

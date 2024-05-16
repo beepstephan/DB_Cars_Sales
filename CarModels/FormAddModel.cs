@@ -22,6 +22,7 @@ namespace DB_Cars_Sales.CarModels
             mainForm = main;
             SearchBrands();
             SearchModels();
+            SearchGearbox();
             comboBoxDrive.SelectedIndex = 0;
         }
 
@@ -67,6 +68,27 @@ namespace DB_Cars_Sales.CarModels
             }
         }
 
+        private void SearchGearbox()
+        {
+            string searchCustomerName = "SELECT DISTINCT gearbox_type FROM model_info";
+            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+            {
+                connection.Open();
+                NpgsqlCommand command = new NpgsqlCommand(searchCustomerName, connection);
+                NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(command);
+                DataTable table = new DataTable();
+
+                adapter.Fill(table);
+
+                if (table.Rows.Count > 0)
+                {
+                    comboBoxGearboxType.DataSource = table;
+                    comboBoxGearboxType.DisplayMember = "gearbox_type";
+                    comboBoxGearboxType.ValueMember = "gearbox_type";
+                }
+            }
+        }
+
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             string brand = comboBoxBrand.Text.Trim();
@@ -78,13 +100,23 @@ namespace DB_Cars_Sales.CarModels
             string drive = comboBoxDrive.Text.Trim();
             string years = textBoxYears.Text.Trim();
 
-            if (brand.Length == 0 || model.Length == 0 || configuration.Length == 0 || bodyshell.Length == 0 || engine.Length == 0 || engine.Length == 0 || drive.Length == 0 || years.Length == 0)
+            float engineCapacity = (float) numericUpDownEngineCapacity.Value;
+            int cylindersNum = (int) numericUpDownCilinders.Value;
+            int power = (int) numericUpDownPower.Value;
+            int maxSpeed = (int) numericUpDownMaxSpeed.Value;
+            float accelerationTo100 = (float)numericUpDownAcceleration.Value;
+            string gearboxType = comboBoxGearboxType.Text.Trim();
+            int gearsNum = (int) numericUpDownGearsNum.Value;
+            float fuelConsumption = (float)numericUpDownFuelConsumption.Value;
+
+            if (brand.Length == 0 || model.Length == 0 || configuration.Length == 0 || bodyshell.Length == 0 || engine.Length == 0 || engine.Length == 0 || drive.Length == 0 || years.Length == 0 || gearboxType.Length == 0)
             {
                 MessageBox.Show("Заповніть усі поля");
             }
             else
             {
                 string addModelQuery = "INSERT INTO car_models (brand, model, configuration, bodyshell, engine, transmission, drive, release_years) VALUES (@brand, @model, @configuration, @bodyshell, @engine, @transmission, @drive, @release_years)";
+                string addModelInfoQuery = "INSERT INTO model_info (configuration, engine_capacity, cylinders_num, power, max_speed, acceleration_to_100, gearbox_type, number_of_gears, fuel_consumption) VALUES (@configuration, @engine_capacity, @cylinders_num, @power, @max_speed, @acceleration_to_100, @gearbox_type, @number_of_gears, @fuel_consumption)";
                 using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
                 {
                     connection.Open();
@@ -100,6 +132,29 @@ namespace DB_Cars_Sales.CarModels
                         insertModelComand.Parameters.AddWithValue("@release_years", years);
 
                         int checkExecute = insertModelComand.ExecuteNonQuery();
+                        if (checkExecute != 0)
+                        {
+                            mainForm.RefreshModelsDataGridView();
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Помилка вставлення");
+                        }
+                    }
+                    using (NpgsqlCommand insertModelInfoComand = new NpgsqlCommand(addModelInfoQuery, connection))
+                    {
+                        insertModelInfoComand.Parameters.AddWithValue("@configuration", configuration);
+                        insertModelInfoComand.Parameters.AddWithValue("@engine_capacity", engineCapacity);
+                        insertModelInfoComand.Parameters.AddWithValue("@cylinders_num", cylindersNum);
+                        insertModelInfoComand.Parameters.AddWithValue("@power", power);
+                        insertModelInfoComand.Parameters.AddWithValue("@max_speed", maxSpeed);
+                        insertModelInfoComand.Parameters.AddWithValue("@acceleration_to_100", accelerationTo100);
+                        insertModelInfoComand.Parameters.AddWithValue("@gearbox_type", gearboxType);
+                        insertModelInfoComand.Parameters.AddWithValue("@number_of_gears", gearsNum);
+                        insertModelInfoComand.Parameters.AddWithValue("@fuel_consumption", fuelConsumption);
+
+                        int checkExecute = insertModelInfoComand.ExecuteNonQuery();
                         if (checkExecute != 0)
                         {
                             mainForm.RefreshModelsDataGridView();

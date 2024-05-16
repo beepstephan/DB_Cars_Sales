@@ -45,6 +45,29 @@
             comboBoxDrive = new ComboBox();
             comboBoxModel = new ComboBox();
             comboBoxBrand = new ComboBox();
+            label9 = new Label();
+            numericUpDownEngineCapacity = new NumericUpDown();
+            numericUpDownCilinders = new NumericUpDown();
+            label10 = new Label();
+            numericUpDownPower = new NumericUpDown();
+            label11 = new Label();
+            numericUpDownMaxSpeed = new NumericUpDown();
+            label12 = new Label();
+            numericUpDownAcceleration = new NumericUpDown();
+            label13 = new Label();
+            comboBoxGearboxType = new ComboBox();
+            label14 = new Label();
+            numericUpDownGearsNum = new NumericUpDown();
+            label15 = new Label();
+            numericUpDownFuelConsumption = new NumericUpDown();
+            label16 = new Label();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownEngineCapacity).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownCilinders).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownPower).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownMaxSpeed).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownAcceleration).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownGearsNum).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownFuelConsumption).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -153,7 +176,7 @@
             // 
             // buttonAdd
             // 
-            buttonAdd.Location = new Point(148, 403);
+            buttonAdd.Location = new Point(268, 408);
             buttonAdd.Name = "buttonAdd";
             buttonAdd.Size = new Size(126, 42);
             buttonAdd.TabIndex = 26;
@@ -197,11 +220,170 @@
             comboBoxBrand.Size = new Size(262, 23);
             comboBoxBrand.TabIndex = 29;
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(350, 9);
+            label9.Name = "label9";
+            label9.Size = new Size(87, 15);
+            label9.TabIndex = 30;
+            label9.Text = "Об'єм двигуна";
+            // 
+            // numericUpDownEngineCapacity
+            // 
+            numericUpDownEngineCapacity.DecimalPlaces = 1;
+            numericUpDownEngineCapacity.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
+            numericUpDownEngineCapacity.Location = new Point(350, 27);
+            numericUpDownEngineCapacity.Name = "numericUpDownEngineCapacity";
+            numericUpDownEngineCapacity.Size = new Size(143, 23);
+            numericUpDownEngineCapacity.TabIndex = 31;
+            // 
+            // numericUpDownCilinders
+            // 
+            numericUpDownCilinders.Location = new Point(350, 71);
+            numericUpDownCilinders.Name = "numericUpDownCilinders";
+            numericUpDownCilinders.Size = new Size(143, 23);
+            numericUpDownCilinders.TabIndex = 33;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(350, 53);
+            label10.Name = "label10";
+            label10.Size = new Size(112, 15);
+            label10.TabIndex = 32;
+            label10.Text = "Кількість циліндрів";
+            // 
+            // numericUpDownPower
+            // 
+            numericUpDownPower.Increment = new decimal(new int[] { 10, 0, 0, 0 });
+            numericUpDownPower.Location = new Point(350, 115);
+            numericUpDownPower.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            numericUpDownPower.Name = "numericUpDownPower";
+            numericUpDownPower.Size = new Size(143, 23);
+            numericUpDownPower.TabIndex = 35;
+            numericUpDownPower.Value = new decimal(new int[] { 150, 0, 0, 0 });
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(350, 97);
+            label11.Name = "label11";
+            label11.Size = new Size(70, 15);
+            label11.TabIndex = 34;
+            label11.Text = "Потужність";
+            // 
+            // numericUpDownMaxSpeed
+            // 
+            numericUpDownMaxSpeed.Location = new Point(350, 159);
+            numericUpDownMaxSpeed.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            numericUpDownMaxSpeed.Name = "numericUpDownMaxSpeed";
+            numericUpDownMaxSpeed.Size = new Size(143, 23);
+            numericUpDownMaxSpeed.TabIndex = 37;
+            numericUpDownMaxSpeed.Value = new decimal(new int[] { 200, 0, 0, 0 });
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(350, 141);
+            label12.Name = "label12";
+            label12.Size = new Size(143, 15);
+            label12.TabIndex = 36;
+            label12.Text = "Максимальна швидкість";
+            // 
+            // numericUpDownAcceleration
+            // 
+            numericUpDownAcceleration.DecimalPlaces = 1;
+            numericUpDownAcceleration.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
+            numericUpDownAcceleration.Location = new Point(350, 203);
+            numericUpDownAcceleration.Name = "numericUpDownAcceleration";
+            numericUpDownAcceleration.Size = new Size(143, 23);
+            numericUpDownAcceleration.TabIndex = 39;
+            numericUpDownAcceleration.Value = new decimal(new int[] { 7, 0, 0, 0 });
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(350, 185);
+            label13.Name = "label13";
+            label13.Size = new Size(131, 15);
+            label13.TabIndex = 38;
+            label13.Text = "Розгін до 100 км/год, с";
+            // 
+            // comboBoxGearboxType
+            // 
+            comboBoxGearboxType.FormattingEnabled = true;
+            comboBoxGearboxType.Location = new Point(350, 247);
+            comboBoxGearboxType.Name = "comboBoxGearboxType";
+            comboBoxGearboxType.Size = new Size(188, 23);
+            comboBoxGearboxType.TabIndex = 41;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(350, 229);
+            label14.Name = "label14";
+            label14.Size = new Size(125, 15);
+            label14.TabIndex = 40;
+            label14.Text = "Тип коробки передач";
+            // 
+            // numericUpDownGearsNum
+            // 
+            numericUpDownGearsNum.Location = new Point(350, 291);
+            numericUpDownGearsNum.Name = "numericUpDownGearsNum";
+            numericUpDownGearsNum.Size = new Size(143, 23);
+            numericUpDownGearsNum.TabIndex = 43;
+            numericUpDownGearsNum.Value = new decimal(new int[] { 7, 0, 0, 0 });
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(350, 273);
+            label15.Name = "label15";
+            label15.Size = new Size(104, 15);
+            label15.TabIndex = 42;
+            label15.Text = "Кількість передач";
+            // 
+            // numericUpDownFuelConsumption
+            // 
+            numericUpDownFuelConsumption.DecimalPlaces = 1;
+            numericUpDownFuelConsumption.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
+            numericUpDownFuelConsumption.Location = new Point(350, 335);
+            numericUpDownFuelConsumption.Name = "numericUpDownFuelConsumption";
+            numericUpDownFuelConsumption.Size = new Size(143, 23);
+            numericUpDownFuelConsumption.TabIndex = 45;
+            numericUpDownFuelConsumption.Value = new decimal(new int[] { 7, 0, 0, 0 });
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Location = new Point(350, 317);
+            label16.Name = "label16";
+            label16.Size = new Size(187, 15);
+            label16.TabIndex = 44;
+            label16.Text = "Споживання палива на 100 км, л";
+            // 
             // FormAddModel
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(435, 478);
+            ClientSize = new Size(658, 478);
+            Controls.Add(numericUpDownFuelConsumption);
+            Controls.Add(label16);
+            Controls.Add(numericUpDownGearsNum);
+            Controls.Add(label15);
+            Controls.Add(comboBoxGearboxType);
+            Controls.Add(label14);
+            Controls.Add(numericUpDownAcceleration);
+            Controls.Add(label13);
+            Controls.Add(numericUpDownMaxSpeed);
+            Controls.Add(label12);
+            Controls.Add(numericUpDownPower);
+            Controls.Add(label11);
+            Controls.Add(numericUpDownCilinders);
+            Controls.Add(label10);
+            Controls.Add(numericUpDownEngineCapacity);
+            Controls.Add(label9);
             Controls.Add(comboBoxBrand);
             Controls.Add(comboBoxModel);
             Controls.Add(comboBoxDrive);
@@ -222,6 +404,13 @@
             Name = "FormAddModel";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Додати модель";
+            ((System.ComponentModel.ISupportInitialize)numericUpDownEngineCapacity).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownCilinders).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownPower).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownMaxSpeed).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownAcceleration).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownGearsNum).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownFuelConsumption).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -245,5 +434,21 @@
         private ComboBox comboBoxDrive;
         private ComboBox comboBoxModel;
         private ComboBox comboBoxBrand;
+        private Label label9;
+        private NumericUpDown numericUpDownEngineCapacity;
+        private NumericUpDown numericUpDownCilinders;
+        private Label label10;
+        private NumericUpDown numericUpDownPower;
+        private Label label11;
+        private NumericUpDown numericUpDownMaxSpeed;
+        private Label label12;
+        private NumericUpDown numericUpDownAcceleration;
+        private Label label13;
+        private ComboBox comboBoxGearboxType;
+        private Label label14;
+        private NumericUpDown numericUpDownGearsNum;
+        private Label label15;
+        private NumericUpDown numericUpDownFuelConsumption;
+        private Label label16;
     }
 }
