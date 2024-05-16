@@ -26,7 +26,7 @@ namespace DB_Cars_Sales.Transactions
                 "WHERE transactions.transaction_id = @id;";
             using (NpgsqlCommand command = new NpgsqlCommand(sql, connection))
             {
-                // Добавляем параметр @id
+                
                 command.Parameters.AddWithValue("@id", transactionId);
 
                 using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(command))
@@ -35,10 +35,9 @@ namespace DB_Cars_Sales.Transactions
                     adapter.Fill(dataTable);
                     if (dataTable.Rows.Count > 0)
                     {
-                        // Получаем первую строку данных
                         DataRow row = dataTable.Rows[0];
 
-                        // Извлекаем значения из столбцов по их именам
+                        
                         string brand = row["brand"].ToString();
                         string model = row["model"].ToString();
                         decimal price = Convert.ToDecimal(row["price"]);
@@ -59,7 +58,7 @@ namespace DB_Cars_Sales.Transactions
                     }
                     else
                     {
-                        // В случае отсутствия данных можно выполнить какие-то действия или вывести сообщение об ошибке
+                        MessageBox.Show("вот такие пироги");
                     }
                 }
             }

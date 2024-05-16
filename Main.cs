@@ -29,12 +29,18 @@ namespace DB_Cars_Sales
             RefreshEmployeessDataGridView();
             RefreshTransactionsDataGridView();
             RefreshModelsDataGridView();
+            RefreshCarsDataGridView();
             radioButtonCustomerSurname.Checked = true;
         }
 
         public void RefreshCarDealershipsDataGridView()
         {
             CarDealershipsDataGridView.DataSource = CarDealershipsSqlConnectionReader();
+        }
+
+        public void RefreshCarsDataGridView()
+        {
+            CarsDataGridView.DataSource = CarsSqlConnectionReader();
         }
 
         public void RefreshEmployeessDataGridView()
@@ -72,6 +78,24 @@ namespace DB_Cars_Sales
             }
         }
 
+        private DataTable CarsSqlConnectionReader()
+        {
+
+            string sql = "SELECT cars.brand, cars.model, cars.price, cars.bodytype, cars.color, " +
+                "cars.mileage, cars.condition, cars.vin, cars.description, cars.configuration, " +
+                "car_dealerships.name AS dealership_owner " +
+                "FROM cars JOIN car_dealerships ON cars.dealership_owner = car_dealerships.dealership_id;";
+            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+            {
+                using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(sql, connection))
+                {
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    return dataTable;
+                }
+            }
+        }
+
         private DataTable EmployeesSqlConnectionReader()
         {
 
@@ -95,7 +119,7 @@ namespace DB_Cars_Sales
                 }
             }
         }
-        // с богом 
+        // з богом 
         private DataTable CustomerssSqlConnectionReader()
         {
 
@@ -551,6 +575,26 @@ namespace DB_Cars_Sales
             {
                 MessageBox.Show("Укажіть рядок з клієнтом, який треба видалити!");
             }
+        }
+
+        private void comboBoxBodytype_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown4_ValueChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void buttonModelDetails_Click(object sender, EventArgs e)
