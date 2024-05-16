@@ -30,6 +30,13 @@ namespace DB_Cars_Sales
             RefreshTransactionsDataGridView();
             RefreshModelsDataGridView();
             RefreshCarsDataGridView();
+
+            SearchCarBrands();
+            comboBoxBrand.SelectedIndex = 1;
+            SearchCarModels();
+            SearchCarBodytypes();
+            comboBoxBodytype.SelectedIndex = 0;
+
             radioButtonCustomerSurname.Checked = true;
         }
 
@@ -577,31 +584,135 @@ namespace DB_Cars_Sales
             }
         }
 
-        private void comboBoxBodytype_SelectedIndexChanged(object sender, EventArgs e)
+        private void SearchCarBrands()
         {
+            string searchBrands = "SELECT DISTINCT brand FROM cars";
+            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+            {
+                connection.Open();
+                NpgsqlCommand command = new NpgsqlCommand(searchBrands, connection);
+                NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(command);
+                DataTable table = new DataTable();
 
+                adapter.Fill(table);
+
+                if (table.Rows.Count > 0)
+                {
+                    comboBoxBrand.DataSource = table;
+                    comboBoxBrand.DisplayMember = "brand";
+                    comboBoxBrand.ValueMember = "brand";
+                }
+            }
         }
 
-        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        private void SearchCarModels()
         {
+            string searchModels = "SELECT DISTINCT model FROM cars WHERE brand = @brand";
+            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+            {
+                connection.Open();
+                using (NpgsqlCommand command = new NpgsqlCommand(searchModels, connection))
+                {
+                    command.Parameters.AddWithValue("@brand", comboBoxBrand.Text);
+                    using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(command))
+                    {
+                        DataTable table = new DataTable();
+                        adapter.Fill(table);
 
+                        if (table.Rows.Count > 0)
+                        {
+                            comboBoxModel.DataSource = table;
+                            comboBoxModel.DisplayMember = "model";
+                            comboBoxModel.ValueMember = "model";
+                        }
+                    }
+                }
+            }
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void SearchCarBodytypes()
         {
+            string searchModels = "SELECT DISTINCT bodytype FROM cars";
+            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+            {
+                connection.Open();
+                using (NpgsqlCommand command = new NpgsqlCommand(searchModels, connection))
+                {
+                    using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(command))
+                    {
+                        DataTable table = new DataTable();
+                        adapter.Fill(table);
 
+                        if (table.Rows.Count > 0)
+                        {
+                            comboBoxBodytype.DataSource = table;
+                            comboBoxBodytype.DisplayMember = "bodytype";
+                            comboBoxBodytype.ValueMember = "bodytype";
+                        }
+                    }
+                }
+            }
         }
 
-        private void numericUpDown4_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void buttonModelDetails_Click(object sender, EventArgs e)
         {
             string configuration = ModelsDataGridView.SelectedRows[0].Cells["configuration"].Value.ToString();
             FormCheckInfoCarModels formCheckInfoCarModels = new FormCheckInfoCarModels(configuration);
             formCheckInfoCarModels.ShowDialog();
+        }
+
+        private void comboBoxBrand_TextUpdate(object sender, EventArgs e)
+        {
+            SearchCarModels();
+        }
+
+        private void comboBoxBrand_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SearchCarModels();
+        }
+
+        private void buttonSearchCar_Click(object sender, EventArgs e)
+        {
+            NpgsqlConnection connection;
+            connection = new NpgsqlConnection(connectionString);
+            string bodytype = comboBoxBodytype.Text;
+            string brand = comboBoxBrand.Text;
+            string model = comboBoxModel.Text;
+            int yearFrom = (int)numericUpDownYearFrom.Value;
+            int yearTo = (int)numericUpDownYearTo.Value;
+            int priceFrom = (int)numericUpDownPriceFrom.Value;
+            int priceTo = (int)numericUpDownPriceTo.Value;
+            try
+            {
+                connection.Open();
+                string query = "SELECT cars.brand, cars.model, cars.price, cars.bodytype, cars.color, " +
+                "cars.mileage, cars.condition, cars.vin, cars.description, cars.configuration, " +
+                "car_dealerships.name AS dealership_owner " +
+                "FROM cars JOIN car_dealerships ON cars.dealership_owner = car_dealerships.dealership_id " +
+                "WHERE brand = @brand AND model = @model AND bodytype = @bodytype " +
+                "AND year BETWEEN @startYear AND @endYear AND " +
+                "price BETWEEN @startPrice AND @endPrice;";
+                
+                NpgsqlCommand cmd = new NpgsqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@brand", brand);
+                cmd.Parameters.AddWithValue("@model", model);
+                cmd.Parameters.AddWithValue("@bodytype", bodytype);
+                cmd.Parameters.AddWithValue("@startYear", yearFrom);
+                cmd.Parameters.AddWithValue("@endYear", yearTo);
+                cmd.Parameters.AddWithValue("@startPrice", priceFrom);
+                cmd.Parameters.AddWithValue("@endPrice", priceTo);
+                NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                CarsDataGridView.DataSource = dt;
+
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
     }
 }

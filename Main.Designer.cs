@@ -30,6 +30,27 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageCars = new System.Windows.Forms.TabPage();
+            this.buttonSearchCar = new System.Windows.Forms.Button();
+            this.buttonUpdateCar = new System.Windows.Forms.Button();
+            this.buttonCheckCarInfo = new System.Windows.Forms.Button();
+            this.buttonDeleteCar = new System.Windows.Forms.Button();
+            this.buttonAddCar = new System.Windows.Forms.Button();
+            this.numericUpDownPriceFrom = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownPriceTo = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.numericUpDownYearTo = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownYearFrom = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelPrice = new System.Windows.Forms.Label();
+            this.labelYear = new System.Windows.Forms.Label();
+            this.labelModel = new System.Windows.Forms.Label();
+            this.comboBoxModel = new System.Windows.Forms.ComboBox();
+            this.labelBrand = new System.Windows.Forms.Label();
+            this.comboBoxBrand = new System.Windows.Forms.ComboBox();
+            this.labelBodytype = new System.Windows.Forms.Label();
+            this.comboBoxBodytype = new System.Windows.Forms.ComboBox();
             this.CarsDataGridView = new System.Windows.Forms.DataGridView();
             this.tabPageCarModels = new System.Windows.Forms.TabPage();
             this.buttonModelDetails = new System.Windows.Forms.Button();
@@ -65,29 +86,12 @@
             this.buttonAddTransaction = new System.Windows.Forms.Button();
             this.TransactionsDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBoxBodytype = new System.Windows.Forms.ComboBox();
-            this.labelBodytype = new System.Windows.Forms.Label();
-            this.labelBrand = new System.Windows.Forms.Label();
-            this.comboBoxBrand = new System.Windows.Forms.ComboBox();
-            this.labelModel = new System.Windows.Forms.Label();
-            this.comboBoxModel = new System.Windows.Forms.ComboBox();
-            this.labelYear = new System.Windows.Forms.Label();
-            this.labelPrice = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownPriceTo = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.buttonCheckCarInfo = new System.Windows.Forms.Button();
-            this.buttonDeleteCar = new System.Windows.Forms.Button();
-            this.buttonAddCar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPageCars.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPriceFrom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPriceTo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYearTo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYearFrom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CarsDataGridView)).BeginInit();
             this.tabPageCarModels.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ModelsDataGridView)).BeginInit();
@@ -100,10 +104,6 @@
             this.tabPageTransactions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TransactionsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPriceTo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -127,17 +127,17 @@
             // tabPageCars
             // 
             this.tabPageCars.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tabPageCars.Controls.Add(this.button2);
-            this.tabPageCars.Controls.Add(this.button1);
+            this.tabPageCars.Controls.Add(this.buttonSearchCar);
+            this.tabPageCars.Controls.Add(this.buttonUpdateCar);
             this.tabPageCars.Controls.Add(this.buttonCheckCarInfo);
             this.tabPageCars.Controls.Add(this.buttonDeleteCar);
             this.tabPageCars.Controls.Add(this.buttonAddCar);
-            this.tabPageCars.Controls.Add(this.numericUpDown4);
+            this.tabPageCars.Controls.Add(this.numericUpDownPriceFrom);
             this.tabPageCars.Controls.Add(this.numericUpDownPriceTo);
             this.tabPageCars.Controls.Add(this.label3);
             this.tabPageCars.Controls.Add(this.label4);
-            this.tabPageCars.Controls.Add(this.numericUpDown2);
-            this.tabPageCars.Controls.Add(this.numericUpDown1);
+            this.tabPageCars.Controls.Add(this.numericUpDownYearTo);
+            this.tabPageCars.Controls.Add(this.numericUpDownYearFrom);
             this.tabPageCars.Controls.Add(this.label2);
             this.tabPageCars.Controls.Add(this.label1);
             this.tabPageCars.Controls.Add(this.labelPrice);
@@ -156,6 +156,241 @@
             this.tabPageCars.Size = new System.Drawing.Size(1046, 568);
             this.tabPageCars.TabIndex = 0;
             this.tabPageCars.Text = "Автомобілі";
+            // 
+            // buttonSearchCar
+            // 
+            this.buttonSearchCar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonSearchCar.Location = new System.Drawing.Point(539, 6);
+            this.buttonSearchCar.Name = "buttonSearchCar";
+            this.buttonSearchCar.Size = new System.Drawing.Size(93, 94);
+            this.buttonSearchCar.TabIndex = 25;
+            this.buttonSearchCar.Text = "Знайти авто";
+            this.buttonSearchCar.UseVisualStyleBackColor = true;
+            this.buttonSearchCar.Click += new System.EventHandler(this.buttonSearchCar_Click);
+            // 
+            // buttonUpdateCar
+            // 
+            this.buttonUpdateCar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonUpdateCar.Location = new System.Drawing.Point(940, 6);
+            this.buttonUpdateCar.Name = "buttonUpdateCar";
+            this.buttonUpdateCar.Size = new System.Drawing.Size(98, 44);
+            this.buttonUpdateCar.TabIndex = 24;
+            this.buttonUpdateCar.Text = "Оновити дані ";
+            this.buttonUpdateCar.UseVisualStyleBackColor = true;
+            // 
+            // buttonCheckCarInfo
+            // 
+            this.buttonCheckCarInfo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonCheckCarInfo.Location = new System.Drawing.Point(940, 56);
+            this.buttonCheckCarInfo.Name = "buttonCheckCarInfo";
+            this.buttonCheckCarInfo.Size = new System.Drawing.Size(98, 44);
+            this.buttonCheckCarInfo.TabIndex = 23;
+            this.buttonCheckCarInfo.Text = "Деталі";
+            this.buttonCheckCarInfo.UseVisualStyleBackColor = true;
+            // 
+            // buttonDeleteCar
+            // 
+            this.buttonDeleteCar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonDeleteCar.Location = new System.Drawing.Point(836, 55);
+            this.buttonDeleteCar.Name = "buttonDeleteCar";
+            this.buttonDeleteCar.Size = new System.Drawing.Size(98, 44);
+            this.buttonDeleteCar.TabIndex = 22;
+            this.buttonDeleteCar.Text = "Видалити авто";
+            this.buttonDeleteCar.UseVisualStyleBackColor = true;
+            // 
+            // buttonAddCar
+            // 
+            this.buttonAddCar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonAddCar.Location = new System.Drawing.Point(836, 6);
+            this.buttonAddCar.Name = "buttonAddCar";
+            this.buttonAddCar.Size = new System.Drawing.Size(98, 44);
+            this.buttonAddCar.TabIndex = 21;
+            this.buttonAddCar.Text = "Додати авто";
+            this.buttonAddCar.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDownPriceFrom
+            // 
+            this.numericUpDownPriceFrom.Location = new System.Drawing.Point(338, 58);
+            this.numericUpDownPriceFrom.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+            this.numericUpDownPriceFrom.Name = "numericUpDownPriceFrom";
+            this.numericUpDownPriceFrom.Size = new System.Drawing.Size(73, 23);
+            this.numericUpDownPriceFrom.TabIndex = 20;
+            this.numericUpDownPriceFrom.Value = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDownPriceTo
+            // 
+            this.numericUpDownPriceTo.Location = new System.Drawing.Point(445, 58);
+            this.numericUpDownPriceTo.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+            this.numericUpDownPriceTo.Name = "numericUpDownPriceTo";
+            this.numericUpDownPriceTo.Size = new System.Drawing.Size(73, 23);
+            this.numericUpDownPriceTo.TabIndex = 19;
+            this.numericUpDownPriceTo.Value = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(417, 60);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(22, 15);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "До";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(309, 60);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(23, 15);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Від";
+            // 
+            // numericUpDownYearTo
+            // 
+            this.numericUpDownYearTo.Location = new System.Drawing.Point(202, 58);
+            this.numericUpDownYearTo.Maximum = new decimal(new int[] {
+            2024,
+            0,
+            0,
+            0});
+            this.numericUpDownYearTo.Name = "numericUpDownYearTo";
+            this.numericUpDownYearTo.Size = new System.Drawing.Size(52, 23);
+            this.numericUpDownYearTo.TabIndex = 15;
+            this.numericUpDownYearTo.Value = new decimal(new int[] {
+            2024,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDownYearFrom
+            // 
+            this.numericUpDownYearFrom.Location = new System.Drawing.Point(116, 58);
+            this.numericUpDownYearFrom.Maximum = new decimal(new int[] {
+            2024,
+            0,
+            0,
+            0});
+            this.numericUpDownYearFrom.Name = "numericUpDownYearFrom";
+            this.numericUpDownYearFrom.Size = new System.Drawing.Size(52, 23);
+            this.numericUpDownYearFrom.TabIndex = 14;
+            this.numericUpDownYearFrom.Value = new decimal(new int[] {
+            1885,
+            0,
+            0,
+            0});
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(174, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(22, 15);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "До";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(87, 60);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(23, 15);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Від";
+            // 
+            // labelPrice
+            // 
+            this.labelPrice.AutoSize = true;
+            this.labelPrice.ForeColor = System.Drawing.Color.Black;
+            this.labelPrice.Location = new System.Drawing.Point(262, 60);
+            this.labelPrice.Name = "labelPrice";
+            this.labelPrice.Size = new System.Drawing.Size(47, 15);
+            this.labelPrice.TabIndex = 11;
+            this.labelPrice.Text = "Ціна, ₴:";
+            // 
+            // labelYear
+            // 
+            this.labelYear.AutoSize = true;
+            this.labelYear.ForeColor = System.Drawing.Color.Black;
+            this.labelYear.Location = new System.Drawing.Point(8, 60);
+            this.labelYear.Name = "labelYear";
+            this.labelYear.Size = new System.Drawing.Size(73, 15);
+            this.labelYear.TabIndex = 10;
+            this.labelYear.Text = "Рік випуску:";
+            // 
+            // labelModel
+            // 
+            this.labelModel.AutoSize = true;
+            this.labelModel.ForeColor = System.Drawing.Color.Black;
+            this.labelModel.Location = new System.Drawing.Point(397, 3);
+            this.labelModel.Name = "labelModel";
+            this.labelModel.Size = new System.Drawing.Size(50, 15);
+            this.labelModel.TabIndex = 9;
+            this.labelModel.Text = "Модель";
+            // 
+            // comboBoxModel
+            // 
+            this.comboBoxModel.FormattingEnabled = true;
+            this.comboBoxModel.Location = new System.Drawing.Point(397, 21);
+            this.comboBoxModel.Name = "comboBoxModel";
+            this.comboBoxModel.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxModel.TabIndex = 8;
+            // 
+            // labelBrand
+            // 
+            this.labelBrand.AutoSize = true;
+            this.labelBrand.ForeColor = System.Drawing.Color.Black;
+            this.labelBrand.Location = new System.Drawing.Point(188, 3);
+            this.labelBrand.Name = "labelBrand";
+            this.labelBrand.Size = new System.Drawing.Size(46, 15);
+            this.labelBrand.TabIndex = 7;
+            this.labelBrand.Text = "Марка ";
+            // 
+            // comboBoxBrand
+            // 
+            this.comboBoxBrand.FormattingEnabled = true;
+            this.comboBoxBrand.Location = new System.Drawing.Point(188, 21);
+            this.comboBoxBrand.Name = "comboBoxBrand";
+            this.comboBoxBrand.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxBrand.TabIndex = 6;
+            this.comboBoxBrand.SelectedIndexChanged += new System.EventHandler(this.comboBoxBrand_SelectedIndexChanged);
+            this.comboBoxBrand.TextUpdate += new System.EventHandler(this.comboBoxBrand_TextUpdate);
+            // 
+            // labelBodytype
+            // 
+            this.labelBodytype.AutoSize = true;
+            this.labelBodytype.ForeColor = System.Drawing.Color.Black;
+            this.labelBodytype.Location = new System.Drawing.Point(8, 3);
+            this.labelBodytype.Name = "labelBodytype";
+            this.labelBodytype.Size = new System.Drawing.Size(66, 15);
+            this.labelBodytype.TabIndex = 5;
+            this.labelBodytype.Text = "Тип кузову";
+            // 
+            // comboBoxBodytype
+            // 
+            this.comboBoxBodytype.FormattingEnabled = true;
+            this.comboBoxBodytype.Location = new System.Drawing.Point(8, 21);
+            this.comboBoxBodytype.Name = "comboBoxBodytype";
+            this.comboBoxBodytype.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxBodytype.TabIndex = 4;
             // 
             // CarsDataGridView
             // 
@@ -190,13 +425,12 @@
             // 
             // buttonModelDetails
             // 
-            buttonModelDetails.Location = new Point(920, 20);
-            buttonModelDetails.Name = "buttonModelDetails";
-            buttonModelDetails.Size = new Size(98, 44);
-            buttonModelDetails.TabIndex = 15;
-            buttonModelDetails.Text = "Деталі";
-            buttonModelDetails.UseVisualStyleBackColor = true;
-            buttonModelDetails.Click += buttonModelDetails_Click;
+            this.buttonModelDetails.Location = new System.Drawing.Point(920, 20);
+            this.buttonModelDetails.Name = "buttonModelDetails";
+            this.buttonModelDetails.Size = new System.Drawing.Size(98, 44);
+            this.buttonModelDetails.TabIndex = 15;
+            this.buttonModelDetails.Text = "Деталі";
+            this.buttonModelDetails.UseVisualStyleBackColor = true;
             // 
             // buttonDeleteModel
             // 
@@ -215,6 +449,7 @@
             this.buttonAddModel.TabIndex = 13;
             this.buttonAddModel.Text = "Додати модель";
             this.buttonAddModel.UseVisualStyleBackColor = true;
+            this.buttonAddModel.Click += new System.EventHandler(this.buttonAddModel_Click);
             // 
             // ModelsDataGridView
             // 
@@ -366,22 +601,22 @@
             // 
             // tabPageCustomers
             // 
-            tabPageCustomers.BackColor = Color.FromArgb(255, 208, 208);
-            tabPageCustomers.Controls.Add(buttonDeleteClient);
-            tabPageCustomers.Controls.Add(buttonUpdateClient);
-            tabPageCustomers.Controls.Add(buttonAddClient);
-            tabPageCustomers.Controls.Add(labelCustomerSearch);
-            tabPageCustomers.Controls.Add(buttonCustomerSearch);
-            tabPageCustomers.Controls.Add(textBoxCustomerSearch);
-            tabPageCustomers.Controls.Add(radioButtonCustomerDate);
-            tabPageCustomers.Controls.Add(radioButtonCustomerPhone);
-            tabPageCustomers.Controls.Add(radioButtonCustomerSurname);
-            tabPageCustomers.Controls.Add(CustomerDataGridView);
-            tabPageCustomers.Location = new Point(4, 24);
-            tabPageCustomers.Name = "tabPageCustomers";
-            tabPageCustomers.Size = new Size(1046, 568);
-            tabPageCustomers.TabIndex = 4;
-            tabPageCustomers.Text = "Клієнти";
+            this.tabPageCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tabPageCustomers.Controls.Add(this.buttonDeleteClient);
+            this.tabPageCustomers.Controls.Add(this.buttonUpdateClient);
+            this.tabPageCustomers.Controls.Add(this.buttonAddClient);
+            this.tabPageCustomers.Controls.Add(this.labelCustomerSearch);
+            this.tabPageCustomers.Controls.Add(this.buttonCustomerSearch);
+            this.tabPageCustomers.Controls.Add(this.textBoxCustomerSearch);
+            this.tabPageCustomers.Controls.Add(this.radioButtonCustomerDate);
+            this.tabPageCustomers.Controls.Add(this.radioButtonCustomerPhone);
+            this.tabPageCustomers.Controls.Add(this.radioButtonCustomerSurname);
+            this.tabPageCustomers.Controls.Add(this.CustomerDataGridView);
+            this.tabPageCustomers.Location = new System.Drawing.Point(4, 24);
+            this.tabPageCustomers.Name = "tabPageCustomers";
+            this.tabPageCustomers.Size = new System.Drawing.Size(1046, 568);
+            this.tabPageCustomers.TabIndex = 4;
+            this.tabPageCustomers.Text = "Клієнти";
             // 
             // buttonDeleteClient
             // 
@@ -425,12 +660,12 @@
             // 
             // buttonCustomerSearch
             // 
-            buttonCustomerSearch.Location = new Point(524, 22);
-            buttonCustomerSearch.Name = "buttonCustomerSearch";
-            buttonCustomerSearch.Size = new Size(93, 52);
-            buttonCustomerSearch.TabIndex = 5;
-            buttonCustomerSearch.Text = "Знайти клієнта";
-            buttonCustomerSearch.UseVisualStyleBackColor = true;
+            this.buttonCustomerSearch.Location = new System.Drawing.Point(524, 22);
+            this.buttonCustomerSearch.Name = "buttonCustomerSearch";
+            this.buttonCustomerSearch.Size = new System.Drawing.Size(93, 52);
+            this.buttonCustomerSearch.TabIndex = 5;
+            this.buttonCustomerSearch.Text = "Знайти клієнта";
+            this.buttonCustomerSearch.UseVisualStyleBackColor = true;
             // 
             // textBoxCustomerSearch
             // 
@@ -441,49 +676,50 @@
             // 
             // radioButtonCustomerDate
             // 
-            radioButtonCustomerDate.AutoSize = true;
-            radioButtonCustomerDate.Location = new Point(363, 62);
-            radioButtonCustomerDate.Name = "radioButtonCustomerDate";
-            radioButtonCustomerDate.Size = new Size(144, 19);
-            radioButtonCustomerDate.TabIndex = 3;
-            radioButtonCustomerDate.TabStop = true;
-            radioButtonCustomerDate.Text = "за датою народження";
-            radioButtonCustomerDate.UseVisualStyleBackColor = true;
+            this.radioButtonCustomerDate.AutoSize = true;
+            this.radioButtonCustomerDate.Location = new System.Drawing.Point(363, 62);
+            this.radioButtonCustomerDate.Name = "radioButtonCustomerDate";
+            this.radioButtonCustomerDate.Size = new System.Drawing.Size(144, 19);
+            this.radioButtonCustomerDate.TabIndex = 3;
+            this.radioButtonCustomerDate.TabStop = true;
+            this.radioButtonCustomerDate.Text = "за датою народження";
+            this.radioButtonCustomerDate.UseVisualStyleBackColor = true;
             // 
             // radioButtonCustomerPhone
             // 
-            radioButtonCustomerPhone.AutoSize = true;
-            radioButtonCustomerPhone.Location = new Point(363, 37);
-            radioButtonCustomerPhone.Name = "radioButtonCustomerPhone";
-            radioButtonCustomerPhone.Size = new Size(102, 19);
-            radioButtonCustomerPhone.TabIndex = 2;
-            radioButtonCustomerPhone.TabStop = true;
-            radioButtonCustomerPhone.Text = "за телефоном";
-            radioButtonCustomerPhone.UseVisualStyleBackColor = true;
+            this.radioButtonCustomerPhone.AutoSize = true;
+            this.radioButtonCustomerPhone.Location = new System.Drawing.Point(363, 37);
+            this.radioButtonCustomerPhone.Name = "radioButtonCustomerPhone";
+            this.radioButtonCustomerPhone.Size = new System.Drawing.Size(102, 19);
+            this.radioButtonCustomerPhone.TabIndex = 2;
+            this.radioButtonCustomerPhone.TabStop = true;
+            this.radioButtonCustomerPhone.Text = "за телефоном";
+            this.radioButtonCustomerPhone.UseVisualStyleBackColor = true;
             // 
             // radioButtonCustomerSurname
             // 
-            radioButtonCustomerSurname.AutoSize = true;
-            radioButtonCustomerSurname.Location = new Point(363, 12);
-            radioButtonCustomerSurname.Name = "radioButtonCustomerSurname";
-            radioButtonCustomerSurname.Size = new Size(100, 19);
-            radioButtonCustomerSurname.TabIndex = 1;
-            radioButtonCustomerSurname.TabStop = true;
-            radioButtonCustomerSurname.Text = "за прізвищем";
-            radioButtonCustomerSurname.UseVisualStyleBackColor = true;
+            this.radioButtonCustomerSurname.AutoSize = true;
+            this.radioButtonCustomerSurname.Location = new System.Drawing.Point(363, 12);
+            this.radioButtonCustomerSurname.Name = "radioButtonCustomerSurname";
+            this.radioButtonCustomerSurname.Size = new System.Drawing.Size(100, 19);
+            this.radioButtonCustomerSurname.TabIndex = 1;
+            this.radioButtonCustomerSurname.TabStop = true;
+            this.radioButtonCustomerSurname.Text = "за прізвищем";
+            this.radioButtonCustomerSurname.UseVisualStyleBackColor = true;
             // 
             // CustomerDataGridView
             // 
-            CustomerDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            CustomerDataGridView.BackgroundColor = Color.FromArgb(255, 228, 228);
-            CustomerDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            CustomerDataGridView.Location = new Point(0, 86);
-            CustomerDataGridView.Name = "CustomerDataGridView";
-            CustomerDataGridView.RowHeadersWidth = 51;
-            CustomerDataGridView.RowTemplate.Height = 25;
-            CustomerDataGridView.Size = new Size(1046, 482);
-            CustomerDataGridView.TabIndex = 0;
-            CustomerDataGridView.SelectionChanged += CustomerDataGridView_SelectionChanged;
+            this.CustomerDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CustomerDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
+            this.CustomerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CustomerDataGridView.Location = new System.Drawing.Point(0, 86);
+            this.CustomerDataGridView.Name = "CustomerDataGridView";
+            this.CustomerDataGridView.RowHeadersWidth = 51;
+            this.CustomerDataGridView.RowTemplate.Height = 25;
+            this.CustomerDataGridView.Size = new System.Drawing.Size(1046, 482);
+            this.CustomerDataGridView.TabIndex = 0;
             // 
             // tabPageTransactions
             // 
@@ -528,23 +764,17 @@
             // 
             // TransactionsDataGridView
             // 
-            TransactionsDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            TransactionsDataGridView.BackgroundColor = Color.FromArgb(255, 228, 228);
-            TransactionsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            TransactionsDataGridView.Location = new Point(0, 86);
-            TransactionsDataGridView.Name = "TransactionsDataGridView";
-            TransactionsDataGridView.RowHeadersWidth = 51;
-            TransactionsDataGridView.RowTemplate.Height = 25;
-            TransactionsDataGridView.Size = new Size(1046, 482);
-            TransactionsDataGridView.TabIndex = 1;
-            TransactionsDataGridView.SelectionChanged += TransactionsDataGridView_SelectionChanged;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(240, 150);
-            dataGridView1.TabIndex = 0;
+            this.TransactionsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TransactionsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
+            this.TransactionsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TransactionsDataGridView.Location = new System.Drawing.Point(0, 86);
+            this.TransactionsDataGridView.Name = "TransactionsDataGridView";
+            this.TransactionsDataGridView.RowHeadersWidth = 51;
+            this.TransactionsDataGridView.RowTemplate.Height = 25;
+            this.TransactionsDataGridView.Size = new System.Drawing.Size(1046, 482);
+            this.TransactionsDataGridView.TabIndex = 1;
             // 
             // dataGridView1
             // 
@@ -552,242 +782,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // comboBoxBodytype
-            // 
-            this.comboBoxBodytype.FormattingEnabled = true;
-            this.comboBoxBodytype.Location = new System.Drawing.Point(8, 21);
-            this.comboBoxBodytype.Name = "comboBoxBodytype";
-            this.comboBoxBodytype.Size = new System.Drawing.Size(121, 23);
-            this.comboBoxBodytype.TabIndex = 4;
-            this.comboBoxBodytype.SelectedIndexChanged += new System.EventHandler(this.comboBoxBodytype_SelectedIndexChanged);
-            // 
-            // labelBodytype
-            // 
-            this.labelBodytype.AutoSize = true;
-            this.labelBodytype.ForeColor = System.Drawing.Color.Black;
-            this.labelBodytype.Location = new System.Drawing.Point(8, 3);
-            this.labelBodytype.Name = "labelBodytype";
-            this.labelBodytype.Size = new System.Drawing.Size(66, 15);
-            this.labelBodytype.TabIndex = 5;
-            this.labelBodytype.Text = "Тип кузову";
-            // 
-            // labelBrand
-            // 
-            this.labelBrand.AutoSize = true;
-            this.labelBrand.ForeColor = System.Drawing.Color.Black;
-            this.labelBrand.Location = new System.Drawing.Point(188, 3);
-            this.labelBrand.Name = "labelBrand";
-            this.labelBrand.Size = new System.Drawing.Size(46, 15);
-            this.labelBrand.TabIndex = 7;
-            this.labelBrand.Text = "Марка ";
-            // 
-            // comboBoxBrand
-            // 
-            this.comboBoxBrand.FormattingEnabled = true;
-            this.comboBoxBrand.Location = new System.Drawing.Point(188, 21);
-            this.comboBoxBrand.Name = "comboBoxBrand";
-            this.comboBoxBrand.Size = new System.Drawing.Size(121, 23);
-            this.comboBoxBrand.TabIndex = 6;
-            // 
-            // labelModel
-            // 
-            this.labelModel.AutoSize = true;
-            this.labelModel.ForeColor = System.Drawing.Color.Black;
-            this.labelModel.Location = new System.Drawing.Point(397, 3);
-            this.labelModel.Name = "labelModel";
-            this.labelModel.Size = new System.Drawing.Size(50, 15);
-            this.labelModel.TabIndex = 9;
-            this.labelModel.Text = "Модель";
-            // 
-            // comboBoxModel
-            // 
-            this.comboBoxModel.FormattingEnabled = true;
-            this.comboBoxModel.Location = new System.Drawing.Point(397, 21);
-            this.comboBoxModel.Name = "comboBoxModel";
-            this.comboBoxModel.Size = new System.Drawing.Size(121, 23);
-            this.comboBoxModel.TabIndex = 8;
-            // 
-            // labelYear
-            // 
-            this.labelYear.AutoSize = true;
-            this.labelYear.ForeColor = System.Drawing.Color.Black;
-            this.labelYear.Location = new System.Drawing.Point(8, 60);
-            this.labelYear.Name = "labelYear";
-            this.labelYear.Size = new System.Drawing.Size(73, 15);
-            this.labelYear.TabIndex = 10;
-            this.labelYear.Text = "Рік випуску:";
-            // 
-            // labelPrice
-            // 
-            this.labelPrice.AutoSize = true;
-            this.labelPrice.ForeColor = System.Drawing.Color.Black;
-            this.labelPrice.Location = new System.Drawing.Point(262, 60);
-            this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(47, 15);
-            this.labelPrice.TabIndex = 11;
-            this.labelPrice.Text = "Ціна, ₴:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(87, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 15);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Від";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(174, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 15);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "До";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(116, 58);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            2024,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(52, 23);
-            this.numericUpDown1.TabIndex = 14;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1885,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(202, 58);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
-            2024,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(52, 23);
-            this.numericUpDown2.TabIndex = 15;
-            this.numericUpDown2.Value = new decimal(new int[] {
-            2024,
-            0,
-            0,
-            0});
-            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
-            // 
-            // numericUpDownPriceTo
-            // 
-            this.numericUpDownPriceTo.Location = new System.Drawing.Point(445, 58);
-            this.numericUpDownPriceTo.Maximum = new decimal(new int[] {
-            1410065407,
-            2,
-            0,
-            0});
-            this.numericUpDownPriceTo.Name = "numericUpDownPriceTo";
-            this.numericUpDownPriceTo.Size = new System.Drawing.Size(73, 23);
-            this.numericUpDownPriceTo.TabIndex = 19;
-            this.numericUpDownPriceTo.Value = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(417, 60);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(22, 15);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "До";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(309, 60);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(23, 15);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Від";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // numericUpDown4
-            // 
-            this.numericUpDown4.Location = new System.Drawing.Point(338, 58);
-            this.numericUpDown4.Maximum = new decimal(new int[] {
-            1410065407,
-            2,
-            0,
-            0});
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(73, 23);
-            this.numericUpDown4.TabIndex = 20;
-            this.numericUpDown4.Value = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.numericUpDown4.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
-            // 
-            // buttonCheckCarInfo
-            // 
-            this.buttonCheckCarInfo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonCheckCarInfo.Location = new System.Drawing.Point(940, 56);
-            this.buttonCheckCarInfo.Name = "buttonCheckCarInfo";
-            this.buttonCheckCarInfo.Size = new System.Drawing.Size(98, 44);
-            this.buttonCheckCarInfo.TabIndex = 23;
-            this.buttonCheckCarInfo.Text = "Деталі";
-            this.buttonCheckCarInfo.UseVisualStyleBackColor = true;
-            // 
-            // buttonDeleteCar
-            // 
-            this.buttonDeleteCar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonDeleteCar.Location = new System.Drawing.Point(836, 55);
-            this.buttonDeleteCar.Name = "buttonDeleteCar";
-            this.buttonDeleteCar.Size = new System.Drawing.Size(98, 44);
-            this.buttonDeleteCar.TabIndex = 22;
-            this.buttonDeleteCar.Text = "Видалити авто";
-            this.buttonDeleteCar.UseVisualStyleBackColor = true;
-            // 
-            // buttonAddCar
-            // 
-            this.buttonAddCar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonAddCar.Location = new System.Drawing.Point(836, 6);
-            this.buttonAddCar.Name = "buttonAddCar";
-            this.buttonAddCar.Size = new System.Drawing.Size(98, 44);
-            this.buttonAddCar.TabIndex = 21;
-            this.buttonAddCar.Text = "Додати авто";
-            this.buttonAddCar.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(940, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 44);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Оновити дані ";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(539, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 94);
-            this.button2.TabIndex = 25;
-            this.button2.Text = "Знайти авто";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -802,6 +796,10 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPageCars.ResumeLayout(false);
             this.tabPageCars.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPriceFrom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPriceTo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYearTo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYearFrom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CarsDataGridView)).EndInit();
             this.tabPageCarModels.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ModelsDataGridView)).EndInit();
@@ -816,10 +814,6 @@
             this.tabPageTransactions.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TransactionsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPriceTo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -864,8 +858,8 @@
         private DataGridView CarsDataGridView;
         private Label labelBodytype;
         private ComboBox comboBoxBodytype;
-        private NumericUpDown numericUpDown2;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown numericUpDownYearTo;
+        private NumericUpDown numericUpDownYearFrom;
         private Label label2;
         private Label label1;
         private Label labelPrice;
@@ -874,14 +868,14 @@
         private ComboBox comboBoxModel;
         private Label labelBrand;
         private ComboBox comboBoxBrand;
-        private NumericUpDown numericUpDown4;
+        private NumericUpDown numericUpDownPriceFrom;
         private NumericUpDown numericUpDownPriceTo;
         private Label label3;
         private Label label4;
         private Button buttonCheckCarInfo;
         private Button buttonDeleteCar;
         private Button buttonAddCar;
-        private Button button2;
-        private Button button1;
+        private Button buttonSearchCar;
+        private Button buttonUpdateCar;
     }
 }
