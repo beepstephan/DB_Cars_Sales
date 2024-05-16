@@ -552,5 +552,12 @@ namespace DB_Cars_Sales
                 MessageBox.Show("Укажіть рядок з клієнтом, який треба видалити!");
             }
         }
+
+        private void buttonModelDetails_Click(object sender, EventArgs e)
+        {
+            string configuration = ModelsDataGridView.SelectedRows[0].Cells["configuration"].Value.ToString();
+            FormCheckInfoCarModels formCheckInfoCarModels = new FormCheckInfoCarModels(configuration);
+            formCheckInfoCarModels.ShowDialog();
+        }
     }
 }

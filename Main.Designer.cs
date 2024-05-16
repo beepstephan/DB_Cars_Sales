@@ -48,6 +48,9 @@
             textBoxEmployeeSearch = new TextBox();
             EmployeesDataGridView = new DataGridView();
             tabPageCustomers = new TabPage();
+            buttonDeleteClient = new Button();
+            buttonUpdateClient = new Button();
+            buttonAddClient = new Button();
             labelCustomerSearch = new Label();
             buttonCustomerSearch = new Button();
             textBoxCustomerSearch = new TextBox();
@@ -60,6 +63,7 @@
             buttonDeleteTransaction = new Button();
             buttonAddTransaction = new Button();
             TransactionsDataGridView = new DataGridView();
+            dataGridView1 = new DataGridView();
             tabControl1.SuspendLayout();
             tabPageCarModels.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ModelsDataGridView).BeginInit();
@@ -71,51 +75,8 @@
             ((System.ComponentModel.ISupportInitialize)CustomerDataGridView).BeginInit();
             tabPageTransactions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)TransactionsDataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPageCars = new System.Windows.Forms.TabPage();
-            this.tabPageCarModels = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tabPageCarDealerships = new System.Windows.Forms.TabPage();
-            this.buttonUpdateDealership = new System.Windows.Forms.Button();
-            this.buttonDeleteDealership = new System.Windows.Forms.Button();
-            this.buttonAddDealership = new System.Windows.Forms.Button();
-            this.CarDealershipsDataGridView = new System.Windows.Forms.DataGridView();
-            this.tabPageEmployees = new System.Windows.Forms.TabPage();
-            this.buttonUpdateEmployee = new System.Windows.Forms.Button();
-            this.buttonDeleteEmployee = new System.Windows.Forms.Button();
-            this.buttonAddEmployee = new System.Windows.Forms.Button();
-            this.labelEmployeeSearch = new System.Windows.Forms.Label();
-            this.textBoxEmployeeSearch = new System.Windows.Forms.TextBox();
-            this.EmployeesDataGridView = new System.Windows.Forms.DataGridView();
-            this.tabPageCustomers = new System.Windows.Forms.TabPage();
-            this.buttonDeleteClient = new System.Windows.Forms.Button();
-            this.buttonUpdateClient = new System.Windows.Forms.Button();
-            this.buttonAddClient = new System.Windows.Forms.Button();
-            this.labelCustomerSearch = new System.Windows.Forms.Label();
-            this.buttonCustomerSearch = new System.Windows.Forms.Button();
-            this.textBoxCustomerSearch = new System.Windows.Forms.TextBox();
-            this.radioButtonCustomerDate = new System.Windows.Forms.RadioButton();
-            this.radioButtonCustomerPhone = new System.Windows.Forms.RadioButton();
-            this.radioButtonCustomerSurname = new System.Windows.Forms.RadioButton();
-            this.CustomerDataGridView = new System.Windows.Forms.DataGridView();
-            this.tabPageTransactions = new System.Windows.Forms.TabPage();
-            this.buttonCheckInfoTransaction = new System.Windows.Forms.Button();
-            this.buttonDeleteTransaction = new System.Windows.Forms.Button();
-            this.buttonAddTransaction = new System.Windows.Forms.Button();
-            this.TransactionsDataGridView = new System.Windows.Forms.DataGridView();
-            this.tabControl1.SuspendLayout();
-            this.tabPageCarModels.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabPageCarDealerships.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CarDealershipsDataGridView)).BeginInit();
-            this.tabPageEmployees.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeesDataGridView)).BeginInit();
-            this.tabPageCustomers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CustomerDataGridView)).BeginInit();
-            this.tabPageTransactions.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TransactionsDataGridView)).BeginInit();
-            this.SuspendLayout();
             // 
             // tabControl1
             // 
@@ -166,6 +127,7 @@
             buttonModelDetails.TabIndex = 15;
             buttonModelDetails.Text = "Деталі";
             buttonModelDetails.UseVisualStyleBackColor = true;
+            buttonModelDetails.Click += buttonModelDetails_Click;
             // 
             // buttonDeleteModel
             // 
@@ -332,53 +294,53 @@
             // 
             // tabPageCustomers
             // 
-            this.tabPageCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tabPageCustomers.Controls.Add(this.buttonDeleteClient);
-            this.tabPageCustomers.Controls.Add(this.buttonUpdateClient);
-            this.tabPageCustomers.Controls.Add(this.buttonAddClient);
-            this.tabPageCustomers.Controls.Add(this.labelCustomerSearch);
-            this.tabPageCustomers.Controls.Add(this.buttonCustomerSearch);
-            this.tabPageCustomers.Controls.Add(this.textBoxCustomerSearch);
-            this.tabPageCustomers.Controls.Add(this.radioButtonCustomerDate);
-            this.tabPageCustomers.Controls.Add(this.radioButtonCustomerPhone);
-            this.tabPageCustomers.Controls.Add(this.radioButtonCustomerSurname);
-            this.tabPageCustomers.Controls.Add(this.CustomerDataGridView);
-            this.tabPageCustomers.Location = new System.Drawing.Point(4, 24);
-            this.tabPageCustomers.Name = "tabPageCustomers";
-            this.tabPageCustomers.Size = new System.Drawing.Size(1046, 568);
-            this.tabPageCustomers.TabIndex = 4;
-            this.tabPageCustomers.Text = "Клієнти";
+            tabPageCustomers.BackColor = Color.FromArgb(255, 208, 208);
+            tabPageCustomers.Controls.Add(buttonDeleteClient);
+            tabPageCustomers.Controls.Add(buttonUpdateClient);
+            tabPageCustomers.Controls.Add(buttonAddClient);
+            tabPageCustomers.Controls.Add(labelCustomerSearch);
+            tabPageCustomers.Controls.Add(buttonCustomerSearch);
+            tabPageCustomers.Controls.Add(textBoxCustomerSearch);
+            tabPageCustomers.Controls.Add(radioButtonCustomerDate);
+            tabPageCustomers.Controls.Add(radioButtonCustomerPhone);
+            tabPageCustomers.Controls.Add(radioButtonCustomerSurname);
+            tabPageCustomers.Controls.Add(CustomerDataGridView);
+            tabPageCustomers.Location = new Point(4, 24);
+            tabPageCustomers.Name = "tabPageCustomers";
+            tabPageCustomers.Size = new Size(1046, 568);
+            tabPageCustomers.TabIndex = 4;
+            tabPageCustomers.Text = "Клієнти";
             // 
             // buttonDeleteClient
             // 
-            this.buttonDeleteClient.Enabled = false;
-            this.buttonDeleteClient.Location = new System.Drawing.Point(784, 22);
-            this.buttonDeleteClient.Name = "buttonDeleteClient";
-            this.buttonDeleteClient.Size = new System.Drawing.Size(98, 52);
-            this.buttonDeleteClient.TabIndex = 13;
-            this.buttonDeleteClient.Text = "Видалити клієнта";
-            this.buttonDeleteClient.UseVisualStyleBackColor = true;
-            this.buttonDeleteClient.Click += new System.EventHandler(this.buttonDeleteClient_Click);
+            buttonDeleteClient.Enabled = false;
+            buttonDeleteClient.Location = new Point(784, 22);
+            buttonDeleteClient.Name = "buttonDeleteClient";
+            buttonDeleteClient.Size = new Size(98, 52);
+            buttonDeleteClient.TabIndex = 13;
+            buttonDeleteClient.Text = "Видалити клієнта";
+            buttonDeleteClient.UseVisualStyleBackColor = true;
+            buttonDeleteClient.Click += buttonDeleteClient_Click;
             // 
             // buttonUpdateClient
             // 
-            this.buttonUpdateClient.Location = new System.Drawing.Point(888, 22);
-            this.buttonUpdateClient.Name = "buttonUpdateClient";
-            this.buttonUpdateClient.Size = new System.Drawing.Size(150, 52);
-            this.buttonUpdateClient.TabIndex = 14;
-            this.buttonUpdateClient.Text = "Оновити дані військовозобов\'язаного";
-            this.buttonUpdateClient.UseVisualStyleBackColor = true;
-            this.buttonUpdateClient.Click += new System.EventHandler(this.buttonUpdateClient_Click);
+            buttonUpdateClient.Location = new Point(888, 22);
+            buttonUpdateClient.Name = "buttonUpdateClient";
+            buttonUpdateClient.Size = new Size(150, 52);
+            buttonUpdateClient.TabIndex = 14;
+            buttonUpdateClient.Text = "Оновити дані військовозобов'язаного";
+            buttonUpdateClient.UseVisualStyleBackColor = true;
+            buttonUpdateClient.Click += buttonUpdateClient_Click;
             // 
             // buttonAddClient
             // 
-            this.buttonAddClient.Location = new System.Drawing.Point(680, 22);
-            this.buttonAddClient.Name = "buttonAddClient";
-            this.buttonAddClient.Size = new System.Drawing.Size(98, 52);
-            this.buttonAddClient.TabIndex = 12;
-            this.buttonAddClient.Text = "Додати клієнта";
-            this.buttonAddClient.UseVisualStyleBackColor = true;
-            this.buttonAddClient.Click += new System.EventHandler(this.buttonAddClient_Click);
+            buttonAddClient.Location = new Point(680, 22);
+            buttonAddClient.Name = "buttonAddClient";
+            buttonAddClient.Size = new Size(98, 52);
+            buttonAddClient.TabIndex = 12;
+            buttonAddClient.Text = "Додати клієнта";
+            buttonAddClient.UseVisualStyleBackColor = true;
+            buttonAddClient.Click += buttonAddClient_Click;
             // 
             // labelCustomerSearch
             // 
@@ -391,12 +353,12 @@
             // 
             // buttonCustomerSearch
             // 
-            this.buttonCustomerSearch.Location = new System.Drawing.Point(524, 22);
-            this.buttonCustomerSearch.Name = "buttonCustomerSearch";
-            this.buttonCustomerSearch.Size = new System.Drawing.Size(93, 52);
-            this.buttonCustomerSearch.TabIndex = 5;
-            this.buttonCustomerSearch.Text = "Знайти клієнта";
-            this.buttonCustomerSearch.UseVisualStyleBackColor = true;
+            buttonCustomerSearch.Location = new Point(524, 22);
+            buttonCustomerSearch.Name = "buttonCustomerSearch";
+            buttonCustomerSearch.Size = new Size(93, 52);
+            buttonCustomerSearch.TabIndex = 5;
+            buttonCustomerSearch.Text = "Знайти клієнта";
+            buttonCustomerSearch.UseVisualStyleBackColor = true;
             // 
             // textBoxCustomerSearch
             // 
@@ -407,51 +369,49 @@
             // 
             // radioButtonCustomerDate
             // 
-            this.radioButtonCustomerDate.AutoSize = true;
-            this.radioButtonCustomerDate.Location = new System.Drawing.Point(363, 62);
-            this.radioButtonCustomerDate.Name = "radioButtonCustomerDate";
-            this.radioButtonCustomerDate.Size = new System.Drawing.Size(144, 19);
-            this.radioButtonCustomerDate.TabIndex = 3;
-            this.radioButtonCustomerDate.TabStop = true;
-            this.radioButtonCustomerDate.Text = "за датою народження";
-            this.radioButtonCustomerDate.UseVisualStyleBackColor = true;
+            radioButtonCustomerDate.AutoSize = true;
+            radioButtonCustomerDate.Location = new Point(363, 62);
+            radioButtonCustomerDate.Name = "radioButtonCustomerDate";
+            radioButtonCustomerDate.Size = new Size(144, 19);
+            radioButtonCustomerDate.TabIndex = 3;
+            radioButtonCustomerDate.TabStop = true;
+            radioButtonCustomerDate.Text = "за датою народження";
+            radioButtonCustomerDate.UseVisualStyleBackColor = true;
             // 
             // radioButtonCustomerPhone
             // 
-            this.radioButtonCustomerPhone.AutoSize = true;
-            this.radioButtonCustomerPhone.Location = new System.Drawing.Point(363, 37);
-            this.radioButtonCustomerPhone.Name = "radioButtonCustomerPhone";
-            this.radioButtonCustomerPhone.Size = new System.Drawing.Size(102, 19);
-            this.radioButtonCustomerPhone.TabIndex = 2;
-            this.radioButtonCustomerPhone.TabStop = true;
-            this.radioButtonCustomerPhone.Text = "за телефоном";
-            this.radioButtonCustomerPhone.UseVisualStyleBackColor = true;
+            radioButtonCustomerPhone.AutoSize = true;
+            radioButtonCustomerPhone.Location = new Point(363, 37);
+            radioButtonCustomerPhone.Name = "radioButtonCustomerPhone";
+            radioButtonCustomerPhone.Size = new Size(102, 19);
+            radioButtonCustomerPhone.TabIndex = 2;
+            radioButtonCustomerPhone.TabStop = true;
+            radioButtonCustomerPhone.Text = "за телефоном";
+            radioButtonCustomerPhone.UseVisualStyleBackColor = true;
             // 
             // radioButtonCustomerSurname
             // 
-            this.radioButtonCustomerSurname.AutoSize = true;
-            this.radioButtonCustomerSurname.Location = new System.Drawing.Point(363, 12);
-            this.radioButtonCustomerSurname.Name = "radioButtonCustomerSurname";
-            this.radioButtonCustomerSurname.Size = new System.Drawing.Size(100, 19);
-            this.radioButtonCustomerSurname.TabIndex = 1;
-            this.radioButtonCustomerSurname.TabStop = true;
-            this.radioButtonCustomerSurname.Text = "за прізвищем";
-            this.radioButtonCustomerSurname.UseVisualStyleBackColor = true;
+            radioButtonCustomerSurname.AutoSize = true;
+            radioButtonCustomerSurname.Location = new Point(363, 12);
+            radioButtonCustomerSurname.Name = "radioButtonCustomerSurname";
+            radioButtonCustomerSurname.Size = new Size(100, 19);
+            radioButtonCustomerSurname.TabIndex = 1;
+            radioButtonCustomerSurname.TabStop = true;
+            radioButtonCustomerSurname.Text = "за прізвищем";
+            radioButtonCustomerSurname.UseVisualStyleBackColor = true;
             // 
             // CustomerDataGridView
             // 
-            this.CustomerDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CustomerDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
-            this.CustomerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CustomerDataGridView.Location = new System.Drawing.Point(0, 86);
-            this.CustomerDataGridView.Name = "CustomerDataGridView";
-            this.CustomerDataGridView.RowHeadersWidth = 51;
-            this.CustomerDataGridView.RowTemplate.Height = 25;
-            this.CustomerDataGridView.Size = new System.Drawing.Size(1046, 482);
-            this.CustomerDataGridView.TabIndex = 0;
-            this.CustomerDataGridView.SelectionChanged += new System.EventHandler(this.CustomerDataGridView_SelectionChanged);
+            CustomerDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            CustomerDataGridView.BackgroundColor = Color.FromArgb(255, 228, 228);
+            CustomerDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            CustomerDataGridView.Location = new Point(0, 86);
+            CustomerDataGridView.Name = "CustomerDataGridView";
+            CustomerDataGridView.RowHeadersWidth = 51;
+            CustomerDataGridView.RowTemplate.Height = 25;
+            CustomerDataGridView.Size = new Size(1046, 482);
+            CustomerDataGridView.TabIndex = 0;
+            CustomerDataGridView.SelectionChanged += CustomerDataGridView_SelectionChanged;
             // 
             // tabPageTransactions
             // 
@@ -499,18 +459,23 @@
             // 
             // TransactionsDataGridView
             // 
-            this.TransactionsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TransactionsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
-            this.TransactionsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TransactionsDataGridView.Location = new System.Drawing.Point(0, 86);
-            this.TransactionsDataGridView.Name = "TransactionsDataGridView";
-            this.TransactionsDataGridView.RowHeadersWidth = 51;
-            this.TransactionsDataGridView.RowTemplate.Height = 25;
-            this.TransactionsDataGridView.Size = new System.Drawing.Size(1046, 482);
-            this.TransactionsDataGridView.TabIndex = 1;
-            this.TransactionsDataGridView.SelectionChanged += new System.EventHandler(this.TransactionsDataGridView_SelectionChanged);
+            TransactionsDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            TransactionsDataGridView.BackgroundColor = Color.FromArgb(255, 228, 228);
+            TransactionsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            TransactionsDataGridView.Location = new Point(0, 86);
+            TransactionsDataGridView.Name = "TransactionsDataGridView";
+            TransactionsDataGridView.RowHeadersWidth = 51;
+            TransactionsDataGridView.RowTemplate.Height = 25;
+            TransactionsDataGridView.Size = new Size(1046, 482);
+            TransactionsDataGridView.TabIndex = 1;
+            TransactionsDataGridView.SelectionChanged += TransactionsDataGridView_SelectionChanged;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(240, 150);
+            dataGridView1.TabIndex = 0;
             // 
             // Main
             // 
@@ -535,6 +500,7 @@
             ((System.ComponentModel.ISupportInitialize)CustomerDataGridView).EndInit();
             tabPageTransactions.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)TransactionsDataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
