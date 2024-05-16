@@ -576,5 +576,25 @@ namespace DB_Cars_Sales
                 MessageBox.Show("Укажіть рядок з клієнтом, який треба видалити!");
             }
         }
+
+        private void comboBoxBodytype_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown4_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
