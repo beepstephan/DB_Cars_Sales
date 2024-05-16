@@ -205,7 +205,6 @@
             // comboBoxModel
             // 
             comboBoxModel.FormattingEnabled = true;
-            comboBoxModel.Items.AddRange(new object[] { "Передній", "Задній", "Повний" });
             comboBoxModel.Location = new Point(12, 71);
             comboBoxModel.Name = "comboBoxModel";
             comboBoxModel.Size = new Size(262, 23);
@@ -219,6 +218,8 @@
             comboBoxBrand.Name = "comboBoxBrand";
             comboBoxBrand.Size = new Size(262, 23);
             comboBoxBrand.TabIndex = 29;
+            comboBoxBrand.SelectedIndexChanged += comboBoxBrand_SelectedIndexChanged;
+            comboBoxBrand.TextUpdate += comboBoxBrand_TextUpdate;
             // 
             // label9
             // 

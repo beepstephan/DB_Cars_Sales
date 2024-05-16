@@ -21,6 +21,7 @@ namespace DB_Cars_Sales.CarModels
             InitializeComponent();
             mainForm = main;
             SearchBrands();
+            comboBoxBrand.SelectedIndex = 1; // = 0
             SearchModels();
             SearchGearbox();
             comboBoxDrive.SelectedIndex = 0;
@@ -28,11 +29,11 @@ namespace DB_Cars_Sales.CarModels
 
         private void SearchBrands()
         {
-            string searchCustomerName = "SELECT DISTINCT brand FROM car_models";
+            string searchBrands = "SELECT DISTINCT brand FROM car_models";
             using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
                 connection.Open();
-                NpgsqlCommand command = new NpgsqlCommand(searchCustomerName, connection);
+                NpgsqlCommand command = new NpgsqlCommand(searchBrands, connection);
                 NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(command);
                 DataTable table = new DataTable();
 
@@ -49,32 +50,36 @@ namespace DB_Cars_Sales.CarModels
 
         private void SearchModels()
         {
-            string searchCustomerName = "SELECT DISTINCT model FROM car_models";
+            string searchModels = "SELECT DISTINCT model FROM car_models WHERE brand = @brand";
             using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
                 connection.Open();
-                NpgsqlCommand command = new NpgsqlCommand(searchCustomerName, connection);
-                NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(command);
-                DataTable table = new DataTable();
-
-                adapter.Fill(table);
-
-                if (table.Rows.Count > 0)
+                using (NpgsqlCommand command = new NpgsqlCommand(searchModels, connection))
                 {
-                    comboBoxModel.DataSource = table;
-                    comboBoxModel.DisplayMember = "model";
-                    comboBoxModel.ValueMember = "model";
+                    command.Parameters.AddWithValue("@brand", comboBoxBrand.Text);
+                    using (NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(command))
+                    {
+                        DataTable table = new DataTable();
+                        adapter.Fill(table);
+
+                        if (table.Rows.Count > 0)
+                        {
+                            comboBoxModel.DataSource = table;
+                            comboBoxModel.DisplayMember = "model";
+                            comboBoxModel.ValueMember = "model";
+                        }
+                    }
                 }
             }
         }
 
         private void SearchGearbox()
         {
-            string searchCustomerName = "SELECT DISTINCT gearbox_type FROM model_info";
+            string searchGearbox = "SELECT DISTINCT gearbox_type FROM model_info";
             using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
                 connection.Open();
-                NpgsqlCommand command = new NpgsqlCommand(searchCustomerName, connection);
+                NpgsqlCommand command = new NpgsqlCommand(searchGearbox, connection);
                 NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(command);
                 DataTable table = new DataTable();
 
@@ -100,13 +105,13 @@ namespace DB_Cars_Sales.CarModels
             string drive = comboBoxDrive.Text.Trim();
             string years = textBoxYears.Text.Trim();
 
-            float engineCapacity = (float) numericUpDownEngineCapacity.Value;
-            int cylindersNum = (int) numericUpDownCilinders.Value;
-            int power = (int) numericUpDownPower.Value;
-            int maxSpeed = (int) numericUpDownMaxSpeed.Value;
+            float engineCapacity = (float)numericUpDownEngineCapacity.Value;
+            int cylindersNum = (int)numericUpDownCilinders.Value;
+            int power = (int)numericUpDownPower.Value;
+            int maxSpeed = (int)numericUpDownMaxSpeed.Value;
             float accelerationTo100 = (float)numericUpDownAcceleration.Value;
             string gearboxType = comboBoxGearboxType.Text.Trim();
-            int gearsNum = (int) numericUpDownGearsNum.Value;
+            int gearsNum = (int)numericUpDownGearsNum.Value;
             float fuelConsumption = (float)numericUpDownFuelConsumption.Value;
 
             if (brand.Length == 0 || model.Length == 0 || configuration.Length == 0 || bodyshell.Length == 0 || engine.Length == 0 || engine.Length == 0 || drive.Length == 0 || years.Length == 0 || gearboxType.Length == 0)
@@ -169,5 +174,14 @@ namespace DB_Cars_Sales.CarModels
             }
         }
 
+        private void comboBoxBrand_TextUpdate(object sender, EventArgs e)
+        {
+            SearchModels();
+        }
+
+        private void comboBoxBrand_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SearchModels();
+        }
     }
 }
