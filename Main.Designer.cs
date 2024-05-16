@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             tabControl1 = new TabControl();
             tabPageCars = new TabPage();
             buttonSearchCar = new Button();
@@ -211,8 +212,7 @@
             buttonAddCar.TabIndex = 21;
             buttonAddCar.Text = "Додати авто";
             buttonAddCar.UseVisualStyleBackColor = true;
-           
-            this.buttonAddCar.Click += new System.EventHandler(this.buttonAddCar_Click);
+            buttonAddCar.Click += buttonAddCar_Click;
             // 
             // numericUpDownPriceFrom
             // 
@@ -373,6 +373,14 @@
             CarsDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             CarsDataGridView.BackgroundColor = Color.FromArgb(255, 228, 228);
             CarsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            CarsDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
             CarsDataGridView.Location = new Point(0, 106);
             CarsDataGridView.Name = "CarsDataGridView";
             CarsDataGridView.ReadOnly = true;
