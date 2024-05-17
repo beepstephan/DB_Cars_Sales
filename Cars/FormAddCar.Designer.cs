@@ -28,312 +28,309 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBoxBrand = new System.Windows.Forms.ComboBox();
-            this.comboBoxModel = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBoxBodyshell = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDownYear = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBoxColor = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBoxMileage = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBoxPrice = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBoxCondition = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBoxVIN = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBoxDescription = new System.Windows.Forms.TextBox();
-            this.comboBoxConfiguration = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.comboBoxDealership = new System.Windows.Forms.ComboBox();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYear)).BeginInit();
-            this.SuspendLayout();
+            comboBoxBrand = new ComboBox();
+            comboBoxModel = new ComboBox();
+            label4 = new Label();
+            textBoxBodyshell = new TextBox();
+            label2 = new Label();
+            label1 = new Label();
+            label3 = new Label();
+            numericUpDownYear = new NumericUpDown();
+            label5 = new Label();
+            textBoxColor = new TextBox();
+            label6 = new Label();
+            textBoxMileage = new TextBox();
+            label7 = new Label();
+            textBoxPrice = new TextBox();
+            label8 = new Label();
+            textBoxCondition = new TextBox();
+            label9 = new Label();
+            textBoxVIN = new TextBox();
+            label10 = new Label();
+            textBoxDescription = new TextBox();
+            comboBoxConfiguration = new ComboBox();
+            label11 = new Label();
+            label12 = new Label();
+            comboBoxDealership = new ComboBox();
+            buttonAdd = new Button();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownYear).BeginInit();
+            SuspendLayout();
             // 
             // comboBoxBrand
             // 
-            this.comboBoxBrand.FormattingEnabled = true;
-            this.comboBoxBrand.Items.AddRange(new object[] {
-            "Передній",
-            "Задній",
-            "Повний"});
-            this.comboBoxBrand.Location = new System.Drawing.Point(12, 30);
-            this.comboBoxBrand.Name = "comboBoxBrand";
-            this.comboBoxBrand.Size = new System.Drawing.Size(262, 23);
-            this.comboBoxBrand.TabIndex = 35;
-            this.comboBoxBrand.SelectedIndexChanged += new System.EventHandler(this.comboBoxBrand_SelectedIndexChanged);
-            this.comboBoxBrand.TextUpdate += new System.EventHandler(this.comboBoxBrand_TextUpdate);
+            comboBoxBrand.FormattingEnabled = true;
+            comboBoxBrand.Location = new Point(14, 40);
+            comboBoxBrand.Margin = new Padding(3, 4, 3, 4);
+            comboBoxBrand.Name = "comboBoxBrand";
+            comboBoxBrand.Size = new Size(299, 28);
+            comboBoxBrand.TabIndex = 35;
+            comboBoxBrand.SelectedIndexChanged += comboBoxBrand_SelectedIndexChanged;
+            comboBoxBrand.TextUpdate += comboBoxBrand_TextUpdate;
             // 
             // comboBoxModel
             // 
-            this.comboBoxModel.FormattingEnabled = true;
-            this.comboBoxModel.Location = new System.Drawing.Point(12, 74);
-            this.comboBoxModel.Name = "comboBoxModel";
-            this.comboBoxModel.Size = new System.Drawing.Size(262, 23);
-            this.comboBoxModel.TabIndex = 34;
-            this.comboBoxModel.SelectedIndexChanged += new System.EventHandler(this.comboBoxModel_SelectedIndexChanged);
-            this.comboBoxModel.TextUpdate += new System.EventHandler(this.comboBoxModel_TextUpdate);
+            comboBoxModel.FormattingEnabled = true;
+            comboBoxModel.Location = new Point(14, 99);
+            comboBoxModel.Margin = new Padding(3, 4, 3, 4);
+            comboBoxModel.Name = "comboBoxModel";
+            comboBoxModel.Size = new Size(299, 28);
+            comboBoxModel.TabIndex = 34;
+            comboBoxModel.SelectedIndexChanged += comboBoxModel_SelectedIndexChanged;
+            comboBoxModel.TextUpdate += comboBoxModel_TextUpdate;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 144);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 15);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Тип кузова";
+            label4.AutoSize = true;
+            label4.Location = new Point(14, 192);
+            label4.Name = "label4";
+            label4.Size = new Size(85, 20);
+            label4.TabIndex = 33;
+            label4.Text = "Тип кузова";
             // 
             // textBoxBodyshell
             // 
-            this.textBoxBodyshell.Location = new System.Drawing.Point(12, 162);
-            this.textBoxBodyshell.MaxLength = 50;
-            this.textBoxBodyshell.Name = "textBoxBodyshell";
-            this.textBoxBodyshell.Size = new System.Drawing.Size(262, 23);
-            this.textBoxBodyshell.TabIndex = 32;
+            textBoxBodyshell.Location = new Point(14, 216);
+            textBoxBodyshell.Margin = new Padding(3, 4, 3, 4);
+            textBoxBodyshell.MaxLength = 50;
+            textBoxBodyshell.Name = "textBoxBodyshell";
+            textBoxBodyshell.Size = new Size(299, 27);
+            textBoxBodyshell.TabIndex = 32;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 56);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 15);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "Назва моделі";
+            label2.AutoSize = true;
+            label2.Location = new Point(14, 75);
+            label2.Name = "label2";
+            label2.Size = new Size(103, 20);
+            label2.TabIndex = 31;
+            label2.Text = "Назва моделі";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 15);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Назва бренду";
+            label1.AutoSize = true;
+            label1.Location = new Point(14, 16);
+            label1.Name = "label1";
+            label1.Size = new Size(105, 20);
+            label1.TabIndex = 30;
+            label1.Text = "Назва бренду";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 100);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 15);
-            this.label3.TabIndex = 36;
-            this.label3.Text = "Рік випуску";
+            label3.AutoSize = true;
+            label3.Location = new Point(15, 133);
+            label3.Name = "label3";
+            label3.Size = new Size(86, 20);
+            label3.TabIndex = 36;
+            label3.Text = "Рік випуску";
             // 
             // numericUpDownYear
             // 
-            this.numericUpDownYear.Location = new System.Drawing.Point(13, 118);
-            this.numericUpDownYear.Maximum = new decimal(new int[] {
-            2024,
-            0,
-            0,
-            0});
-            this.numericUpDownYear.Minimum = new decimal(new int[] {
-            1885,
-            0,
-            0,
-            0});
-            this.numericUpDownYear.Name = "numericUpDownYear";
-            this.numericUpDownYear.Size = new System.Drawing.Size(261, 23);
-            this.numericUpDownYear.TabIndex = 37;
-            this.numericUpDownYear.Value = new decimal(new int[] {
-            2014,
-            0,
-            0,
-            0});
+            numericUpDownYear.Location = new Point(15, 157);
+            numericUpDownYear.Margin = new Padding(3, 4, 3, 4);
+            numericUpDownYear.Maximum = new decimal(new int[] { 2024, 0, 0, 0 });
+            numericUpDownYear.Minimum = new decimal(new int[] { 1885, 0, 0, 0 });
+            numericUpDownYear.Name = "numericUpDownYear";
+            numericUpDownYear.Size = new Size(298, 27);
+            numericUpDownYear.TabIndex = 37;
+            numericUpDownYear.Value = new decimal(new int[] { 2014, 0, 0, 0 });
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 188);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 15);
-            this.label5.TabIndex = 39;
-            this.label5.Text = "Колір";
+            label5.AutoSize = true;
+            label5.Location = new Point(15, 251);
+            label5.Name = "label5";
+            label5.Size = new Size(48, 20);
+            label5.TabIndex = 39;
+            label5.Text = "Колір";
             // 
             // textBoxColor
             // 
-            this.textBoxColor.Location = new System.Drawing.Point(13, 206);
-            this.textBoxColor.MaxLength = 50;
-            this.textBoxColor.Name = "textBoxColor";
-            this.textBoxColor.Size = new System.Drawing.Size(262, 23);
-            this.textBoxColor.TabIndex = 38;
+            textBoxColor.Location = new Point(15, 275);
+            textBoxColor.Margin = new Padding(3, 4, 3, 4);
+            textBoxColor.MaxLength = 50;
+            textBoxColor.Name = "textBoxColor";
+            textBoxColor.Size = new Size(299, 27);
+            textBoxColor.TabIndex = 38;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 231);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 15);
-            this.label6.TabIndex = 41;
-            this.label6.Text = "Пробіг";
+            label6.AutoSize = true;
+            label6.Location = new Point(15, 308);
+            label6.Name = "label6";
+            label6.Size = new Size(57, 20);
+            label6.TabIndex = 41;
+            label6.Text = "Пробіг";
             // 
             // textBoxMileage
             // 
-            this.textBoxMileage.Location = new System.Drawing.Point(13, 249);
-            this.textBoxMileage.MaxLength = 50;
-            this.textBoxMileage.Name = "textBoxMileage";
-            this.textBoxMileage.Size = new System.Drawing.Size(262, 23);
-            this.textBoxMileage.TabIndex = 40;
+            textBoxMileage.Location = new Point(15, 332);
+            textBoxMileage.Margin = new Padding(3, 4, 3, 4);
+            textBoxMileage.MaxLength = 50;
+            textBoxMileage.Name = "textBoxMileage";
+            textBoxMileage.Size = new Size(299, 27);
+            textBoxMileage.TabIndex = 40;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(384, 12);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 15);
-            this.label7.TabIndex = 43;
-            this.label7.Text = "Ціна, ₴";
+            label7.AutoSize = true;
+            label7.Location = new Point(439, 16);
+            label7.Name = "label7";
+            label7.Size = new Size(56, 20);
+            label7.TabIndex = 43;
+            label7.Text = "Ціна, ₴";
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(384, 30);
-            this.textBoxPrice.MaxLength = 50;
-            this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.Size = new System.Drawing.Size(262, 23);
-            this.textBoxPrice.TabIndex = 42;
+            textBoxPrice.Location = new Point(439, 40);
+            textBoxPrice.Margin = new Padding(3, 4, 3, 4);
+            textBoxPrice.MaxLength = 50;
+            textBoxPrice.Name = "textBoxPrice";
+            textBoxPrice.Size = new Size(299, 27);
+            textBoxPrice.TabIndex = 42;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(384, 56);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(33, 15);
-            this.label8.TabIndex = 45;
-            this.label8.Text = "Стан";
+            label8.AutoSize = true;
+            label8.Location = new Point(439, 75);
+            label8.Name = "label8";
+            label8.Size = new Size(41, 20);
+            label8.TabIndex = 45;
+            label8.Text = "Стан";
             // 
             // textBoxCondition
             // 
-            this.textBoxCondition.Location = new System.Drawing.Point(384, 74);
-            this.textBoxCondition.MaxLength = 50;
-            this.textBoxCondition.Name = "textBoxCondition";
-            this.textBoxCondition.Size = new System.Drawing.Size(262, 23);
-            this.textBoxCondition.TabIndex = 44;
+            textBoxCondition.Location = new Point(439, 99);
+            textBoxCondition.Margin = new Padding(3, 4, 3, 4);
+            textBoxCondition.MaxLength = 50;
+            textBoxCondition.Name = "textBoxCondition";
+            textBoxCondition.Size = new Size(299, 27);
+            textBoxCondition.TabIndex = 44;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(384, 99);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(26, 15);
-            this.label9.TabIndex = 47;
-            this.label9.Text = "VIN";
+            label9.AutoSize = true;
+            label9.Location = new Point(439, 132);
+            label9.Name = "label9";
+            label9.Size = new Size(33, 20);
+            label9.TabIndex = 47;
+            label9.Text = "VIN";
             // 
             // textBoxVIN
             // 
-            this.textBoxVIN.Location = new System.Drawing.Point(384, 117);
-            this.textBoxVIN.MaxLength = 50;
-            this.textBoxVIN.Name = "textBoxVIN";
-            this.textBoxVIN.Size = new System.Drawing.Size(262, 23);
-            this.textBoxVIN.TabIndex = 46;
+            textBoxVIN.Location = new Point(439, 156);
+            textBoxVIN.Margin = new Padding(3, 4, 3, 4);
+            textBoxVIN.MaxLength = 50;
+            textBoxVIN.Name = "textBoxVIN";
+            textBoxVIN.Size = new Size(299, 27);
+            textBoxVIN.TabIndex = 46;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(384, 144);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(36, 15);
-            this.label10.TabIndex = 49;
-            this.label10.Text = "Опис";
+            label10.AutoSize = true;
+            label10.Location = new Point(439, 192);
+            label10.Name = "label10";
+            label10.Size = new Size(45, 20);
+            label10.TabIndex = 49;
+            label10.Text = "Опис";
             // 
             // textBoxDescription
             // 
-            this.textBoxDescription.Location = new System.Drawing.Point(384, 162);
-            this.textBoxDescription.MaxLength = 50;
-            this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.Size = new System.Drawing.Size(262, 23);
-            this.textBoxDescription.TabIndex = 48;
+            textBoxDescription.Location = new Point(439, 216);
+            textBoxDescription.Margin = new Padding(3, 4, 3, 4);
+            textBoxDescription.MaxLength = 50;
+            textBoxDescription.Name = "textBoxDescription";
+            textBoxDescription.Size = new Size(299, 27);
+            textBoxDescription.TabIndex = 48;
             // 
             // comboBoxConfiguration
             // 
-            this.comboBoxConfiguration.FormattingEnabled = true;
-            this.comboBoxConfiguration.Location = new System.Drawing.Point(384, 206);
-            this.comboBoxConfiguration.Name = "comboBoxConfiguration";
-            this.comboBoxConfiguration.Size = new System.Drawing.Size(262, 23);
-            this.comboBoxConfiguration.TabIndex = 51;
+            comboBoxConfiguration.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxConfiguration.FormattingEnabled = true;
+            comboBoxConfiguration.Location = new Point(439, 275);
+            comboBoxConfiguration.Margin = new Padding(3, 4, 3, 4);
+            comboBoxConfiguration.Name = "comboBoxConfiguration";
+            comboBoxConfiguration.Size = new Size(299, 28);
+            comboBoxConfiguration.TabIndex = 51;
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(384, 188);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(111, 15);
-            this.label11.TabIndex = 50;
-            this.label11.Text = "Назва конфігурації";
+            label11.AutoSize = true;
+            label11.Location = new Point(439, 251);
+            label11.Name = "label11";
+            label11.Size = new Size(141, 20);
+            label11.TabIndex = 50;
+            label11.Text = "Назва конфігурації";
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(384, 231);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(218, 15);
-            this.label12.TabIndex = 53;
-            this.label12.Text = "Автосалон, який володіє автомобілем";
+            label12.AutoSize = true;
+            label12.Location = new Point(439, 308);
+            label12.Name = "label12";
+            label12.Size = new Size(275, 20);
+            label12.TabIndex = 53;
+            label12.Text = "Автосалон, який володіє автомобілем";
             // 
             // comboBoxDealership
             // 
-            this.comboBoxDealership.FormattingEnabled = true;
-            this.comboBoxDealership.Items.AddRange(new object[] {
-            "Автосалон Audi",
-            "Автосалон Volkswagen",
-            "Автосалон Skoda",
-            "Автосалон \"Бомбейський Пантеон\"",
-            "Автосалон \"Вторинний Рай\""});
-            this.comboBoxDealership.Location = new System.Drawing.Point(384, 249);
-            this.comboBoxDealership.Name = "comboBoxDealership";
-            this.comboBoxDealership.Size = new System.Drawing.Size(262, 23);
-            this.comboBoxDealership.TabIndex = 54;
+            comboBoxDealership.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxDealership.FormattingEnabled = true;
+            comboBoxDealership.Items.AddRange(new object[] { "Автосалон Audi", "Автосалон Volkswagen", "Автосалон Skoda", "Автосалон \"Бомбейський Пантеон\"", "Автосалон \"Вторинний Рай\"" });
+            comboBoxDealership.Location = new Point(439, 332);
+            comboBoxDealership.Margin = new Padding(3, 4, 3, 4);
+            comboBoxDealership.Name = "comboBoxDealership";
+            comboBoxDealership.Size = new Size(299, 28);
+            comboBoxDealership.TabIndex = 54;
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(268, 408);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(126, 42);
-            this.buttonAdd.TabIndex = 55;
-            this.buttonAdd.Text = "Додати";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            buttonAdd.Location = new Point(306, 544);
+            buttonAdd.Margin = new Padding(3, 4, 3, 4);
+            buttonAdd.Name = "buttonAdd";
+            buttonAdd.Size = new Size(144, 56);
+            buttonAdd.TabIndex = 55;
+            buttonAdd.Text = "Додати";
+            buttonAdd.UseVisualStyleBackColor = true;
+            buttonAdd.Click += buttonAdd_Click;
             // 
             // FormAddCar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 478);
-            this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.comboBoxDealership);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.comboBoxConfiguration);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBoxDescription);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBoxVIN);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBoxCondition);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBoxPrice);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBoxMileage);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBoxColor);
-            this.Controls.Add(this.numericUpDownYear);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBoxBrand);
-            this.Controls.Add(this.comboBoxModel);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBoxBodyshell);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Name = "FormAddCar";
-            this.Text = "Додати машину";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYear)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(752, 637);
+            Controls.Add(buttonAdd);
+            Controls.Add(comboBoxDealership);
+            Controls.Add(label12);
+            Controls.Add(comboBoxConfiguration);
+            Controls.Add(label11);
+            Controls.Add(label10);
+            Controls.Add(textBoxDescription);
+            Controls.Add(label9);
+            Controls.Add(textBoxVIN);
+            Controls.Add(label8);
+            Controls.Add(textBoxCondition);
+            Controls.Add(label7);
+            Controls.Add(textBoxPrice);
+            Controls.Add(label6);
+            Controls.Add(textBoxMileage);
+            Controls.Add(label5);
+            Controls.Add(textBoxColor);
+            Controls.Add(numericUpDownYear);
+            Controls.Add(label3);
+            Controls.Add(comboBoxBrand);
+            Controls.Add(comboBoxModel);
+            Controls.Add(label4);
+            Controls.Add(textBoxBodyshell);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
+            Name = "FormAddCar";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Додати машину";
+            ((System.ComponentModel.ISupportInitialize)numericUpDownYear).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

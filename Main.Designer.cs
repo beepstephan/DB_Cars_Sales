@@ -28,824 +28,828 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPageCars = new System.Windows.Forms.TabPage();
-            this.buttonSearchCar = new System.Windows.Forms.Button();
-            this.buttonUpdateCar = new System.Windows.Forms.Button();
-            this.buttonCheckCarInfo = new System.Windows.Forms.Button();
-            this.buttonDeleteCar = new System.Windows.Forms.Button();
-            this.buttonAddCar = new System.Windows.Forms.Button();
-            this.numericUpDownPriceFrom = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownPriceTo = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDownYearTo = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownYearFrom = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelPrice = new System.Windows.Forms.Label();
-            this.labelYear = new System.Windows.Forms.Label();
-            this.labelModel = new System.Windows.Forms.Label();
-            this.comboBoxModel = new System.Windows.Forms.ComboBox();
-            this.labelBrand = new System.Windows.Forms.Label();
-            this.comboBoxBrand = new System.Windows.Forms.ComboBox();
-            this.labelBodytype = new System.Windows.Forms.Label();
-            this.comboBoxBodytype = new System.Windows.Forms.ComboBox();
-            this.CarsDataGridView = new System.Windows.Forms.DataGridView();
-            this.tabPageCarModels = new System.Windows.Forms.TabPage();
-            this.buttonModelDetails = new System.Windows.Forms.Button();
-            this.buttonDeleteModel = new System.Windows.Forms.Button();
-            this.buttonAddModel = new System.Windows.Forms.Button();
-            this.ModelsDataGridView = new System.Windows.Forms.DataGridView();
-            this.tabPageCarDealerships = new System.Windows.Forms.TabPage();
-            this.buttonUpdateDealership = new System.Windows.Forms.Button();
-            this.buttonDeleteDealership = new System.Windows.Forms.Button();
-            this.buttonAddDealership = new System.Windows.Forms.Button();
-            this.CarDealershipsDataGridView = new System.Windows.Forms.DataGridView();
-            this.tabPageEmployees = new System.Windows.Forms.TabPage();
-            this.buttonUpdateEmployee = new System.Windows.Forms.Button();
-            this.buttonDeleteEmployee = new System.Windows.Forms.Button();
-            this.buttonAddEmployee = new System.Windows.Forms.Button();
-            this.labelEmployeeSearch = new System.Windows.Forms.Label();
-            this.textBoxEmployeeSearch = new System.Windows.Forms.TextBox();
-            this.EmployeesDataGridView = new System.Windows.Forms.DataGridView();
-            this.tabPageCustomers = new System.Windows.Forms.TabPage();
-            this.buttonDeleteClient = new System.Windows.Forms.Button();
-            this.buttonUpdateClient = new System.Windows.Forms.Button();
-            this.buttonAddClient = new System.Windows.Forms.Button();
-            this.labelCustomerSearch = new System.Windows.Forms.Label();
-            this.buttonCustomerSearch = new System.Windows.Forms.Button();
-            this.textBoxCustomerSearch = new System.Windows.Forms.TextBox();
-            this.radioButtonCustomerDate = new System.Windows.Forms.RadioButton();
-            this.radioButtonCustomerPhone = new System.Windows.Forms.RadioButton();
-            this.radioButtonCustomerSurname = new System.Windows.Forms.RadioButton();
-            this.CustomerDataGridView = new System.Windows.Forms.DataGridView();
-            this.tabPageTransactions = new System.Windows.Forms.TabPage();
-            this.buttonCheckInfoTransaction = new System.Windows.Forms.Button();
-            this.buttonDeleteTransaction = new System.Windows.Forms.Button();
-            this.buttonAddTransaction = new System.Windows.Forms.Button();
-            this.TransactionsDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tabControl1.SuspendLayout();
-            this.tabPageCars.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPriceFrom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPriceTo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYearTo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYearFrom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CarsDataGridView)).BeginInit();
-            this.tabPageCarModels.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ModelsDataGridView)).BeginInit();
-            this.tabPageCarDealerships.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CarDealershipsDataGridView)).BeginInit();
-            this.tabPageEmployees.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeesDataGridView)).BeginInit();
-            this.tabPageCustomers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CustomerDataGridView)).BeginInit();
-            this.tabPageTransactions.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TransactionsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            tabControl1 = new TabControl();
+            tabPageCars = new TabPage();
+            buttonSearchCar = new Button();
+            buttonUpdateCar = new Button();
+            buttonCheckCarInfo = new Button();
+            buttonDeleteCar = new Button();
+            buttonAddCar = new Button();
+            numericUpDownPriceFrom = new NumericUpDown();
+            numericUpDownPriceTo = new NumericUpDown();
+            label3 = new Label();
+            label4 = new Label();
+            numericUpDownYearTo = new NumericUpDown();
+            numericUpDownYearFrom = new NumericUpDown();
+            label2 = new Label();
+            label1 = new Label();
+            labelPrice = new Label();
+            labelYear = new Label();
+            labelModel = new Label();
+            comboBoxModel = new ComboBox();
+            labelBrand = new Label();
+            comboBoxBrand = new ComboBox();
+            labelBodytype = new Label();
+            comboBoxBodytype = new ComboBox();
+            CarsDataGridView = new DataGridView();
+            tabPageCarModels = new TabPage();
+            buttonModelDetails = new Button();
+            buttonDeleteModel = new Button();
+            buttonAddModel = new Button();
+            ModelsDataGridView = new DataGridView();
+            tabPageCarDealerships = new TabPage();
+            buttonUpdateDealership = new Button();
+            buttonDeleteDealership = new Button();
+            buttonAddDealership = new Button();
+            CarDealershipsDataGridView = new DataGridView();
+            tabPageEmployees = new TabPage();
+            buttonUpdateEmployee = new Button();
+            buttonDeleteEmployee = new Button();
+            buttonAddEmployee = new Button();
+            labelEmployeeSearch = new Label();
+            textBoxEmployeeSearch = new TextBox();
+            EmployeesDataGridView = new DataGridView();
+            tabPageCustomers = new TabPage();
+            buttonDeleteClient = new Button();
+            buttonUpdateClient = new Button();
+            buttonAddClient = new Button();
+            labelCustomerSearch = new Label();
+            buttonCustomerSearch = new Button();
+            textBoxCustomerSearch = new TextBox();
+            radioButtonCustomerDate = new RadioButton();
+            radioButtonCustomerPhone = new RadioButton();
+            radioButtonCustomerSurname = new RadioButton();
+            CustomerDataGridView = new DataGridView();
+            tabPageTransactions = new TabPage();
+            buttonCheckInfoTransaction = new Button();
+            buttonDeleteTransaction = new Button();
+            buttonAddTransaction = new Button();
+            TransactionsDataGridView = new DataGridView();
+            dataGridView1 = new DataGridView();
+            tabControl1.SuspendLayout();
+            tabPageCars.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownPriceFrom).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownPriceTo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownYearTo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownYearFrom).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CarsDataGridView).BeginInit();
+            tabPageCarModels.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ModelsDataGridView).BeginInit();
+            tabPageCarDealerships.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)CarDealershipsDataGridView).BeginInit();
+            tabPageEmployees.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)EmployeesDataGridView).BeginInit();
+            tabPageCustomers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)CustomerDataGridView).BeginInit();
+            tabPageTransactions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)TransactionsDataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPageCars);
-            this.tabControl1.Controls.Add(this.tabPageCarModels);
-            this.tabControl1.Controls.Add(this.tabPageCarDealerships);
-            this.tabControl1.Controls.Add(this.tabPageEmployees);
-            this.tabControl1.Controls.Add(this.tabPageCustomers);
-            this.tabControl1.Controls.Add(this.tabPageTransactions);
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Multiline = true;
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1054, 596);
-            this.tabControl1.TabIndex = 1;
+            tabControl1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tabControl1.Controls.Add(tabPageCars);
+            tabControl1.Controls.Add(tabPageCarModels);
+            tabControl1.Controls.Add(tabPageCarDealerships);
+            tabControl1.Controls.Add(tabPageEmployees);
+            tabControl1.Controls.Add(tabPageCustomers);
+            tabControl1.Controls.Add(tabPageTransactions);
+            tabControl1.Location = new Point(0, 0);
+            tabControl1.Margin = new Padding(3, 4, 3, 4);
+            tabControl1.Multiline = true;
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(1205, 795);
+            tabControl1.TabIndex = 1;
             // 
             // tabPageCars
             // 
-            this.tabPageCars.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tabPageCars.Controls.Add(this.buttonSearchCar);
-            this.tabPageCars.Controls.Add(this.buttonUpdateCar);
-            this.tabPageCars.Controls.Add(this.buttonCheckCarInfo);
-            this.tabPageCars.Controls.Add(this.buttonDeleteCar);
-            this.tabPageCars.Controls.Add(this.buttonAddCar);
-            this.tabPageCars.Controls.Add(this.numericUpDownPriceFrom);
-            this.tabPageCars.Controls.Add(this.numericUpDownPriceTo);
-            this.tabPageCars.Controls.Add(this.label3);
-            this.tabPageCars.Controls.Add(this.label4);
-            this.tabPageCars.Controls.Add(this.numericUpDownYearTo);
-            this.tabPageCars.Controls.Add(this.numericUpDownYearFrom);
-            this.tabPageCars.Controls.Add(this.label2);
-            this.tabPageCars.Controls.Add(this.label1);
-            this.tabPageCars.Controls.Add(this.labelPrice);
-            this.tabPageCars.Controls.Add(this.labelYear);
-            this.tabPageCars.Controls.Add(this.labelModel);
-            this.tabPageCars.Controls.Add(this.comboBoxModel);
-            this.tabPageCars.Controls.Add(this.labelBrand);
-            this.tabPageCars.Controls.Add(this.comboBoxBrand);
-            this.tabPageCars.Controls.Add(this.labelBodytype);
-            this.tabPageCars.Controls.Add(this.comboBoxBodytype);
-            this.tabPageCars.Controls.Add(this.CarsDataGridView);
-            this.tabPageCars.ForeColor = System.Drawing.Color.Coral;
-            this.tabPageCars.Location = new System.Drawing.Point(4, 24);
-            this.tabPageCars.Name = "tabPageCars";
-            this.tabPageCars.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPageCars.Size = new System.Drawing.Size(1046, 568);
-            this.tabPageCars.TabIndex = 0;
-            this.tabPageCars.Text = "Автомобілі";
+            tabPageCars.BackColor = Color.FromArgb(255, 208, 208);
+            tabPageCars.Controls.Add(buttonSearchCar);
+            tabPageCars.Controls.Add(buttonUpdateCar);
+            tabPageCars.Controls.Add(buttonCheckCarInfo);
+            tabPageCars.Controls.Add(buttonDeleteCar);
+            tabPageCars.Controls.Add(buttonAddCar);
+            tabPageCars.Controls.Add(numericUpDownPriceFrom);
+            tabPageCars.Controls.Add(numericUpDownPriceTo);
+            tabPageCars.Controls.Add(label3);
+            tabPageCars.Controls.Add(label4);
+            tabPageCars.Controls.Add(numericUpDownYearTo);
+            tabPageCars.Controls.Add(numericUpDownYearFrom);
+            tabPageCars.Controls.Add(label2);
+            tabPageCars.Controls.Add(label1);
+            tabPageCars.Controls.Add(labelPrice);
+            tabPageCars.Controls.Add(labelYear);
+            tabPageCars.Controls.Add(labelModel);
+            tabPageCars.Controls.Add(comboBoxModel);
+            tabPageCars.Controls.Add(labelBrand);
+            tabPageCars.Controls.Add(comboBoxBrand);
+            tabPageCars.Controls.Add(labelBodytype);
+            tabPageCars.Controls.Add(comboBoxBodytype);
+            tabPageCars.Controls.Add(CarsDataGridView);
+            tabPageCars.ForeColor = Color.Coral;
+            tabPageCars.Location = new Point(4, 29);
+            tabPageCars.Margin = new Padding(3, 4, 3, 4);
+            tabPageCars.Name = "tabPageCars";
+            tabPageCars.Padding = new Padding(3, 4, 3, 4);
+            tabPageCars.Size = new Size(1197, 762);
+            tabPageCars.TabIndex = 0;
+            tabPageCars.Text = "Автомобілі";
             // 
             // buttonSearchCar
             // 
-            this.buttonSearchCar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonSearchCar.Location = new System.Drawing.Point(539, 6);
-            this.buttonSearchCar.Name = "buttonSearchCar";
-            this.buttonSearchCar.Size = new System.Drawing.Size(93, 94);
-            this.buttonSearchCar.TabIndex = 25;
-            this.buttonSearchCar.Text = "Знайти авто";
-            this.buttonSearchCar.UseVisualStyleBackColor = true;
+            buttonSearchCar.ForeColor = SystemColors.ActiveCaptionText;
+            buttonSearchCar.Location = new Point(616, 8);
+            buttonSearchCar.Margin = new Padding(3, 4, 3, 4);
+            buttonSearchCar.Name = "buttonSearchCar";
+            buttonSearchCar.Size = new Size(106, 125);
+            buttonSearchCar.TabIndex = 25;
+            buttonSearchCar.Text = "Знайти авто";
+            buttonSearchCar.UseVisualStyleBackColor = true;
             // 
             // buttonUpdateCar
             // 
-            this.buttonUpdateCar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonUpdateCar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonUpdateCar.Location = new System.Drawing.Point(940, 6);
-            this.buttonUpdateCar.Name = "buttonUpdateCar";
-            this.buttonUpdateCar.Size = new System.Drawing.Size(98, 44);
-            this.buttonUpdateCar.TabIndex = 24;
-            this.buttonUpdateCar.Text = "Оновити дані ";
-            this.buttonUpdateCar.UseVisualStyleBackColor = true;
+            buttonUpdateCar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonUpdateCar.ForeColor = SystemColors.ActiveCaptionText;
+            buttonUpdateCar.Location = new Point(1074, 8);
+            buttonUpdateCar.Margin = new Padding(3, 4, 3, 4);
+            buttonUpdateCar.Name = "buttonUpdateCar";
+            buttonUpdateCar.Size = new Size(112, 59);
+            buttonUpdateCar.TabIndex = 24;
+            buttonUpdateCar.Text = "Оновити дані ";
+            buttonUpdateCar.UseVisualStyleBackColor = true;
+            buttonUpdateCar.Click += buttonUpdateCar_Click;
             // 
             // buttonCheckCarInfo
             // 
-            this.buttonCheckCarInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCheckCarInfo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonCheckCarInfo.Location = new System.Drawing.Point(940, 56);
-            this.buttonCheckCarInfo.Name = "buttonCheckCarInfo";
-            this.buttonCheckCarInfo.Size = new System.Drawing.Size(98, 44);
-            this.buttonCheckCarInfo.TabIndex = 23;
-            this.buttonCheckCarInfo.Text = "Деталі";
-            this.buttonCheckCarInfo.UseVisualStyleBackColor = true;
+            buttonCheckCarInfo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonCheckCarInfo.ForeColor = SystemColors.ActiveCaptionText;
+            buttonCheckCarInfo.Location = new Point(1074, 75);
+            buttonCheckCarInfo.Margin = new Padding(3, 4, 3, 4);
+            buttonCheckCarInfo.Name = "buttonCheckCarInfo";
+            buttonCheckCarInfo.Size = new Size(112, 59);
+            buttonCheckCarInfo.TabIndex = 23;
+            buttonCheckCarInfo.Text = "Деталі";
+            buttonCheckCarInfo.UseVisualStyleBackColor = true;
+            buttonCheckCarInfo.Click += buttonCheckCarInfo_Click;
             // 
             // buttonDeleteCar
             // 
-            this.buttonDeleteCar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDeleteCar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonDeleteCar.Location = new System.Drawing.Point(836, 55);
-            this.buttonDeleteCar.Name = "buttonDeleteCar";
-            this.buttonDeleteCar.Size = new System.Drawing.Size(98, 44);
-            this.buttonDeleteCar.TabIndex = 22;
-            this.buttonDeleteCar.Text = "Видалити авто";
-            this.buttonDeleteCar.UseVisualStyleBackColor = true;
+            buttonDeleteCar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonDeleteCar.ForeColor = SystemColors.ActiveCaptionText;
+            buttonDeleteCar.Location = new Point(955, 73);
+            buttonDeleteCar.Margin = new Padding(3, 4, 3, 4);
+            buttonDeleteCar.Name = "buttonDeleteCar";
+            buttonDeleteCar.Size = new Size(112, 59);
+            buttonDeleteCar.TabIndex = 22;
+            buttonDeleteCar.Text = "Видалити авто";
+            buttonDeleteCar.UseVisualStyleBackColor = true;
+            buttonDeleteCar.Click += buttonDeleteCar_Click;
             // 
             // buttonAddCar
             // 
-            this.buttonAddCar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAddCar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonAddCar.Location = new System.Drawing.Point(836, 6);
-            this.buttonAddCar.Name = "buttonAddCar";
-            this.buttonAddCar.Size = new System.Drawing.Size(98, 44);
-            this.buttonAddCar.TabIndex = 21;
-            this.buttonAddCar.Text = "Додати авто";
-            this.buttonAddCar.UseVisualStyleBackColor = true;
+            buttonAddCar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonAddCar.ForeColor = SystemColors.ActiveCaptionText;
+            buttonAddCar.Location = new Point(955, 8);
+            buttonAddCar.Margin = new Padding(3, 4, 3, 4);
+            buttonAddCar.Name = "buttonAddCar";
+            buttonAddCar.Size = new Size(112, 59);
+            buttonAddCar.TabIndex = 21;
+            buttonAddCar.Text = "Додати авто";
+            buttonAddCar.UseVisualStyleBackColor = true;
+            buttonAddCar.Click += buttonAddCar_Click;
             // 
             // numericUpDownPriceFrom
             // 
-            this.numericUpDownPriceFrom.Location = new System.Drawing.Point(338, 58);
-            this.numericUpDownPriceFrom.Maximum = new decimal(new int[] {
-            1410065407,
-            2,
-            0,
-            0});
-            this.numericUpDownPriceFrom.Name = "numericUpDownPriceFrom";
-            this.numericUpDownPriceFrom.Size = new System.Drawing.Size(73, 23);
-            this.numericUpDownPriceFrom.TabIndex = 20;
-            this.numericUpDownPriceFrom.Value = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
+            numericUpDownPriceFrom.Location = new Point(386, 77);
+            numericUpDownPriceFrom.Margin = new Padding(3, 4, 3, 4);
+            numericUpDownPriceFrom.Maximum = new decimal(new int[] { 1410065407, 2, 0, 0 });
+            numericUpDownPriceFrom.Name = "numericUpDownPriceFrom";
+            numericUpDownPriceFrom.Size = new Size(83, 27);
+            numericUpDownPriceFrom.TabIndex = 20;
+            numericUpDownPriceFrom.Value = new decimal(new int[] { 10000, 0, 0, 0 });
             // 
             // numericUpDownPriceTo
             // 
-            this.numericUpDownPriceTo.Location = new System.Drawing.Point(445, 58);
-            this.numericUpDownPriceTo.Maximum = new decimal(new int[] {
-            1410065407,
-            2,
-            0,
-            0});
-            this.numericUpDownPriceTo.Name = "numericUpDownPriceTo";
-            this.numericUpDownPriceTo.Size = new System.Drawing.Size(73, 23);
-            this.numericUpDownPriceTo.TabIndex = 19;
-            this.numericUpDownPriceTo.Value = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
+            numericUpDownPriceTo.Location = new Point(509, 77);
+            numericUpDownPriceTo.Margin = new Padding(3, 4, 3, 4);
+            numericUpDownPriceTo.Maximum = new decimal(new int[] { 1410065407, 2, 0, 0 });
+            numericUpDownPriceTo.Name = "numericUpDownPriceTo";
+            numericUpDownPriceTo.Size = new Size(83, 27);
+            numericUpDownPriceTo.TabIndex = 19;
+            numericUpDownPriceTo.Value = new decimal(new int[] { 100000, 0, 0, 0 });
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(417, 60);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(22, 15);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "До";
+            label3.AutoSize = true;
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(477, 80);
+            label3.Name = "label3";
+            label3.Size = new Size(28, 20);
+            label3.TabIndex = 17;
+            label3.Text = "До";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(309, 60);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(23, 15);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Від";
+            label4.AutoSize = true;
+            label4.ForeColor = Color.Black;
+            label4.Location = new Point(353, 80);
+            label4.Name = "label4";
+            label4.Size = new Size(30, 20);
+            label4.TabIndex = 16;
+            label4.Text = "Від";
             // 
             // numericUpDownYearTo
             // 
-            this.numericUpDownYearTo.Location = new System.Drawing.Point(202, 58);
-            this.numericUpDownYearTo.Maximum = new decimal(new int[] {
-            2024,
-            0,
-            0,
-            0});
-            this.numericUpDownYearTo.Name = "numericUpDownYearTo";
-            this.numericUpDownYearTo.Size = new System.Drawing.Size(52, 23);
-            this.numericUpDownYearTo.TabIndex = 15;
-            this.numericUpDownYearTo.Value = new decimal(new int[] {
-            2024,
-            0,
-            0,
-            0});
+            numericUpDownYearTo.Location = new Point(231, 77);
+            numericUpDownYearTo.Margin = new Padding(3, 4, 3, 4);
+            numericUpDownYearTo.Maximum = new decimal(new int[] { 2024, 0, 0, 0 });
+            numericUpDownYearTo.Name = "numericUpDownYearTo";
+            numericUpDownYearTo.Size = new Size(59, 27);
+            numericUpDownYearTo.TabIndex = 15;
+            numericUpDownYearTo.Value = new decimal(new int[] { 2024, 0, 0, 0 });
             // 
             // numericUpDownYearFrom
             // 
-            this.numericUpDownYearFrom.Location = new System.Drawing.Point(116, 58);
-            this.numericUpDownYearFrom.Maximum = new decimal(new int[] {
-            2024,
-            0,
-            0,
-            0});
-            this.numericUpDownYearFrom.Name = "numericUpDownYearFrom";
-            this.numericUpDownYearFrom.Size = new System.Drawing.Size(52, 23);
-            this.numericUpDownYearFrom.TabIndex = 14;
-            this.numericUpDownYearFrom.Value = new decimal(new int[] {
-            1885,
-            0,
-            0,
-            0});
+            numericUpDownYearFrom.Location = new Point(133, 77);
+            numericUpDownYearFrom.Margin = new Padding(3, 4, 3, 4);
+            numericUpDownYearFrom.Maximum = new decimal(new int[] { 2024, 0, 0, 0 });
+            numericUpDownYearFrom.Name = "numericUpDownYearFrom";
+            numericUpDownYearFrom.Size = new Size(59, 27);
+            numericUpDownYearFrom.TabIndex = 14;
+            numericUpDownYearFrom.Value = new decimal(new int[] { 1885, 0, 0, 0 });
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(174, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 15);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "До";
+            label2.AutoSize = true;
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(199, 80);
+            label2.Name = "label2";
+            label2.Size = new Size(28, 20);
+            label2.TabIndex = 13;
+            label2.Text = "До";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(87, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 15);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Від";
+            label1.AutoSize = true;
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(99, 80);
+            label1.Name = "label1";
+            label1.Size = new Size(30, 20);
+            label1.TabIndex = 12;
+            label1.Text = "Від";
             // 
             // labelPrice
             // 
-            this.labelPrice.AutoSize = true;
-            this.labelPrice.ForeColor = System.Drawing.Color.Black;
-            this.labelPrice.Location = new System.Drawing.Point(262, 60);
-            this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(47, 15);
-            this.labelPrice.TabIndex = 11;
-            this.labelPrice.Text = "Ціна, ₴:";
+            labelPrice.AutoSize = true;
+            labelPrice.ForeColor = Color.Black;
+            labelPrice.Location = new Point(299, 80);
+            labelPrice.Name = "labelPrice";
+            labelPrice.Size = new Size(59, 20);
+            labelPrice.TabIndex = 11;
+            labelPrice.Text = "Ціна, ₴:";
             // 
             // labelYear
             // 
-            this.labelYear.AutoSize = true;
-            this.labelYear.ForeColor = System.Drawing.Color.Black;
-            this.labelYear.Location = new System.Drawing.Point(8, 60);
-            this.labelYear.Name = "labelYear";
-            this.labelYear.Size = new System.Drawing.Size(73, 15);
-            this.labelYear.TabIndex = 10;
-            this.labelYear.Text = "Рік випуску:";
+            labelYear.AutoSize = true;
+            labelYear.ForeColor = Color.Black;
+            labelYear.Location = new Point(9, 80);
+            labelYear.Name = "labelYear";
+            labelYear.Size = new Size(89, 20);
+            labelYear.TabIndex = 10;
+            labelYear.Text = "Рік випуску:";
             // 
             // labelModel
             // 
-            this.labelModel.AutoSize = true;
-            this.labelModel.ForeColor = System.Drawing.Color.Black;
-            this.labelModel.Location = new System.Drawing.Point(397, 3);
-            this.labelModel.Name = "labelModel";
-            this.labelModel.Size = new System.Drawing.Size(50, 15);
-            this.labelModel.TabIndex = 9;
-            this.labelModel.Text = "Модель";
+            labelModel.AutoSize = true;
+            labelModel.ForeColor = Color.Black;
+            labelModel.Location = new Point(454, 4);
+            labelModel.Name = "labelModel";
+            labelModel.Size = new Size(63, 20);
+            labelModel.TabIndex = 9;
+            labelModel.Text = "Модель";
             // 
             // comboBoxModel
             // 
-            this.comboBoxModel.FormattingEnabled = true;
-            this.comboBoxModel.Location = new System.Drawing.Point(397, 21);
-            this.comboBoxModel.Name = "comboBoxModel";
-            this.comboBoxModel.Size = new System.Drawing.Size(121, 23);
-            this.comboBoxModel.TabIndex = 8;
+            comboBoxModel.FormattingEnabled = true;
+            comboBoxModel.Location = new Point(454, 28);
+            comboBoxModel.Margin = new Padding(3, 4, 3, 4);
+            comboBoxModel.Name = "comboBoxModel";
+            comboBoxModel.Size = new Size(138, 28);
+            comboBoxModel.TabIndex = 8;
             // 
             // labelBrand
             // 
-            this.labelBrand.AutoSize = true;
-            this.labelBrand.ForeColor = System.Drawing.Color.Black;
-            this.labelBrand.Location = new System.Drawing.Point(188, 3);
-            this.labelBrand.Name = "labelBrand";
-            this.labelBrand.Size = new System.Drawing.Size(46, 15);
-            this.labelBrand.TabIndex = 7;
-            this.labelBrand.Text = "Марка ";
+            labelBrand.AutoSize = true;
+            labelBrand.ForeColor = Color.Black;
+            labelBrand.Location = new Point(215, 4);
+            labelBrand.Name = "labelBrand";
+            labelBrand.Size = new Size(58, 20);
+            labelBrand.TabIndex = 7;
+            labelBrand.Text = "Марка ";
             // 
             // comboBoxBrand
             // 
-            this.comboBoxBrand.FormattingEnabled = true;
-            this.comboBoxBrand.Location = new System.Drawing.Point(188, 21);
-            this.comboBoxBrand.Name = "comboBoxBrand";
-            this.comboBoxBrand.Size = new System.Drawing.Size(121, 23);
-            this.comboBoxBrand.TabIndex = 6;
+            comboBoxBrand.FormattingEnabled = true;
+            comboBoxBrand.Location = new Point(215, 28);
+            comboBoxBrand.Margin = new Padding(3, 4, 3, 4);
+            comboBoxBrand.Name = "comboBoxBrand";
+            comboBoxBrand.Size = new Size(138, 28);
+            comboBoxBrand.TabIndex = 6;
             // 
             // labelBodytype
             // 
-            this.labelBodytype.AutoSize = true;
-            this.labelBodytype.ForeColor = System.Drawing.Color.Black;
-            this.labelBodytype.Location = new System.Drawing.Point(8, 3);
-            this.labelBodytype.Name = "labelBodytype";
-            this.labelBodytype.Size = new System.Drawing.Size(66, 15);
-            this.labelBodytype.TabIndex = 5;
-            this.labelBodytype.Text = "Тип кузову";
+            labelBodytype.AutoSize = true;
+            labelBodytype.ForeColor = Color.Black;
+            labelBodytype.Location = new Point(9, 4);
+            labelBodytype.Name = "labelBodytype";
+            labelBodytype.Size = new Size(84, 20);
+            labelBodytype.TabIndex = 5;
+            labelBodytype.Text = "Тип кузову";
             // 
             // comboBoxBodytype
             // 
-            this.comboBoxBodytype.FormattingEnabled = true;
-            this.comboBoxBodytype.Location = new System.Drawing.Point(8, 21);
-            this.comboBoxBodytype.Name = "comboBoxBodytype";
-            this.comboBoxBodytype.Size = new System.Drawing.Size(121, 23);
-            this.comboBoxBodytype.TabIndex = 4;
+            comboBoxBodytype.FormattingEnabled = true;
+            comboBoxBodytype.Location = new Point(9, 28);
+            comboBoxBodytype.Margin = new Padding(3, 4, 3, 4);
+            comboBoxBodytype.Name = "comboBoxBodytype";
+            comboBoxBodytype.Size = new Size(138, 28);
+            comboBoxBodytype.TabIndex = 4;
             // 
             // CarsDataGridView
             // 
-            this.CarsDataGridView.AllowUserToAddRows = false;
-            this.CarsDataGridView.AllowUserToDeleteRows = false;
-            this.CarsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CarsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
-            this.CarsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.CarsDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
-            this.CarsDataGridView.Location = new System.Drawing.Point(0, 106);
-            this.CarsDataGridView.Name = "CarsDataGridView";
-            this.CarsDataGridView.ReadOnly = true;
-            this.CarsDataGridView.RowHeadersWidth = 51;
-            this.CarsDataGridView.RowTemplate.Height = 25;
-            this.CarsDataGridView.Size = new System.Drawing.Size(1046, 462);
-            this.CarsDataGridView.TabIndex = 3;
+            CarsDataGridView.AllowUserToAddRows = false;
+            CarsDataGridView.AllowUserToDeleteRows = false;
+            CarsDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            CarsDataGridView.BackgroundColor = Color.FromArgb(255, 228, 228);
+            CarsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.Coral;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            CarsDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
+            CarsDataGridView.Location = new Point(0, 141);
+            CarsDataGridView.Margin = new Padding(3, 4, 3, 4);
+            CarsDataGridView.Name = "CarsDataGridView";
+            CarsDataGridView.ReadOnly = true;
+            CarsDataGridView.RowHeadersWidth = 51;
+            CarsDataGridView.RowTemplate.Height = 25;
+            CarsDataGridView.Size = new Size(1195, 616);
+            CarsDataGridView.TabIndex = 3;
             // 
             // tabPageCarModels
             // 
-            this.tabPageCarModels.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tabPageCarModels.Controls.Add(this.buttonModelDetails);
-            this.tabPageCarModels.Controls.Add(this.buttonDeleteModel);
-            this.tabPageCarModels.Controls.Add(this.buttonAddModel);
-            this.tabPageCarModels.Controls.Add(this.ModelsDataGridView);
-            this.tabPageCarModels.Location = new System.Drawing.Point(4, 24);
-            this.tabPageCarModels.Name = "tabPageCarModels";
-            this.tabPageCarModels.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPageCarModels.Size = new System.Drawing.Size(1046, 568);
-            this.tabPageCarModels.TabIndex = 1;
-            this.tabPageCarModels.Text = "Моделі автомобілей";
+            tabPageCarModels.BackColor = Color.FromArgb(255, 208, 208);
+            tabPageCarModels.Controls.Add(buttonModelDetails);
+            tabPageCarModels.Controls.Add(buttonDeleteModel);
+            tabPageCarModels.Controls.Add(buttonAddModel);
+            tabPageCarModels.Controls.Add(ModelsDataGridView);
+            tabPageCarModels.Location = new Point(4, 29);
+            tabPageCarModels.Margin = new Padding(3, 4, 3, 4);
+            tabPageCarModels.Name = "tabPageCarModels";
+            tabPageCarModels.Padding = new Padding(3, 4, 3, 4);
+            tabPageCarModels.Size = new Size(1197, 762);
+            tabPageCarModels.TabIndex = 1;
+            tabPageCarModels.Text = "Моделі автомобілей";
             // 
             // buttonModelDetails
             // 
-            this.buttonModelDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonModelDetails.Location = new System.Drawing.Point(920, 20);
-            this.buttonModelDetails.Name = "buttonModelDetails";
-            this.buttonModelDetails.Size = new System.Drawing.Size(98, 44);
-            this.buttonModelDetails.TabIndex = 15;
-            this.buttonModelDetails.Text = "Деталі";
-            this.buttonModelDetails.UseVisualStyleBackColor = true;
+            buttonModelDetails.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonModelDetails.Location = new Point(1051, 27);
+            buttonModelDetails.Margin = new Padding(3, 4, 3, 4);
+            buttonModelDetails.Name = "buttonModelDetails";
+            buttonModelDetails.Size = new Size(112, 59);
+            buttonModelDetails.TabIndex = 15;
+            buttonModelDetails.Text = "Деталі";
+            buttonModelDetails.UseVisualStyleBackColor = true;
             // 
             // buttonDeleteModel
             // 
-            this.buttonDeleteModel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDeleteModel.Location = new System.Drawing.Point(797, 20);
-            this.buttonDeleteModel.Name = "buttonDeleteModel";
-            this.buttonDeleteModel.Size = new System.Drawing.Size(98, 44);
-            this.buttonDeleteModel.TabIndex = 14;
-            this.buttonDeleteModel.Text = "Видалити модель";
-            this.buttonDeleteModel.UseVisualStyleBackColor = true;
+            buttonDeleteModel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonDeleteModel.Location = new Point(911, 27);
+            buttonDeleteModel.Margin = new Padding(3, 4, 3, 4);
+            buttonDeleteModel.Name = "buttonDeleteModel";
+            buttonDeleteModel.Size = new Size(112, 59);
+            buttonDeleteModel.TabIndex = 14;
+            buttonDeleteModel.Text = "Видалити модель";
+            buttonDeleteModel.UseVisualStyleBackColor = true;
             // 
             // buttonAddModel
             // 
-            this.buttonAddModel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAddModel.Location = new System.Drawing.Point(667, 20);
-            this.buttonAddModel.Name = "buttonAddModel";
-            this.buttonAddModel.Size = new System.Drawing.Size(98, 44);
-            this.buttonAddModel.TabIndex = 13;
-            this.buttonAddModel.Text = "Додати модель";
-            this.buttonAddModel.UseVisualStyleBackColor = true;
+            buttonAddModel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonAddModel.Location = new Point(762, 27);
+            buttonAddModel.Margin = new Padding(3, 4, 3, 4);
+            buttonAddModel.Name = "buttonAddModel";
+            buttonAddModel.Size = new Size(112, 59);
+            buttonAddModel.TabIndex = 13;
+            buttonAddModel.Text = "Додати модель";
+            buttonAddModel.UseVisualStyleBackColor = true;
             // 
             // ModelsDataGridView
             // 
-            this.ModelsDataGridView.AllowUserToAddRows = false;
-            this.ModelsDataGridView.AllowUserToDeleteRows = false;
-            this.ModelsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ModelsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
-            this.ModelsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ModelsDataGridView.Location = new System.Drawing.Point(0, 86);
-            this.ModelsDataGridView.Name = "ModelsDataGridView";
-            this.ModelsDataGridView.ReadOnly = true;
-            this.ModelsDataGridView.RowHeadersWidth = 51;
-            this.ModelsDataGridView.RowTemplate.Height = 25;
-            this.ModelsDataGridView.Size = new System.Drawing.Size(1046, 482);
-            this.ModelsDataGridView.TabIndex = 2;
+            ModelsDataGridView.AllowUserToAddRows = false;
+            ModelsDataGridView.AllowUserToDeleteRows = false;
+            ModelsDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ModelsDataGridView.BackgroundColor = Color.FromArgb(255, 228, 228);
+            ModelsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ModelsDataGridView.Location = new Point(0, 115);
+            ModelsDataGridView.Margin = new Padding(3, 4, 3, 4);
+            ModelsDataGridView.Name = "ModelsDataGridView";
+            ModelsDataGridView.ReadOnly = true;
+            ModelsDataGridView.RowHeadersWidth = 51;
+            ModelsDataGridView.RowTemplate.Height = 25;
+            ModelsDataGridView.Size = new Size(1195, 643);
+            ModelsDataGridView.TabIndex = 2;
             // 
             // tabPageCarDealerships
             // 
-            this.tabPageCarDealerships.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tabPageCarDealerships.Controls.Add(this.buttonUpdateDealership);
-            this.tabPageCarDealerships.Controls.Add(this.buttonDeleteDealership);
-            this.tabPageCarDealerships.Controls.Add(this.buttonAddDealership);
-            this.tabPageCarDealerships.Controls.Add(this.CarDealershipsDataGridView);
-            this.tabPageCarDealerships.Location = new System.Drawing.Point(4, 24);
-            this.tabPageCarDealerships.Name = "tabPageCarDealerships";
-            this.tabPageCarDealerships.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPageCarDealerships.Size = new System.Drawing.Size(1046, 568);
-            this.tabPageCarDealerships.TabIndex = 2;
-            this.tabPageCarDealerships.Text = "Автосалони";
+            tabPageCarDealerships.BackColor = Color.FromArgb(255, 208, 208);
+            tabPageCarDealerships.Controls.Add(buttonUpdateDealership);
+            tabPageCarDealerships.Controls.Add(buttonDeleteDealership);
+            tabPageCarDealerships.Controls.Add(buttonAddDealership);
+            tabPageCarDealerships.Controls.Add(CarDealershipsDataGridView);
+            tabPageCarDealerships.Location = new Point(4, 29);
+            tabPageCarDealerships.Margin = new Padding(3, 4, 3, 4);
+            tabPageCarDealerships.Name = "tabPageCarDealerships";
+            tabPageCarDealerships.Padding = new Padding(3, 4, 3, 4);
+            tabPageCarDealerships.Size = new Size(1197, 762);
+            tabPageCarDealerships.TabIndex = 2;
+            tabPageCarDealerships.Text = "Автосалони";
             // 
             // buttonUpdateDealership
             // 
-            this.buttonUpdateDealership.Location = new System.Drawing.Point(8, 115);
-            this.buttonUpdateDealership.Name = "buttonUpdateDealership";
-            this.buttonUpdateDealership.Size = new System.Drawing.Size(98, 44);
-            this.buttonUpdateDealership.TabIndex = 4;
-            this.buttonUpdateDealership.Text = "Оновити дані";
-            this.buttonUpdateDealership.UseVisualStyleBackColor = true;
+            buttonUpdateDealership.Location = new Point(9, 153);
+            buttonUpdateDealership.Margin = new Padding(3, 4, 3, 4);
+            buttonUpdateDealership.Name = "buttonUpdateDealership";
+            buttonUpdateDealership.Size = new Size(112, 59);
+            buttonUpdateDealership.TabIndex = 4;
+            buttonUpdateDealership.Text = "Оновити дані";
+            buttonUpdateDealership.UseVisualStyleBackColor = true;
             // 
             // buttonDeleteDealership
             // 
-            this.buttonDeleteDealership.Location = new System.Drawing.Point(8, 65);
-            this.buttonDeleteDealership.Name = "buttonDeleteDealership";
-            this.buttonDeleteDealership.Size = new System.Drawing.Size(98, 44);
-            this.buttonDeleteDealership.TabIndex = 3;
-            this.buttonDeleteDealership.Text = "Видалити автосалон";
-            this.buttonDeleteDealership.UseVisualStyleBackColor = true;
+            buttonDeleteDealership.Location = new Point(9, 87);
+            buttonDeleteDealership.Margin = new Padding(3, 4, 3, 4);
+            buttonDeleteDealership.Name = "buttonDeleteDealership";
+            buttonDeleteDealership.Size = new Size(112, 59);
+            buttonDeleteDealership.TabIndex = 3;
+            buttonDeleteDealership.Text = "Видалити автосалон";
+            buttonDeleteDealership.UseVisualStyleBackColor = true;
             // 
             // buttonAddDealership
             // 
-            this.buttonAddDealership.Location = new System.Drawing.Point(8, 15);
-            this.buttonAddDealership.Name = "buttonAddDealership";
-            this.buttonAddDealership.Size = new System.Drawing.Size(98, 44);
-            this.buttonAddDealership.TabIndex = 2;
-            this.buttonAddDealership.Text = "Додати автосалон";
-            this.buttonAddDealership.UseVisualStyleBackColor = true;
+            buttonAddDealership.Location = new Point(9, 20);
+            buttonAddDealership.Margin = new Padding(3, 4, 3, 4);
+            buttonAddDealership.Name = "buttonAddDealership";
+            buttonAddDealership.Size = new Size(112, 59);
+            buttonAddDealership.TabIndex = 2;
+            buttonAddDealership.Text = "Додати автосалон";
+            buttonAddDealership.UseVisualStyleBackColor = true;
             // 
             // CarDealershipsDataGridView
             // 
-            this.CarDealershipsDataGridView.AllowUserToAddRows = false;
-            this.CarDealershipsDataGridView.AllowUserToDeleteRows = false;
-            this.CarDealershipsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CarDealershipsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
-            this.CarDealershipsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CarDealershipsDataGridView.Location = new System.Drawing.Point(112, 0);
-            this.CarDealershipsDataGridView.Name = "CarDealershipsDataGridView";
-            this.CarDealershipsDataGridView.ReadOnly = true;
-            this.CarDealershipsDataGridView.RowHeadersWidth = 51;
-            this.CarDealershipsDataGridView.RowTemplate.Height = 25;
-            this.CarDealershipsDataGridView.Size = new System.Drawing.Size(934, 568);
-            this.CarDealershipsDataGridView.TabIndex = 1;
+            CarDealershipsDataGridView.AllowUserToAddRows = false;
+            CarDealershipsDataGridView.AllowUserToDeleteRows = false;
+            CarDealershipsDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            CarDealershipsDataGridView.BackgroundColor = Color.FromArgb(255, 228, 228);
+            CarDealershipsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            CarDealershipsDataGridView.Location = new Point(128, 0);
+            CarDealershipsDataGridView.Margin = new Padding(3, 4, 3, 4);
+            CarDealershipsDataGridView.Name = "CarDealershipsDataGridView";
+            CarDealershipsDataGridView.ReadOnly = true;
+            CarDealershipsDataGridView.RowHeadersWidth = 51;
+            CarDealershipsDataGridView.RowTemplate.Height = 25;
+            CarDealershipsDataGridView.Size = new Size(1067, 757);
+            CarDealershipsDataGridView.TabIndex = 1;
             // 
             // tabPageEmployees
             // 
-            this.tabPageEmployees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tabPageEmployees.Controls.Add(this.buttonUpdateEmployee);
-            this.tabPageEmployees.Controls.Add(this.buttonDeleteEmployee);
-            this.tabPageEmployees.Controls.Add(this.buttonAddEmployee);
-            this.tabPageEmployees.Controls.Add(this.labelEmployeeSearch);
-            this.tabPageEmployees.Controls.Add(this.textBoxEmployeeSearch);
-            this.tabPageEmployees.Controls.Add(this.EmployeesDataGridView);
-            this.tabPageEmployees.Location = new System.Drawing.Point(4, 24);
-            this.tabPageEmployees.Name = "tabPageEmployees";
-            this.tabPageEmployees.Size = new System.Drawing.Size(1046, 568);
-            this.tabPageEmployees.TabIndex = 3;
-            this.tabPageEmployees.Text = "Працівники";
+            tabPageEmployees.BackColor = Color.FromArgb(255, 208, 208);
+            tabPageEmployees.Controls.Add(buttonUpdateEmployee);
+            tabPageEmployees.Controls.Add(buttonDeleteEmployee);
+            tabPageEmployees.Controls.Add(buttonAddEmployee);
+            tabPageEmployees.Controls.Add(labelEmployeeSearch);
+            tabPageEmployees.Controls.Add(textBoxEmployeeSearch);
+            tabPageEmployees.Controls.Add(EmployeesDataGridView);
+            tabPageEmployees.Location = new Point(4, 29);
+            tabPageEmployees.Margin = new Padding(3, 4, 3, 4);
+            tabPageEmployees.Name = "tabPageEmployees";
+            tabPageEmployees.Size = new Size(1197, 762);
+            tabPageEmployees.TabIndex = 3;
+            tabPageEmployees.Text = "Працівники";
             // 
             // buttonUpdateEmployee
             // 
-            this.buttonUpdateEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonUpdateEmployee.Location = new System.Drawing.Point(940, 20);
-            this.buttonUpdateEmployee.Name = "buttonUpdateEmployee";
-            this.buttonUpdateEmployee.Size = new System.Drawing.Size(98, 44);
-            this.buttonUpdateEmployee.TabIndex = 11;
-            this.buttonUpdateEmployee.Text = "Оновити дані";
-            this.buttonUpdateEmployee.UseVisualStyleBackColor = true;
+            buttonUpdateEmployee.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonUpdateEmployee.Location = new Point(1074, 27);
+            buttonUpdateEmployee.Margin = new Padding(3, 4, 3, 4);
+            buttonUpdateEmployee.Name = "buttonUpdateEmployee";
+            buttonUpdateEmployee.Size = new Size(112, 59);
+            buttonUpdateEmployee.TabIndex = 11;
+            buttonUpdateEmployee.Text = "Оновити дані";
+            buttonUpdateEmployee.UseVisualStyleBackColor = true;
             // 
             // buttonDeleteEmployee
             // 
-            this.buttonDeleteEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDeleteEmployee.Enabled = false;
-            this.buttonDeleteEmployee.Location = new System.Drawing.Point(797, 20);
-            this.buttonDeleteEmployee.Name = "buttonDeleteEmployee";
-            this.buttonDeleteEmployee.Size = new System.Drawing.Size(98, 44);
-            this.buttonDeleteEmployee.TabIndex = 10;
-            this.buttonDeleteEmployee.Text = "Видалити працівника";
-            this.buttonDeleteEmployee.UseVisualStyleBackColor = true;
+            buttonDeleteEmployee.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonDeleteEmployee.Enabled = false;
+            buttonDeleteEmployee.Location = new Point(911, 27);
+            buttonDeleteEmployee.Margin = new Padding(3, 4, 3, 4);
+            buttonDeleteEmployee.Name = "buttonDeleteEmployee";
+            buttonDeleteEmployee.Size = new Size(112, 59);
+            buttonDeleteEmployee.TabIndex = 10;
+            buttonDeleteEmployee.Text = "Видалити працівника";
+            buttonDeleteEmployee.UseVisualStyleBackColor = true;
             // 
             // buttonAddEmployee
             // 
-            this.buttonAddEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAddEmployee.Location = new System.Drawing.Point(649, 20);
-            this.buttonAddEmployee.Name = "buttonAddEmployee";
-            this.buttonAddEmployee.Size = new System.Drawing.Size(98, 44);
-            this.buttonAddEmployee.TabIndex = 9;
-            this.buttonAddEmployee.Text = "Додати працівника";
-            this.buttonAddEmployee.UseVisualStyleBackColor = true;
+            buttonAddEmployee.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonAddEmployee.Location = new Point(742, 27);
+            buttonAddEmployee.Margin = new Padding(3, 4, 3, 4);
+            buttonAddEmployee.Name = "buttonAddEmployee";
+            buttonAddEmployee.Size = new Size(112, 59);
+            buttonAddEmployee.TabIndex = 9;
+            buttonAddEmployee.Text = "Додати працівника";
+            buttonAddEmployee.UseVisualStyleBackColor = true;
             // 
             // labelEmployeeSearch
             // 
-            this.labelEmployeeSearch.AutoSize = true;
-            this.labelEmployeeSearch.Location = new System.Drawing.Point(8, 20);
-            this.labelEmployeeSearch.Name = "labelEmployeeSearch";
-            this.labelEmployeeSearch.Size = new System.Drawing.Size(228, 15);
-            this.labelEmployeeSearch.TabIndex = 8;
-            this.labelEmployeeSearch.Text = "Поле для вводу щоб знайти працівників";
+            labelEmployeeSearch.AutoSize = true;
+            labelEmployeeSearch.Location = new Point(9, 27);
+            labelEmployeeSearch.Name = "labelEmployeeSearch";
+            labelEmployeeSearch.Size = new Size(291, 20);
+            labelEmployeeSearch.TabIndex = 8;
+            labelEmployeeSearch.Text = "Поле для вводу щоб знайти працівників";
             // 
             // textBoxEmployeeSearch
             // 
-            this.textBoxEmployeeSearch.Location = new System.Drawing.Point(8, 38);
-            this.textBoxEmployeeSearch.Name = "textBoxEmployeeSearch";
-            this.textBoxEmployeeSearch.Size = new System.Drawing.Size(302, 23);
-            this.textBoxEmployeeSearch.TabIndex = 7;
+            textBoxEmployeeSearch.Location = new Point(9, 51);
+            textBoxEmployeeSearch.Margin = new Padding(3, 4, 3, 4);
+            textBoxEmployeeSearch.Name = "textBoxEmployeeSearch";
+            textBoxEmployeeSearch.Size = new Size(345, 27);
+            textBoxEmployeeSearch.TabIndex = 7;
             // 
             // EmployeesDataGridView
             // 
-            this.EmployeesDataGridView.AllowUserToAddRows = false;
-            this.EmployeesDataGridView.AllowUserToDeleteRows = false;
-            this.EmployeesDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.EmployeesDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
-            this.EmployeesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EmployeesDataGridView.Location = new System.Drawing.Point(0, 86);
-            this.EmployeesDataGridView.Name = "EmployeesDataGridView";
-            this.EmployeesDataGridView.ReadOnly = true;
-            this.EmployeesDataGridView.RowHeadersWidth = 51;
-            this.EmployeesDataGridView.RowTemplate.Height = 25;
-            this.EmployeesDataGridView.Size = new System.Drawing.Size(1046, 482);
-            this.EmployeesDataGridView.TabIndex = 1;
+            EmployeesDataGridView.AllowUserToAddRows = false;
+            EmployeesDataGridView.AllowUserToDeleteRows = false;
+            EmployeesDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            EmployeesDataGridView.BackgroundColor = Color.FromArgb(255, 228, 228);
+            EmployeesDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            EmployeesDataGridView.Location = new Point(0, 115);
+            EmployeesDataGridView.Margin = new Padding(3, 4, 3, 4);
+            EmployeesDataGridView.Name = "EmployeesDataGridView";
+            EmployeesDataGridView.ReadOnly = true;
+            EmployeesDataGridView.RowHeadersWidth = 51;
+            EmployeesDataGridView.RowTemplate.Height = 25;
+            EmployeesDataGridView.Size = new Size(1195, 643);
+            EmployeesDataGridView.TabIndex = 1;
             // 
             // tabPageCustomers
             // 
-            this.tabPageCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tabPageCustomers.Controls.Add(this.buttonDeleteClient);
-            this.tabPageCustomers.Controls.Add(this.buttonUpdateClient);
-            this.tabPageCustomers.Controls.Add(this.buttonAddClient);
-            this.tabPageCustomers.Controls.Add(this.labelCustomerSearch);
-            this.tabPageCustomers.Controls.Add(this.buttonCustomerSearch);
-            this.tabPageCustomers.Controls.Add(this.textBoxCustomerSearch);
-            this.tabPageCustomers.Controls.Add(this.radioButtonCustomerDate);
-            this.tabPageCustomers.Controls.Add(this.radioButtonCustomerPhone);
-            this.tabPageCustomers.Controls.Add(this.radioButtonCustomerSurname);
-            this.tabPageCustomers.Controls.Add(this.CustomerDataGridView);
-            this.tabPageCustomers.Location = new System.Drawing.Point(4, 24);
-            this.tabPageCustomers.Name = "tabPageCustomers";
-            this.tabPageCustomers.Size = new System.Drawing.Size(1046, 568);
-            this.tabPageCustomers.TabIndex = 4;
-            this.tabPageCustomers.Text = "Клієнти";
+            tabPageCustomers.BackColor = Color.FromArgb(255, 208, 208);
+            tabPageCustomers.Controls.Add(buttonDeleteClient);
+            tabPageCustomers.Controls.Add(buttonUpdateClient);
+            tabPageCustomers.Controls.Add(buttonAddClient);
+            tabPageCustomers.Controls.Add(labelCustomerSearch);
+            tabPageCustomers.Controls.Add(buttonCustomerSearch);
+            tabPageCustomers.Controls.Add(textBoxCustomerSearch);
+            tabPageCustomers.Controls.Add(radioButtonCustomerDate);
+            tabPageCustomers.Controls.Add(radioButtonCustomerPhone);
+            tabPageCustomers.Controls.Add(radioButtonCustomerSurname);
+            tabPageCustomers.Controls.Add(CustomerDataGridView);
+            tabPageCustomers.Location = new Point(4, 29);
+            tabPageCustomers.Margin = new Padding(3, 4, 3, 4);
+            tabPageCustomers.Name = "tabPageCustomers";
+            tabPageCustomers.Size = new Size(1197, 762);
+            tabPageCustomers.TabIndex = 4;
+            tabPageCustomers.Text = "Клієнти";
             // 
             // buttonDeleteClient
             // 
-            this.buttonDeleteClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDeleteClient.Enabled = false;
-            this.buttonDeleteClient.Location = new System.Drawing.Point(836, 22);
-            this.buttonDeleteClient.Name = "buttonDeleteClient";
-            this.buttonDeleteClient.Size = new System.Drawing.Size(98, 52);
-            this.buttonDeleteClient.TabIndex = 13;
-            this.buttonDeleteClient.Text = "Видалити клієнта";
-            this.buttonDeleteClient.UseVisualStyleBackColor = true;
+            buttonDeleteClient.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonDeleteClient.Enabled = false;
+            buttonDeleteClient.Location = new Point(955, 29);
+            buttonDeleteClient.Margin = new Padding(3, 4, 3, 4);
+            buttonDeleteClient.Name = "buttonDeleteClient";
+            buttonDeleteClient.Size = new Size(112, 69);
+            buttonDeleteClient.TabIndex = 13;
+            buttonDeleteClient.Text = "Видалити клієнта";
+            buttonDeleteClient.UseVisualStyleBackColor = true;
             // 
             // buttonUpdateClient
             // 
-            this.buttonUpdateClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonUpdateClient.Location = new System.Drawing.Point(940, 22);
-            this.buttonUpdateClient.Name = "buttonUpdateClient";
-            this.buttonUpdateClient.Size = new System.Drawing.Size(98, 52);
-            this.buttonUpdateClient.TabIndex = 14;
-            this.buttonUpdateClient.Text = "Оновити дані ";
-            this.buttonUpdateClient.UseVisualStyleBackColor = true;
+            buttonUpdateClient.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonUpdateClient.Location = new Point(1074, 29);
+            buttonUpdateClient.Margin = new Padding(3, 4, 3, 4);
+            buttonUpdateClient.Name = "buttonUpdateClient";
+            buttonUpdateClient.Size = new Size(112, 69);
+            buttonUpdateClient.TabIndex = 14;
+            buttonUpdateClient.Text = "Оновити дані ";
+            buttonUpdateClient.UseVisualStyleBackColor = true;
             // 
             // buttonAddClient
             // 
-            this.buttonAddClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAddClient.Location = new System.Drawing.Point(732, 22);
-            this.buttonAddClient.Name = "buttonAddClient";
-            this.buttonAddClient.Size = new System.Drawing.Size(98, 52);
-            this.buttonAddClient.TabIndex = 12;
-            this.buttonAddClient.Text = "Додати клієнта";
-            this.buttonAddClient.UseVisualStyleBackColor = true;
+            buttonAddClient.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonAddClient.Location = new Point(837, 29);
+            buttonAddClient.Margin = new Padding(3, 4, 3, 4);
+            buttonAddClient.Name = "buttonAddClient";
+            buttonAddClient.Size = new Size(112, 69);
+            buttonAddClient.TabIndex = 12;
+            buttonAddClient.Text = "Додати клієнта";
+            buttonAddClient.UseVisualStyleBackColor = true;
             // 
             // labelCustomerSearch
             // 
-            this.labelCustomerSearch.AutoSize = true;
-            this.labelCustomerSearch.Location = new System.Drawing.Point(8, 20);
-            this.labelCustomerSearch.Name = "labelCustomerSearch";
-            this.labelCustomerSearch.Size = new System.Drawing.Size(206, 15);
-            this.labelCustomerSearch.TabIndex = 6;
-            this.labelCustomerSearch.Text = "Поле для вводу щоб знайти клієнтів";
+            labelCustomerSearch.AutoSize = true;
+            labelCustomerSearch.Location = new Point(9, 27);
+            labelCustomerSearch.Name = "labelCustomerSearch";
+            labelCustomerSearch.Size = new Size(260, 20);
+            labelCustomerSearch.TabIndex = 6;
+            labelCustomerSearch.Text = "Поле для вводу щоб знайти клієнтів";
             // 
             // buttonCustomerSearch
             // 
-            this.buttonCustomerSearch.Location = new System.Drawing.Point(524, 22);
-            this.buttonCustomerSearch.Name = "buttonCustomerSearch";
-            this.buttonCustomerSearch.Size = new System.Drawing.Size(93, 52);
-            this.buttonCustomerSearch.TabIndex = 5;
-            this.buttonCustomerSearch.Text = "Знайти клієнта";
-            this.buttonCustomerSearch.UseVisualStyleBackColor = true;
+            buttonCustomerSearch.Location = new Point(599, 29);
+            buttonCustomerSearch.Margin = new Padding(3, 4, 3, 4);
+            buttonCustomerSearch.Name = "buttonCustomerSearch";
+            buttonCustomerSearch.Size = new Size(106, 69);
+            buttonCustomerSearch.TabIndex = 5;
+            buttonCustomerSearch.Text = "Знайти клієнта";
+            buttonCustomerSearch.UseVisualStyleBackColor = true;
             // 
             // textBoxCustomerSearch
             // 
-            this.textBoxCustomerSearch.Location = new System.Drawing.Point(8, 38);
-            this.textBoxCustomerSearch.Name = "textBoxCustomerSearch";
-            this.textBoxCustomerSearch.Size = new System.Drawing.Size(302, 23);
-            this.textBoxCustomerSearch.TabIndex = 4;
+            textBoxCustomerSearch.Location = new Point(9, 51);
+            textBoxCustomerSearch.Margin = new Padding(3, 4, 3, 4);
+            textBoxCustomerSearch.Name = "textBoxCustomerSearch";
+            textBoxCustomerSearch.Size = new Size(345, 27);
+            textBoxCustomerSearch.TabIndex = 4;
             // 
             // radioButtonCustomerDate
             // 
-            this.radioButtonCustomerDate.AutoSize = true;
-            this.radioButtonCustomerDate.Location = new System.Drawing.Point(363, 62);
-            this.radioButtonCustomerDate.Name = "radioButtonCustomerDate";
-            this.radioButtonCustomerDate.Size = new System.Drawing.Size(144, 19);
-            this.radioButtonCustomerDate.TabIndex = 3;
-            this.radioButtonCustomerDate.TabStop = true;
-            this.radioButtonCustomerDate.Text = "за датою народження";
-            this.radioButtonCustomerDate.UseVisualStyleBackColor = true;
+            radioButtonCustomerDate.AutoSize = true;
+            radioButtonCustomerDate.Location = new Point(415, 83);
+            radioButtonCustomerDate.Margin = new Padding(3, 4, 3, 4);
+            radioButtonCustomerDate.Name = "radioButtonCustomerDate";
+            radioButtonCustomerDate.Size = new Size(184, 24);
+            radioButtonCustomerDate.TabIndex = 3;
+            radioButtonCustomerDate.TabStop = true;
+            radioButtonCustomerDate.Text = "за датою народження";
+            radioButtonCustomerDate.UseVisualStyleBackColor = true;
             // 
             // radioButtonCustomerPhone
             // 
-            this.radioButtonCustomerPhone.AutoSize = true;
-            this.radioButtonCustomerPhone.Location = new System.Drawing.Point(363, 37);
-            this.radioButtonCustomerPhone.Name = "radioButtonCustomerPhone";
-            this.radioButtonCustomerPhone.Size = new System.Drawing.Size(102, 19);
-            this.radioButtonCustomerPhone.TabIndex = 2;
-            this.radioButtonCustomerPhone.TabStop = true;
-            this.radioButtonCustomerPhone.Text = "за телефоном";
-            this.radioButtonCustomerPhone.UseVisualStyleBackColor = true;
+            radioButtonCustomerPhone.AutoSize = true;
+            radioButtonCustomerPhone.Location = new Point(415, 49);
+            radioButtonCustomerPhone.Margin = new Padding(3, 4, 3, 4);
+            radioButtonCustomerPhone.Name = "radioButtonCustomerPhone";
+            radioButtonCustomerPhone.Size = new Size(127, 24);
+            radioButtonCustomerPhone.TabIndex = 2;
+            radioButtonCustomerPhone.TabStop = true;
+            radioButtonCustomerPhone.Text = "за телефоном";
+            radioButtonCustomerPhone.UseVisualStyleBackColor = true;
             // 
             // radioButtonCustomerSurname
             // 
-            this.radioButtonCustomerSurname.AutoSize = true;
-            this.radioButtonCustomerSurname.Location = new System.Drawing.Point(363, 12);
-            this.radioButtonCustomerSurname.Name = "radioButtonCustomerSurname";
-            this.radioButtonCustomerSurname.Size = new System.Drawing.Size(100, 19);
-            this.radioButtonCustomerSurname.TabIndex = 1;
-            this.radioButtonCustomerSurname.TabStop = true;
-            this.radioButtonCustomerSurname.Text = "за прізвищем";
-            this.radioButtonCustomerSurname.UseVisualStyleBackColor = true;
+            radioButtonCustomerSurname.AutoSize = true;
+            radioButtonCustomerSurname.Location = new Point(415, 16);
+            radioButtonCustomerSurname.Margin = new Padding(3, 4, 3, 4);
+            radioButtonCustomerSurname.Name = "radioButtonCustomerSurname";
+            radioButtonCustomerSurname.Size = new Size(126, 24);
+            radioButtonCustomerSurname.TabIndex = 1;
+            radioButtonCustomerSurname.TabStop = true;
+            radioButtonCustomerSurname.Text = "за прізвищем";
+            radioButtonCustomerSurname.UseVisualStyleBackColor = true;
             // 
             // CustomerDataGridView
             // 
-            this.CustomerDataGridView.AllowUserToAddRows = false;
-            this.CustomerDataGridView.AllowUserToDeleteRows = false;
-            this.CustomerDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CustomerDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
-            this.CustomerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CustomerDataGridView.Location = new System.Drawing.Point(0, 86);
-            this.CustomerDataGridView.Name = "CustomerDataGridView";
-            this.CustomerDataGridView.ReadOnly = true;
-            this.CustomerDataGridView.RowHeadersWidth = 51;
-            this.CustomerDataGridView.RowTemplate.Height = 25;
-            this.CustomerDataGridView.Size = new System.Drawing.Size(1046, 482);
-            this.CustomerDataGridView.TabIndex = 0;
+            CustomerDataGridView.AllowUserToAddRows = false;
+            CustomerDataGridView.AllowUserToDeleteRows = false;
+            CustomerDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            CustomerDataGridView.BackgroundColor = Color.FromArgb(255, 228, 228);
+            CustomerDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            CustomerDataGridView.Location = new Point(0, 115);
+            CustomerDataGridView.Margin = new Padding(3, 4, 3, 4);
+            CustomerDataGridView.Name = "CustomerDataGridView";
+            CustomerDataGridView.ReadOnly = true;
+            CustomerDataGridView.RowHeadersWidth = 51;
+            CustomerDataGridView.RowTemplate.Height = 25;
+            CustomerDataGridView.Size = new Size(1195, 643);
+            CustomerDataGridView.TabIndex = 0;
             // 
             // tabPageTransactions
             // 
-            this.tabPageTransactions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tabPageTransactions.Controls.Add(this.buttonCheckInfoTransaction);
-            this.tabPageTransactions.Controls.Add(this.buttonDeleteTransaction);
-            this.tabPageTransactions.Controls.Add(this.buttonAddTransaction);
-            this.tabPageTransactions.Controls.Add(this.TransactionsDataGridView);
-            this.tabPageTransactions.Location = new System.Drawing.Point(4, 24);
-            this.tabPageTransactions.Name = "tabPageTransactions";
-            this.tabPageTransactions.Size = new System.Drawing.Size(1046, 568);
-            this.tabPageTransactions.TabIndex = 5;
-            this.tabPageTransactions.Text = "Транзакції";
+            tabPageTransactions.BackColor = Color.FromArgb(255, 208, 208);
+            tabPageTransactions.Controls.Add(buttonCheckInfoTransaction);
+            tabPageTransactions.Controls.Add(buttonDeleteTransaction);
+            tabPageTransactions.Controls.Add(buttonAddTransaction);
+            tabPageTransactions.Controls.Add(TransactionsDataGridView);
+            tabPageTransactions.Location = new Point(4, 29);
+            tabPageTransactions.Margin = new Padding(3, 4, 3, 4);
+            tabPageTransactions.Name = "tabPageTransactions";
+            tabPageTransactions.Size = new Size(1197, 762);
+            tabPageTransactions.TabIndex = 5;
+            tabPageTransactions.Text = "Транзакції";
             // 
             // buttonCheckInfoTransaction
             // 
-            this.buttonCheckInfoTransaction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCheckInfoTransaction.Location = new System.Drawing.Point(920, 20);
-            this.buttonCheckInfoTransaction.Name = "buttonCheckInfoTransaction";
-            this.buttonCheckInfoTransaction.Size = new System.Drawing.Size(98, 44);
-            this.buttonCheckInfoTransaction.TabIndex = 14;
-            this.buttonCheckInfoTransaction.Text = "Деталі";
-            this.buttonCheckInfoTransaction.UseVisualStyleBackColor = true;
+            buttonCheckInfoTransaction.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonCheckInfoTransaction.Location = new Point(1051, 27);
+            buttonCheckInfoTransaction.Margin = new Padding(3, 4, 3, 4);
+            buttonCheckInfoTransaction.Name = "buttonCheckInfoTransaction";
+            buttonCheckInfoTransaction.Size = new Size(112, 59);
+            buttonCheckInfoTransaction.TabIndex = 14;
+            buttonCheckInfoTransaction.Text = "Деталі";
+            buttonCheckInfoTransaction.UseVisualStyleBackColor = true;
             // 
             // buttonDeleteTransaction
             // 
-            this.buttonDeleteTransaction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDeleteTransaction.Enabled = false;
-            this.buttonDeleteTransaction.Location = new System.Drawing.Point(797, 20);
-            this.buttonDeleteTransaction.Name = "buttonDeleteTransaction";
-            this.buttonDeleteTransaction.Size = new System.Drawing.Size(98, 44);
-            this.buttonDeleteTransaction.TabIndex = 13;
-            this.buttonDeleteTransaction.Text = "Видалити транзакцію";
-            this.buttonDeleteTransaction.UseVisualStyleBackColor = true;
+            buttonDeleteTransaction.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonDeleteTransaction.Enabled = false;
+            buttonDeleteTransaction.Location = new Point(911, 27);
+            buttonDeleteTransaction.Margin = new Padding(3, 4, 3, 4);
+            buttonDeleteTransaction.Name = "buttonDeleteTransaction";
+            buttonDeleteTransaction.Size = new Size(112, 59);
+            buttonDeleteTransaction.TabIndex = 13;
+            buttonDeleteTransaction.Text = "Видалити транзакцію";
+            buttonDeleteTransaction.UseVisualStyleBackColor = true;
             // 
             // buttonAddTransaction
             // 
-            this.buttonAddTransaction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAddTransaction.Location = new System.Drawing.Point(667, 20);
-            this.buttonAddTransaction.Name = "buttonAddTransaction";
-            this.buttonAddTransaction.Size = new System.Drawing.Size(98, 44);
-            this.buttonAddTransaction.TabIndex = 12;
-            this.buttonAddTransaction.Text = "Додати транзакцію";
-            this.buttonAddTransaction.UseVisualStyleBackColor = true;
+            buttonAddTransaction.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonAddTransaction.Location = new Point(762, 27);
+            buttonAddTransaction.Margin = new Padding(3, 4, 3, 4);
+            buttonAddTransaction.Name = "buttonAddTransaction";
+            buttonAddTransaction.Size = new Size(112, 59);
+            buttonAddTransaction.TabIndex = 12;
+            buttonAddTransaction.Text = "Додати транзакцію";
+            buttonAddTransaction.UseVisualStyleBackColor = true;
             // 
             // TransactionsDataGridView
             // 
-            this.TransactionsDataGridView.AllowUserToAddRows = false;
-            this.TransactionsDataGridView.AllowUserToDeleteRows = false;
-            this.TransactionsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TransactionsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
-            this.TransactionsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TransactionsDataGridView.Location = new System.Drawing.Point(0, 86);
-            this.TransactionsDataGridView.Name = "TransactionsDataGridView";
-            this.TransactionsDataGridView.ReadOnly = true;
-            this.TransactionsDataGridView.RowHeadersWidth = 51;
-            this.TransactionsDataGridView.RowTemplate.Height = 25;
-            this.TransactionsDataGridView.Size = new System.Drawing.Size(1046, 482);
-            this.TransactionsDataGridView.TabIndex = 1;
+            TransactionsDataGridView.AllowUserToAddRows = false;
+            TransactionsDataGridView.AllowUserToDeleteRows = false;
+            TransactionsDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            TransactionsDataGridView.BackgroundColor = Color.FromArgb(255, 228, 228);
+            TransactionsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            TransactionsDataGridView.Location = new Point(0, 115);
+            TransactionsDataGridView.Margin = new Padding(3, 4, 3, 4);
+            TransactionsDataGridView.Name = "TransactionsDataGridView";
+            TransactionsDataGridView.ReadOnly = true;
+            TransactionsDataGridView.RowHeadersWidth = 51;
+            TransactionsDataGridView.RowTemplate.Height = 25;
+            TransactionsDataGridView.Size = new Size(1195, 643);
+            TransactionsDataGridView.TabIndex = 1;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeight = 29;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 0;
+            dataGridView1.ColumnHeadersHeight = 29;
+            dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(240, 150);
+            dataGridView1.TabIndex = 0;
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
-            this.ClientSize = new System.Drawing.Size(1054, 596);
-            this.Controls.Add(this.tabControl1);
-            this.MinimumSize = new System.Drawing.Size(1000, 598);
-            this.Name = "Main";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DB Cars Sales";
-            this.tabControl1.ResumeLayout(false);
-            this.tabPageCars.ResumeLayout(false);
-            this.tabPageCars.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPriceFrom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPriceTo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYearTo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYearFrom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CarsDataGridView)).EndInit();
-            this.tabPageCarModels.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ModelsDataGridView)).EndInit();
-            this.tabPageCarDealerships.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.CarDealershipsDataGridView)).EndInit();
-            this.tabPageEmployees.ResumeLayout(false);
-            this.tabPageEmployees.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeesDataGridView)).EndInit();
-            this.tabPageCustomers.ResumeLayout(false);
-            this.tabPageCustomers.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CustomerDataGridView)).EndInit();
-            this.tabPageTransactions.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.TransactionsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(225, 172, 172);
+            ClientSize = new Size(1205, 795);
+            Controls.Add(tabControl1);
+            Margin = new Padding(3, 4, 3, 4);
+            MinimumSize = new Size(1140, 782);
+            Name = "Main";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "DB Cars Sales";
+            tabControl1.ResumeLayout(false);
+            tabPageCars.ResumeLayout(false);
+            tabPageCars.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownPriceFrom).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownPriceTo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownYearTo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownYearFrom).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CarsDataGridView).EndInit();
+            tabPageCarModels.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)ModelsDataGridView).EndInit();
+            tabPageCarDealerships.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)CarDealershipsDataGridView).EndInit();
+            tabPageEmployees.ResumeLayout(false);
+            tabPageEmployees.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)EmployeesDataGridView).EndInit();
+            tabPageCustomers.ResumeLayout(false);
+            tabPageCustomers.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)CustomerDataGridView).EndInit();
+            tabPageTransactions.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)TransactionsDataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

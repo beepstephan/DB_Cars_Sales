@@ -794,5 +794,12 @@ namespace DB_Cars_Sales
             else if (tabControl1.SelectedIndex == 5)
                 ColumnsResize(TransactionsDataGridView);
         }
+
+        private void buttonUpdateCar_Click(object sender, EventArgs e)
+        {
+            string VIN = CarsDataGridView.SelectedRows[0].Cells["vin"].Value.ToString();
+            FormUpdateCar formUpdateCars = new FormUpdateCar(this, VIN);
+            formUpdateCars.ShowDialog();
+        }
     }
 }
