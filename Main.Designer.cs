@@ -117,11 +117,13 @@
             tabControl1.Controls.Add(tabPageCustomers);
             tabControl1.Controls.Add(tabPageTransactions);
             tabControl1.Location = new Point(0, 0);
+            tabControl1.Margin = new Padding(3, 4, 3, 4);
             tabControl1.Multiline = true;
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1054, 596);
+            tabControl1.Size = new Size(1205, 795);
             tabControl1.TabIndex = 1;
+            tabControl1.SelectedIndexChanged += tabControl1_SelectedIndexChanged;
             // 
             // tabPageCars
             // 
@@ -149,19 +151,21 @@
             tabPageCars.Controls.Add(comboBoxBodytype);
             tabPageCars.Controls.Add(CarsDataGridView);
             tabPageCars.ForeColor = Color.Coral;
-            tabPageCars.Location = new Point(4, 24);
+            tabPageCars.Location = new Point(4, 29);
+            tabPageCars.Margin = new Padding(3, 4, 3, 4);
             tabPageCars.Name = "tabPageCars";
-            tabPageCars.Padding = new Padding(3);
-            tabPageCars.Size = new Size(1046, 568);
+            tabPageCars.Padding = new Padding(3, 4, 3, 4);
+            tabPageCars.Size = new Size(1197, 762);
             tabPageCars.TabIndex = 0;
             tabPageCars.Text = "Автомобілі";
             // 
             // buttonSearchCar
             // 
             buttonSearchCar.ForeColor = SystemColors.ActiveCaptionText;
-            buttonSearchCar.Location = new Point(539, 6);
+            buttonSearchCar.Location = new Point(616, 8);
+            buttonSearchCar.Margin = new Padding(3, 4, 3, 4);
             buttonSearchCar.Name = "buttonSearchCar";
-            buttonSearchCar.Size = new Size(93, 94);
+            buttonSearchCar.Size = new Size(106, 125);
             buttonSearchCar.TabIndex = 25;
             buttonSearchCar.Text = "Знайти авто";
             buttonSearchCar.UseVisualStyleBackColor = true;
@@ -171,9 +175,10 @@
             // 
             buttonUpdateCar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             buttonUpdateCar.ForeColor = SystemColors.ActiveCaptionText;
-            buttonUpdateCar.Location = new Point(940, 6);
+            buttonUpdateCar.Location = new Point(1074, 8);
+            buttonUpdateCar.Margin = new Padding(3, 4, 3, 4);
             buttonUpdateCar.Name = "buttonUpdateCar";
-            buttonUpdateCar.Size = new Size(98, 44);
+            buttonUpdateCar.Size = new Size(112, 59);
             buttonUpdateCar.TabIndex = 24;
             buttonUpdateCar.Text = "Оновити дані ";
             buttonUpdateCar.UseVisualStyleBackColor = true;
@@ -182,9 +187,10 @@
             // 
             buttonCheckCarInfo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             buttonCheckCarInfo.ForeColor = SystemColors.ActiveCaptionText;
-            buttonCheckCarInfo.Location = new Point(940, 56);
+            buttonCheckCarInfo.Location = new Point(1074, 75);
+            buttonCheckCarInfo.Margin = new Padding(3, 4, 3, 4);
             buttonCheckCarInfo.Name = "buttonCheckCarInfo";
-            buttonCheckCarInfo.Size = new Size(98, 44);
+            buttonCheckCarInfo.Size = new Size(112, 59);
             buttonCheckCarInfo.TabIndex = 23;
             buttonCheckCarInfo.Text = "Деталі";
             buttonCheckCarInfo.UseVisualStyleBackColor = true;
@@ -194,9 +200,10 @@
             // 
             buttonDeleteCar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             buttonDeleteCar.ForeColor = SystemColors.ActiveCaptionText;
-            buttonDeleteCar.Location = new Point(836, 55);
+            buttonDeleteCar.Location = new Point(955, 73);
+            buttonDeleteCar.Margin = new Padding(3, 4, 3, 4);
             buttonDeleteCar.Name = "buttonDeleteCar";
-            buttonDeleteCar.Size = new Size(98, 44);
+            buttonDeleteCar.Size = new Size(112, 59);
             buttonDeleteCar.TabIndex = 22;
             buttonDeleteCar.Text = "Видалити авто";
             buttonDeleteCar.UseVisualStyleBackColor = true;
@@ -206,9 +213,10 @@
             // 
             buttonAddCar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             buttonAddCar.ForeColor = SystemColors.ActiveCaptionText;
-            buttonAddCar.Location = new Point(836, 6);
+            buttonAddCar.Location = new Point(955, 8);
+            buttonAddCar.Margin = new Padding(3, 4, 3, 4);
             buttonAddCar.Name = "buttonAddCar";
-            buttonAddCar.Size = new Size(98, 44);
+            buttonAddCar.Size = new Size(112, 59);
             buttonAddCar.TabIndex = 21;
             buttonAddCar.Text = "Додати авто";
             buttonAddCar.UseVisualStyleBackColor = true;
@@ -216,19 +224,21 @@
             // 
             // numericUpDownPriceFrom
             // 
-            numericUpDownPriceFrom.Location = new Point(338, 58);
+            numericUpDownPriceFrom.Location = new Point(386, 77);
+            numericUpDownPriceFrom.Margin = new Padding(3, 4, 3, 4);
             numericUpDownPriceFrom.Maximum = new decimal(new int[] { 1410065407, 2, 0, 0 });
             numericUpDownPriceFrom.Name = "numericUpDownPriceFrom";
-            numericUpDownPriceFrom.Size = new Size(73, 23);
+            numericUpDownPriceFrom.Size = new Size(83, 27);
             numericUpDownPriceFrom.TabIndex = 20;
             numericUpDownPriceFrom.Value = new decimal(new int[] { 10000, 0, 0, 0 });
             // 
             // numericUpDownPriceTo
             // 
-            numericUpDownPriceTo.Location = new Point(445, 58);
+            numericUpDownPriceTo.Location = new Point(509, 77);
+            numericUpDownPriceTo.Margin = new Padding(3, 4, 3, 4);
             numericUpDownPriceTo.Maximum = new decimal(new int[] { 1410065407, 2, 0, 0 });
             numericUpDownPriceTo.Name = "numericUpDownPriceTo";
-            numericUpDownPriceTo.Size = new Size(73, 23);
+            numericUpDownPriceTo.Size = new Size(83, 27);
             numericUpDownPriceTo.TabIndex = 19;
             numericUpDownPriceTo.Value = new decimal(new int[] { 100000, 0, 0, 0 });
             // 
@@ -236,9 +246,9 @@
             // 
             label3.AutoSize = true;
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(417, 60);
+            label3.Location = new Point(477, 80);
             label3.Name = "label3";
-            label3.Size = new Size(22, 15);
+            label3.Size = new Size(28, 20);
             label3.TabIndex = 17;
             label3.Text = "До";
             // 
@@ -246,27 +256,29 @@
             // 
             label4.AutoSize = true;
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(309, 60);
+            label4.Location = new Point(353, 80);
             label4.Name = "label4";
-            label4.Size = new Size(23, 15);
+            label4.Size = new Size(30, 20);
             label4.TabIndex = 16;
             label4.Text = "Від";
             // 
             // numericUpDownYearTo
             // 
-            numericUpDownYearTo.Location = new Point(202, 58);
+            numericUpDownYearTo.Location = new Point(231, 77);
+            numericUpDownYearTo.Margin = new Padding(3, 4, 3, 4);
             numericUpDownYearTo.Maximum = new decimal(new int[] { 2024, 0, 0, 0 });
             numericUpDownYearTo.Name = "numericUpDownYearTo";
-            numericUpDownYearTo.Size = new Size(52, 23);
+            numericUpDownYearTo.Size = new Size(59, 27);
             numericUpDownYearTo.TabIndex = 15;
             numericUpDownYearTo.Value = new decimal(new int[] { 2024, 0, 0, 0 });
             // 
             // numericUpDownYearFrom
             // 
-            numericUpDownYearFrom.Location = new Point(116, 58);
+            numericUpDownYearFrom.Location = new Point(133, 77);
+            numericUpDownYearFrom.Margin = new Padding(3, 4, 3, 4);
             numericUpDownYearFrom.Maximum = new decimal(new int[] { 2024, 0, 0, 0 });
             numericUpDownYearFrom.Name = "numericUpDownYearFrom";
-            numericUpDownYearFrom.Size = new Size(52, 23);
+            numericUpDownYearFrom.Size = new Size(59, 27);
             numericUpDownYearFrom.TabIndex = 14;
             numericUpDownYearFrom.Value = new decimal(new int[] { 1885, 0, 0, 0 });
             // 
@@ -274,9 +286,9 @@
             // 
             label2.AutoSize = true;
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(174, 60);
+            label2.Location = new Point(199, 80);
             label2.Name = "label2";
-            label2.Size = new Size(22, 15);
+            label2.Size = new Size(28, 20);
             label2.TabIndex = 13;
             label2.Text = "До";
             // 
@@ -284,9 +296,9 @@
             // 
             label1.AutoSize = true;
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(87, 60);
+            label1.Location = new Point(99, 80);
             label1.Name = "label1";
-            label1.Size = new Size(23, 15);
+            label1.Size = new Size(30, 20);
             label1.TabIndex = 12;
             label1.Text = "Від";
             // 
@@ -294,9 +306,9 @@
             // 
             labelPrice.AutoSize = true;
             labelPrice.ForeColor = Color.Black;
-            labelPrice.Location = new Point(262, 60);
+            labelPrice.Location = new Point(299, 80);
             labelPrice.Name = "labelPrice";
-            labelPrice.Size = new Size(47, 15);
+            labelPrice.Size = new Size(59, 20);
             labelPrice.TabIndex = 11;
             labelPrice.Text = "Ціна, ₴:";
             // 
@@ -304,9 +316,9 @@
             // 
             labelYear.AutoSize = true;
             labelYear.ForeColor = Color.Black;
-            labelYear.Location = new Point(8, 60);
+            labelYear.Location = new Point(9, 80);
             labelYear.Name = "labelYear";
-            labelYear.Size = new Size(73, 15);
+            labelYear.Size = new Size(89, 20);
             labelYear.TabIndex = 10;
             labelYear.Text = "Рік випуску:";
             // 
@@ -314,36 +326,38 @@
             // 
             labelModel.AutoSize = true;
             labelModel.ForeColor = Color.Black;
-            labelModel.Location = new Point(397, 3);
+            labelModel.Location = new Point(454, 4);
             labelModel.Name = "labelModel";
-            labelModel.Size = new Size(50, 15);
+            labelModel.Size = new Size(63, 20);
             labelModel.TabIndex = 9;
             labelModel.Text = "Модель";
             // 
             // comboBoxModel
             // 
             comboBoxModel.FormattingEnabled = true;
-            comboBoxModel.Location = new Point(397, 21);
+            comboBoxModel.Location = new Point(454, 28);
+            comboBoxModel.Margin = new Padding(3, 4, 3, 4);
             comboBoxModel.Name = "comboBoxModel";
-            comboBoxModel.Size = new Size(121, 23);
+            comboBoxModel.Size = new Size(138, 28);
             comboBoxModel.TabIndex = 8;
             // 
             // labelBrand
             // 
             labelBrand.AutoSize = true;
             labelBrand.ForeColor = Color.Black;
-            labelBrand.Location = new Point(188, 3);
+            labelBrand.Location = new Point(215, 4);
             labelBrand.Name = "labelBrand";
-            labelBrand.Size = new Size(46, 15);
+            labelBrand.Size = new Size(58, 20);
             labelBrand.TabIndex = 7;
             labelBrand.Text = "Марка ";
             // 
             // comboBoxBrand
             // 
             comboBoxBrand.FormattingEnabled = true;
-            comboBoxBrand.Location = new Point(188, 21);
+            comboBoxBrand.Location = new Point(215, 28);
+            comboBoxBrand.Margin = new Padding(3, 4, 3, 4);
             comboBoxBrand.Name = "comboBoxBrand";
-            comboBoxBrand.Size = new Size(121, 23);
+            comboBoxBrand.Size = new Size(138, 28);
             comboBoxBrand.TabIndex = 6;
             comboBoxBrand.SelectedIndexChanged += comboBoxBrand_SelectedIndexChanged;
             comboBoxBrand.TextUpdate += comboBoxBrand_TextUpdate;
@@ -352,18 +366,19 @@
             // 
             labelBodytype.AutoSize = true;
             labelBodytype.ForeColor = Color.Black;
-            labelBodytype.Location = new Point(8, 3);
+            labelBodytype.Location = new Point(9, 4);
             labelBodytype.Name = "labelBodytype";
-            labelBodytype.Size = new Size(66, 15);
+            labelBodytype.Size = new Size(84, 20);
             labelBodytype.TabIndex = 5;
             labelBodytype.Text = "Тип кузову";
             // 
             // comboBoxBodytype
             // 
             comboBoxBodytype.FormattingEnabled = true;
-            comboBoxBodytype.Location = new Point(8, 21);
+            comboBoxBodytype.Location = new Point(9, 28);
+            comboBoxBodytype.Margin = new Padding(3, 4, 3, 4);
             comboBoxBodytype.Name = "comboBoxBodytype";
-            comboBoxBodytype.Size = new Size(121, 23);
+            comboBoxBodytype.Size = new Size(138, 28);
             comboBoxBodytype.TabIndex = 4;
             // 
             // CarsDataGridView
@@ -376,17 +391,18 @@
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.Window;
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridViewCellStyle1.ForeColor = Color.Coral;
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
             CarsDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
-            CarsDataGridView.Location = new Point(0, 106);
+            CarsDataGridView.Location = new Point(0, 141);
+            CarsDataGridView.Margin = new Padding(3, 4, 3, 4);
             CarsDataGridView.Name = "CarsDataGridView";
             CarsDataGridView.ReadOnly = true;
             CarsDataGridView.RowHeadersWidth = 51;
             CarsDataGridView.RowTemplate.Height = 25;
-            CarsDataGridView.Size = new Size(1046, 462);
+            CarsDataGridView.Size = new Size(1195, 616);
             CarsDataGridView.TabIndex = 3;
             // 
             // tabPageCarModels
@@ -396,19 +412,21 @@
             tabPageCarModels.Controls.Add(buttonDeleteModel);
             tabPageCarModels.Controls.Add(buttonAddModel);
             tabPageCarModels.Controls.Add(ModelsDataGridView);
-            tabPageCarModels.Location = new Point(4, 24);
+            tabPageCarModels.Location = new Point(4, 29);
+            tabPageCarModels.Margin = new Padding(3, 4, 3, 4);
             tabPageCarModels.Name = "tabPageCarModels";
-            tabPageCarModels.Padding = new Padding(3);
-            tabPageCarModels.Size = new Size(1046, 568);
+            tabPageCarModels.Padding = new Padding(3, 4, 3, 4);
+            tabPageCarModels.Size = new Size(1197, 762);
             tabPageCarModels.TabIndex = 1;
             tabPageCarModels.Text = "Моделі автомобілей";
             // 
             // buttonModelDetails
             // 
             buttonModelDetails.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonModelDetails.Location = new Point(920, 20);
+            buttonModelDetails.Location = new Point(1051, 27);
+            buttonModelDetails.Margin = new Padding(3, 4, 3, 4);
             buttonModelDetails.Name = "buttonModelDetails";
-            buttonModelDetails.Size = new Size(98, 44);
+            buttonModelDetails.Size = new Size(112, 59);
             buttonModelDetails.TabIndex = 15;
             buttonModelDetails.Text = "Деталі";
             buttonModelDetails.UseVisualStyleBackColor = true;
@@ -416,9 +434,10 @@
             // buttonDeleteModel
             // 
             buttonDeleteModel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonDeleteModel.Location = new Point(797, 20);
+            buttonDeleteModel.Location = new Point(911, 27);
+            buttonDeleteModel.Margin = new Padding(3, 4, 3, 4);
             buttonDeleteModel.Name = "buttonDeleteModel";
-            buttonDeleteModel.Size = new Size(98, 44);
+            buttonDeleteModel.Size = new Size(112, 59);
             buttonDeleteModel.TabIndex = 14;
             buttonDeleteModel.Text = "Видалити модель";
             buttonDeleteModel.UseVisualStyleBackColor = true;
@@ -426,9 +445,10 @@
             // buttonAddModel
             // 
             buttonAddModel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonAddModel.Location = new Point(667, 20);
+            buttonAddModel.Location = new Point(762, 27);
+            buttonAddModel.Margin = new Padding(3, 4, 3, 4);
             buttonAddModel.Name = "buttonAddModel";
-            buttonAddModel.Size = new Size(98, 44);
+            buttonAddModel.Size = new Size(112, 59);
             buttonAddModel.TabIndex = 13;
             buttonAddModel.Text = "Додати модель";
             buttonAddModel.UseVisualStyleBackColor = true;
@@ -441,12 +461,13 @@
             ModelsDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ModelsDataGridView.BackgroundColor = Color.FromArgb(255, 228, 228);
             ModelsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ModelsDataGridView.Location = new Point(0, 86);
+            ModelsDataGridView.Location = new Point(0, 115);
+            ModelsDataGridView.Margin = new Padding(3, 4, 3, 4);
             ModelsDataGridView.Name = "ModelsDataGridView";
             ModelsDataGridView.ReadOnly = true;
             ModelsDataGridView.RowHeadersWidth = 51;
             ModelsDataGridView.RowTemplate.Height = 25;
-            ModelsDataGridView.Size = new Size(1046, 482);
+            ModelsDataGridView.Size = new Size(1195, 643);
             ModelsDataGridView.TabIndex = 2;
             // 
             // tabPageCarDealerships
@@ -456,36 +477,40 @@
             tabPageCarDealerships.Controls.Add(buttonDeleteDealership);
             tabPageCarDealerships.Controls.Add(buttonAddDealership);
             tabPageCarDealerships.Controls.Add(CarDealershipsDataGridView);
-            tabPageCarDealerships.Location = new Point(4, 24);
+            tabPageCarDealerships.Location = new Point(4, 29);
+            tabPageCarDealerships.Margin = new Padding(3, 4, 3, 4);
             tabPageCarDealerships.Name = "tabPageCarDealerships";
-            tabPageCarDealerships.Padding = new Padding(3);
-            tabPageCarDealerships.Size = new Size(1046, 568);
+            tabPageCarDealerships.Padding = new Padding(3, 4, 3, 4);
+            tabPageCarDealerships.Size = new Size(1197, 762);
             tabPageCarDealerships.TabIndex = 2;
             tabPageCarDealerships.Text = "Автосалони";
             // 
             // buttonUpdateDealership
             // 
-            buttonUpdateDealership.Location = new Point(8, 115);
+            buttonUpdateDealership.Location = new Point(9, 153);
+            buttonUpdateDealership.Margin = new Padding(3, 4, 3, 4);
             buttonUpdateDealership.Name = "buttonUpdateDealership";
-            buttonUpdateDealership.Size = new Size(98, 44);
+            buttonUpdateDealership.Size = new Size(112, 59);
             buttonUpdateDealership.TabIndex = 4;
             buttonUpdateDealership.Text = "Оновити дані";
             buttonUpdateDealership.UseVisualStyleBackColor = true;
             // 
             // buttonDeleteDealership
             // 
-            buttonDeleteDealership.Location = new Point(8, 65);
+            buttonDeleteDealership.Location = new Point(9, 87);
+            buttonDeleteDealership.Margin = new Padding(3, 4, 3, 4);
             buttonDeleteDealership.Name = "buttonDeleteDealership";
-            buttonDeleteDealership.Size = new Size(98, 44);
+            buttonDeleteDealership.Size = new Size(112, 59);
             buttonDeleteDealership.TabIndex = 3;
             buttonDeleteDealership.Text = "Видалити автосалон";
             buttonDeleteDealership.UseVisualStyleBackColor = true;
             // 
             // buttonAddDealership
             // 
-            buttonAddDealership.Location = new Point(8, 15);
+            buttonAddDealership.Location = new Point(9, 20);
+            buttonAddDealership.Margin = new Padding(3, 4, 3, 4);
             buttonAddDealership.Name = "buttonAddDealership";
-            buttonAddDealership.Size = new Size(98, 44);
+            buttonAddDealership.Size = new Size(112, 59);
             buttonAddDealership.TabIndex = 2;
             buttonAddDealership.Text = "Додати автосалон";
             buttonAddDealership.UseVisualStyleBackColor = true;
@@ -497,12 +522,13 @@
             CarDealershipsDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             CarDealershipsDataGridView.BackgroundColor = Color.FromArgb(255, 228, 228);
             CarDealershipsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            CarDealershipsDataGridView.Location = new Point(112, 0);
+            CarDealershipsDataGridView.Location = new Point(128, 0);
+            CarDealershipsDataGridView.Margin = new Padding(3, 4, 3, 4);
             CarDealershipsDataGridView.Name = "CarDealershipsDataGridView";
             CarDealershipsDataGridView.ReadOnly = true;
             CarDealershipsDataGridView.RowHeadersWidth = 51;
             CarDealershipsDataGridView.RowTemplate.Height = 25;
-            CarDealershipsDataGridView.Size = new Size(934, 568);
+            CarDealershipsDataGridView.Size = new Size(1067, 757);
             CarDealershipsDataGridView.TabIndex = 1;
             // 
             // tabPageEmployees
@@ -514,18 +540,20 @@
             tabPageEmployees.Controls.Add(labelEmployeeSearch);
             tabPageEmployees.Controls.Add(textBoxEmployeeSearch);
             tabPageEmployees.Controls.Add(EmployeesDataGridView);
-            tabPageEmployees.Location = new Point(4, 24);
+            tabPageEmployees.Location = new Point(4, 29);
+            tabPageEmployees.Margin = new Padding(3, 4, 3, 4);
             tabPageEmployees.Name = "tabPageEmployees";
-            tabPageEmployees.Size = new Size(1046, 568);
+            tabPageEmployees.Size = new Size(1197, 762);
             tabPageEmployees.TabIndex = 3;
             tabPageEmployees.Text = "Працівники";
             // 
             // buttonUpdateEmployee
             // 
             buttonUpdateEmployee.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonUpdateEmployee.Location = new Point(940, 20);
+            buttonUpdateEmployee.Location = new Point(1074, 27);
+            buttonUpdateEmployee.Margin = new Padding(3, 4, 3, 4);
             buttonUpdateEmployee.Name = "buttonUpdateEmployee";
-            buttonUpdateEmployee.Size = new Size(98, 44);
+            buttonUpdateEmployee.Size = new Size(112, 59);
             buttonUpdateEmployee.TabIndex = 11;
             buttonUpdateEmployee.Text = "Оновити дані";
             buttonUpdateEmployee.UseVisualStyleBackColor = true;
@@ -534,9 +562,10 @@
             // 
             buttonDeleteEmployee.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             buttonDeleteEmployee.Enabled = false;
-            buttonDeleteEmployee.Location = new Point(797, 20);
+            buttonDeleteEmployee.Location = new Point(911, 27);
+            buttonDeleteEmployee.Margin = new Padding(3, 4, 3, 4);
             buttonDeleteEmployee.Name = "buttonDeleteEmployee";
-            buttonDeleteEmployee.Size = new Size(98, 44);
+            buttonDeleteEmployee.Size = new Size(112, 59);
             buttonDeleteEmployee.TabIndex = 10;
             buttonDeleteEmployee.Text = "Видалити працівника";
             buttonDeleteEmployee.UseVisualStyleBackColor = true;
@@ -544,9 +573,10 @@
             // buttonAddEmployee
             // 
             buttonAddEmployee.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonAddEmployee.Location = new Point(649, 20);
+            buttonAddEmployee.Location = new Point(742, 27);
+            buttonAddEmployee.Margin = new Padding(3, 4, 3, 4);
             buttonAddEmployee.Name = "buttonAddEmployee";
-            buttonAddEmployee.Size = new Size(98, 44);
+            buttonAddEmployee.Size = new Size(112, 59);
             buttonAddEmployee.TabIndex = 9;
             buttonAddEmployee.Text = "Додати працівника";
             buttonAddEmployee.UseVisualStyleBackColor = true;
@@ -554,17 +584,18 @@
             // labelEmployeeSearch
             // 
             labelEmployeeSearch.AutoSize = true;
-            labelEmployeeSearch.Location = new Point(8, 20);
+            labelEmployeeSearch.Location = new Point(9, 27);
             labelEmployeeSearch.Name = "labelEmployeeSearch";
-            labelEmployeeSearch.Size = new Size(228, 15);
+            labelEmployeeSearch.Size = new Size(291, 20);
             labelEmployeeSearch.TabIndex = 8;
             labelEmployeeSearch.Text = "Поле для вводу щоб знайти працівників";
             // 
             // textBoxEmployeeSearch
             // 
-            textBoxEmployeeSearch.Location = new Point(8, 38);
+            textBoxEmployeeSearch.Location = new Point(9, 51);
+            textBoxEmployeeSearch.Margin = new Padding(3, 4, 3, 4);
             textBoxEmployeeSearch.Name = "textBoxEmployeeSearch";
-            textBoxEmployeeSearch.Size = new Size(302, 23);
+            textBoxEmployeeSearch.Size = new Size(345, 27);
             textBoxEmployeeSearch.TabIndex = 7;
             // 
             // EmployeesDataGridView
@@ -574,12 +605,13 @@
             EmployeesDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             EmployeesDataGridView.BackgroundColor = Color.FromArgb(255, 228, 228);
             EmployeesDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            EmployeesDataGridView.Location = new Point(0, 86);
+            EmployeesDataGridView.Location = new Point(0, 115);
+            EmployeesDataGridView.Margin = new Padding(3, 4, 3, 4);
             EmployeesDataGridView.Name = "EmployeesDataGridView";
             EmployeesDataGridView.ReadOnly = true;
             EmployeesDataGridView.RowHeadersWidth = 51;
             EmployeesDataGridView.RowTemplate.Height = 25;
-            EmployeesDataGridView.Size = new Size(1046, 482);
+            EmployeesDataGridView.Size = new Size(1195, 643);
             EmployeesDataGridView.TabIndex = 1;
             // 
             // tabPageCustomers
@@ -595,9 +627,10 @@
             tabPageCustomers.Controls.Add(radioButtonCustomerPhone);
             tabPageCustomers.Controls.Add(radioButtonCustomerSurname);
             tabPageCustomers.Controls.Add(CustomerDataGridView);
-            tabPageCustomers.Location = new Point(4, 24);
+            tabPageCustomers.Location = new Point(4, 29);
+            tabPageCustomers.Margin = new Padding(3, 4, 3, 4);
             tabPageCustomers.Name = "tabPageCustomers";
-            tabPageCustomers.Size = new Size(1046, 568);
+            tabPageCustomers.Size = new Size(1197, 762);
             tabPageCustomers.TabIndex = 4;
             tabPageCustomers.Text = "Клієнти";
             // 
@@ -605,9 +638,10 @@
             // 
             buttonDeleteClient.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             buttonDeleteClient.Enabled = false;
-            buttonDeleteClient.Location = new Point(836, 22);
+            buttonDeleteClient.Location = new Point(955, 29);
+            buttonDeleteClient.Margin = new Padding(3, 4, 3, 4);
             buttonDeleteClient.Name = "buttonDeleteClient";
-            buttonDeleteClient.Size = new Size(98, 52);
+            buttonDeleteClient.Size = new Size(112, 69);
             buttonDeleteClient.TabIndex = 13;
             buttonDeleteClient.Text = "Видалити клієнта";
             buttonDeleteClient.UseVisualStyleBackColor = true;
@@ -616,9 +650,10 @@
             // buttonUpdateClient
             // 
             buttonUpdateClient.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonUpdateClient.Location = new Point(940, 22);
+            buttonUpdateClient.Location = new Point(1074, 29);
+            buttonUpdateClient.Margin = new Padding(3, 4, 3, 4);
             buttonUpdateClient.Name = "buttonUpdateClient";
-            buttonUpdateClient.Size = new Size(98, 52);
+            buttonUpdateClient.Size = new Size(112, 69);
             buttonUpdateClient.TabIndex = 14;
             buttonUpdateClient.Text = "Оновити дані ";
             buttonUpdateClient.UseVisualStyleBackColor = true;
@@ -627,9 +662,10 @@
             // buttonAddClient
             // 
             buttonAddClient.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonAddClient.Location = new Point(732, 22);
+            buttonAddClient.Location = new Point(837, 29);
+            buttonAddClient.Margin = new Padding(3, 4, 3, 4);
             buttonAddClient.Name = "buttonAddClient";
-            buttonAddClient.Size = new Size(98, 52);
+            buttonAddClient.Size = new Size(112, 69);
             buttonAddClient.TabIndex = 12;
             buttonAddClient.Text = "Додати клієнта";
             buttonAddClient.UseVisualStyleBackColor = true;
@@ -638,34 +674,37 @@
             // labelCustomerSearch
             // 
             labelCustomerSearch.AutoSize = true;
-            labelCustomerSearch.Location = new Point(8, 20);
+            labelCustomerSearch.Location = new Point(9, 27);
             labelCustomerSearch.Name = "labelCustomerSearch";
-            labelCustomerSearch.Size = new Size(206, 15);
+            labelCustomerSearch.Size = new Size(260, 20);
             labelCustomerSearch.TabIndex = 6;
             labelCustomerSearch.Text = "Поле для вводу щоб знайти клієнтів";
             // 
             // buttonCustomerSearch
             // 
-            buttonCustomerSearch.Location = new Point(524, 22);
+            buttonCustomerSearch.Location = new Point(599, 29);
+            buttonCustomerSearch.Margin = new Padding(3, 4, 3, 4);
             buttonCustomerSearch.Name = "buttonCustomerSearch";
-            buttonCustomerSearch.Size = new Size(93, 52);
+            buttonCustomerSearch.Size = new Size(106, 69);
             buttonCustomerSearch.TabIndex = 5;
             buttonCustomerSearch.Text = "Знайти клієнта";
             buttonCustomerSearch.UseVisualStyleBackColor = true;
             // 
             // textBoxCustomerSearch
             // 
-            textBoxCustomerSearch.Location = new Point(8, 38);
+            textBoxCustomerSearch.Location = new Point(9, 51);
+            textBoxCustomerSearch.Margin = new Padding(3, 4, 3, 4);
             textBoxCustomerSearch.Name = "textBoxCustomerSearch";
-            textBoxCustomerSearch.Size = new Size(302, 23);
+            textBoxCustomerSearch.Size = new Size(345, 27);
             textBoxCustomerSearch.TabIndex = 4;
             // 
             // radioButtonCustomerDate
             // 
             radioButtonCustomerDate.AutoSize = true;
-            radioButtonCustomerDate.Location = new Point(363, 62);
+            radioButtonCustomerDate.Location = new Point(415, 83);
+            radioButtonCustomerDate.Margin = new Padding(3, 4, 3, 4);
             radioButtonCustomerDate.Name = "radioButtonCustomerDate";
-            radioButtonCustomerDate.Size = new Size(144, 19);
+            radioButtonCustomerDate.Size = new Size(184, 24);
             radioButtonCustomerDate.TabIndex = 3;
             radioButtonCustomerDate.TabStop = true;
             radioButtonCustomerDate.Text = "за датою народження";
@@ -674,9 +713,10 @@
             // radioButtonCustomerPhone
             // 
             radioButtonCustomerPhone.AutoSize = true;
-            radioButtonCustomerPhone.Location = new Point(363, 37);
+            radioButtonCustomerPhone.Location = new Point(415, 49);
+            radioButtonCustomerPhone.Margin = new Padding(3, 4, 3, 4);
             radioButtonCustomerPhone.Name = "radioButtonCustomerPhone";
-            radioButtonCustomerPhone.Size = new Size(102, 19);
+            radioButtonCustomerPhone.Size = new Size(127, 24);
             radioButtonCustomerPhone.TabIndex = 2;
             radioButtonCustomerPhone.TabStop = true;
             radioButtonCustomerPhone.Text = "за телефоном";
@@ -685,9 +725,10 @@
             // radioButtonCustomerSurname
             // 
             radioButtonCustomerSurname.AutoSize = true;
-            radioButtonCustomerSurname.Location = new Point(363, 12);
+            radioButtonCustomerSurname.Location = new Point(415, 16);
+            radioButtonCustomerSurname.Margin = new Padding(3, 4, 3, 4);
             radioButtonCustomerSurname.Name = "radioButtonCustomerSurname";
-            radioButtonCustomerSurname.Size = new Size(100, 19);
+            radioButtonCustomerSurname.Size = new Size(126, 24);
             radioButtonCustomerSurname.TabIndex = 1;
             radioButtonCustomerSurname.TabStop = true;
             radioButtonCustomerSurname.Text = "за прізвищем";
@@ -700,12 +741,13 @@
             CustomerDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             CustomerDataGridView.BackgroundColor = Color.FromArgb(255, 228, 228);
             CustomerDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            CustomerDataGridView.Location = new Point(0, 86);
+            CustomerDataGridView.Location = new Point(0, 115);
+            CustomerDataGridView.Margin = new Padding(3, 4, 3, 4);
             CustomerDataGridView.Name = "CustomerDataGridView";
             CustomerDataGridView.ReadOnly = true;
             CustomerDataGridView.RowHeadersWidth = 51;
             CustomerDataGridView.RowTemplate.Height = 25;
-            CustomerDataGridView.Size = new Size(1046, 482);
+            CustomerDataGridView.Size = new Size(1195, 643);
             CustomerDataGridView.TabIndex = 0;
             // 
             // tabPageTransactions
@@ -715,18 +757,20 @@
             tabPageTransactions.Controls.Add(buttonDeleteTransaction);
             tabPageTransactions.Controls.Add(buttonAddTransaction);
             tabPageTransactions.Controls.Add(TransactionsDataGridView);
-            tabPageTransactions.Location = new Point(4, 24);
+            tabPageTransactions.Location = new Point(4, 29);
+            tabPageTransactions.Margin = new Padding(3, 4, 3, 4);
             tabPageTransactions.Name = "tabPageTransactions";
-            tabPageTransactions.Size = new Size(1046, 568);
+            tabPageTransactions.Size = new Size(1197, 762);
             tabPageTransactions.TabIndex = 5;
             tabPageTransactions.Text = "Транзакції";
             // 
             // buttonCheckInfoTransaction
             // 
             buttonCheckInfoTransaction.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonCheckInfoTransaction.Location = new Point(920, 20);
+            buttonCheckInfoTransaction.Location = new Point(1051, 27);
+            buttonCheckInfoTransaction.Margin = new Padding(3, 4, 3, 4);
             buttonCheckInfoTransaction.Name = "buttonCheckInfoTransaction";
-            buttonCheckInfoTransaction.Size = new Size(98, 44);
+            buttonCheckInfoTransaction.Size = new Size(112, 59);
             buttonCheckInfoTransaction.TabIndex = 14;
             buttonCheckInfoTransaction.Text = "Деталі";
             buttonCheckInfoTransaction.UseVisualStyleBackColor = true;
@@ -735,9 +779,10 @@
             // 
             buttonDeleteTransaction.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             buttonDeleteTransaction.Enabled = false;
-            buttonDeleteTransaction.Location = new Point(797, 20);
+            buttonDeleteTransaction.Location = new Point(911, 27);
+            buttonDeleteTransaction.Margin = new Padding(3, 4, 3, 4);
             buttonDeleteTransaction.Name = "buttonDeleteTransaction";
-            buttonDeleteTransaction.Size = new Size(98, 44);
+            buttonDeleteTransaction.Size = new Size(112, 59);
             buttonDeleteTransaction.TabIndex = 13;
             buttonDeleteTransaction.Text = "Видалити транзакцію";
             buttonDeleteTransaction.UseVisualStyleBackColor = true;
@@ -745,9 +790,10 @@
             // buttonAddTransaction
             // 
             buttonAddTransaction.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonAddTransaction.Location = new Point(667, 20);
+            buttonAddTransaction.Location = new Point(762, 27);
+            buttonAddTransaction.Margin = new Padding(3, 4, 3, 4);
             buttonAddTransaction.Name = "buttonAddTransaction";
-            buttonAddTransaction.Size = new Size(98, 44);
+            buttonAddTransaction.Size = new Size(112, 59);
             buttonAddTransaction.TabIndex = 12;
             buttonAddTransaction.Text = "Додати транзакцію";
             buttonAddTransaction.UseVisualStyleBackColor = true;
@@ -759,29 +805,33 @@
             TransactionsDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             TransactionsDataGridView.BackgroundColor = Color.FromArgb(255, 228, 228);
             TransactionsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            TransactionsDataGridView.Location = new Point(0, 86);
+            TransactionsDataGridView.Location = new Point(0, 115);
+            TransactionsDataGridView.Margin = new Padding(3, 4, 3, 4);
             TransactionsDataGridView.Name = "TransactionsDataGridView";
             TransactionsDataGridView.ReadOnly = true;
             TransactionsDataGridView.RowHeadersWidth = 51;
             TransactionsDataGridView.RowTemplate.Height = 25;
-            TransactionsDataGridView.Size = new Size(1046, 482);
+            TransactionsDataGridView.Size = new Size(1195, 643);
             TransactionsDataGridView.TabIndex = 1;
             // 
             // dataGridView1
             // 
+            dataGridView1.ColumnHeadersHeight = 29;
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(240, 150);
             dataGridView1.TabIndex = 0;
             // 
             // Main
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(225, 172, 172);
-            ClientSize = new Size(1054, 596);
+            ClientSize = new Size(1205, 795);
             Controls.Add(tabControl1);
-            MinimumSize = new Size(1000, 600);
+            Margin = new Padding(3, 4, 3, 4);
+            MinimumSize = new Size(1140, 784);
             Name = "Main";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "DB Cars Sales";

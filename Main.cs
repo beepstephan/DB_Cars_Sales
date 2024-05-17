@@ -37,8 +37,8 @@ namespace DB_Cars_Sales
             SearchCarModels();
             SearchCarBodytypes();
             comboBoxBodytype.SelectedIndex = 0;
+            ColumnsResize(CarsDataGridView);
 
-            ColumnsResize();
             radioButtonCustomerSurname.Checked = true;
         }
 
@@ -749,29 +749,9 @@ namespace DB_Cars_Sales
             formCheckInfoCarModels.ShowDialog();
         }
 
-        private void ColumnsResize()
+        private void ColumnsResize(DataGridView table)
         {
-            foreach (DataGridViewColumn column in TransactionsDataGridView.Columns)
-            {
-                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            }
-            foreach (DataGridViewColumn column in CustomerDataGridView.Columns)
-            {
-                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            }
-            foreach (DataGridViewColumn column in EmployeesDataGridView.Columns)
-            {
-                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            }
-            foreach (DataGridViewColumn column in CarDealershipsDataGridView.Columns)
-            {
-                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            }
-            foreach (DataGridViewColumn column in ModelsDataGridView.Columns)
-            {
-                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            }
-            foreach (DataGridViewColumn column in CarsDataGridView.Columns)
+            foreach (DataGridViewColumn column in table.Columns)
             {
                 column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
@@ -779,13 +759,40 @@ namespace DB_Cars_Sales
 
         private void Main_SizeChanged(object sender, EventArgs e)
         {
-            ColumnsResize();
+            if (tabControl1.SelectedIndex == 0)
+                ColumnsResize(CarsDataGridView);
+            else if (tabControl1.SelectedIndex == 1)
+                ColumnsResize(ModelsDataGridView);
+            else if (tabControl1.SelectedIndex == 2)
+                ColumnsResize(CarDealershipsDataGridView);
+            else if (tabControl1.SelectedIndex == 3)
+                ColumnsResize(EmployeesDataGridView);
+            else if (tabControl1.SelectedIndex == 4)
+                ColumnsResize(CustomerDataGridView);
+            else if (tabControl1.SelectedIndex == 5)
+                ColumnsResize(TransactionsDataGridView);
         }
 
         private void buttonAddCar_Click(object sender, EventArgs e)
         {
             FormAddCar formAddCar = new FormAddCar(this);
             formAddCar.ShowDialog();
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 0)
+                ColumnsResize(CarsDataGridView);
+            else if (tabControl1.SelectedIndex == 1)
+                ColumnsResize(ModelsDataGridView);
+            else if (tabControl1.SelectedIndex == 2)
+                ColumnsResize(CarDealershipsDataGridView);
+            else if (tabControl1.SelectedIndex == 3)
+                ColumnsResize(EmployeesDataGridView);
+            else if (tabControl1.SelectedIndex == 4)
+                ColumnsResize(CustomerDataGridView);
+            else if (tabControl1.SelectedIndex == 5)
+                ColumnsResize(TransactionsDataGridView);
         }
     }
 }
